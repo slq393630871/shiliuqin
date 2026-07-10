@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>常州高一英语 · 核心知识点+练习</title>
+<style>
+  :root {
+    --bg: #f5f0eb; --card: #ffffff; --text: #2c2416; --sub: #6b5e4a;
+    --primary: #4a90d9; --accent: #e8734a; --success: #5a9e6f;
+    --border: #e8e0d5; --shadow: 0 2px 12px rgba(44,36,22,0.07);
+    --tab-bg: #ffffff; --highlight: #fef9e7; --tag-bg: #eef4fb;
+    --tag-text: #4a90d9; --wrong: #fef0eb; --correct-bg: #eef7f0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1815; --card: #252320; --text: #e8e0d5; --sub: #b0a590;
+      --primary: #6db3f2; --accent: #f08a60; --success: #7ab88a;
+      --border: #3d3830; --shadow: 0 2px 12px rgba(0,0,0,0.25);
+      --tab-bg: #1f1d19; --highlight: #2a2618; --tag-bg: #1e2a38;
+      --tag-text: #6db3f2; --wrong: #2a1a15; --correct-bg: #1a2a1f;
+    }
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { font-size:16px; scroll-behavior:smooth; }
+  body {
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    background: var(--bg); color: var(--text); min-height: 100vh;
+    padding-bottom: 90px; line-height: 1.65;
+    -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none;
+  }
+
+  .header {
+    background: var(--card); padding: 12px 18px; position: sticky; top:0; z-index:100;
+    box-shadow: var(--shadow); display: flex; align-items: center; gap: 10px;
+  }
+  .header .logo { font-size:1.05rem; font-weight:700; flex:1; }
+  .header .logo span { color:var(--accent); }
+  .streak { font-size:0.75rem; color:var(--sub); background:var(--tag-bg); padding:4px 10px; border-radius:20px; white-space:nowrap; }
+  .streak b { color:var(--accent); }
+
+  .stats-row { display:flex; gap:8px; padding:14px 14px 4px; overflow-x:auto; }
+  .stats-row::-webkit-scrollbar { display:none; }
+  .stat-card { flex:1; min-width:80px; background:var(--card); border-radius:12px; padding:10px 8px; text-align:center; box-shadow:var(--shadow); }
+  .stat-card .num { font-size:1.3rem; font-weight:700; color:var(--primary); }
+  .stat-card .lbl { font-size:0.68rem; color:var(--sub); margin-top:2px; }
+
+  /* ── 模块导航 ── */
+  .module-nav { padding:12px 14px; }
+  .module-nav summary { font-size:0.9rem; font-weight:700; color:var(--primary); cursor:pointer; padding:8px 0; }
+  .module-list { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .mod-btn { padding:6px 13px; border-radius:16px; font-size:0.75rem; font-weight:600; border:1.5px solid var(--border); background:var(--card); color:var(--sub); cursor:pointer; transition:all 0.15s; }
+  .mod-btn.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+  .mod-btn.done { border-color:var(--success); color:var(--success); }
+  .mod-btn.done::after { content:' ✓'; }
+
+  /* ── 知识点内容区 ── */
+  .kp-section { display:none; padding:0 14px 20px; }
+  .kp-section.active { display:block; }
+
+  .kp-card {
+    background:var(--card); border-radius:16px; padding:18px;
+    box-shadow:var(--shadow); margin-bottom:14px;
+  }
+  .kp-card .kp-tag {
+    display:inline-block; font-size:0.7rem; padding:3px 10px;
+    border-radius:10px; margin-bottom:8px; font-weight:600;
+  }
+  .kp-tag.grammar { background:#fef0eb; color:#e8734a; }
+  .kp-tag.vocab { background:#eef7f0; color:#5a9e6f; }
+  .kp-tag.reading { background:#eef4fb; color:#4a90d9; }
+  .kp-tag.writing { background:#f5eeff; color:#7c5ce7; }
+
+  .kp-card .kp-title { font-size:1rem; font-weight:700; margin-bottom:10px; }
+  .kp-card .kp-desc { font-size:0.82rem; color:var(--sub); margin-bottom:12px; line-height:1.7; }
+  .kp-card .kp-rule {
+    font-size:0.84rem; padding:12px 14px; background:var(--highlight);
+    border-radius:10px; margin-bottom:12px; line-height:1.9;
+  }
+  .kp-card .kp-rule b { color:var(--accent); }
+  .kp-card .kp-example {
+    font-size:0.8rem; color:var(--sub); padding-left:14px;
+    border-left:3px solid var(--primary); margin-bottom:14px; line-height:1.7;
+  }
+
+  /* 练习题 */
+  .exercise { margin-top:14px; border-top:1px dashed var(--border); padding-top:14px; }
+  .exercise .ex-title { font-size:0.88rem; font-weight:700; margin-bottom:10px; }
+  .ex-item { margin-bottom:14px; }
+  .ex-item .ex-q { font-size:0.85rem; font-weight:600; margin-bottom:6px; }
+  .ex-item .ex-opts { display:flex; flex-direction:column; gap:5px; }
+  .ex-opt {
+    padding:9px 12px; border-radius:10px; border:1.5px solid var(--border);
+    background:var(--card); font-size:0.82rem; cursor:pointer; transition:all 0.12s;
+  }
+  .ex-opt:active { transform:scale(0.98); }
+  .ex-opt.sel { border-color:var(--primary); background:var(--tag-bg); font-weight:600; }
+  .ex-opt.corr { border-color:var(--success); background:var(--correct-bg); }
+  .ex-opt.wrng { border-color:var(--accent); background:var(--wrong); }
+  .ex-feedback { font-size:0.78rem; margin-top:6px; padding:8px 10px; border-radius:8px; display:none; }
+  .ex-feedback.show { display:block; }
+  .ex-feedback.ok { background:var(--correct-bg); color:var(--success); }
+  .ex-feedback.no { background:var(--wrong); color:var(--accent); }
+
+  /* 填空输入 */
+  .fill-input {
+    width:100%; padding:10px 12px; border:1.5px solid var(--border);
+    border-radius:10px; font-size:0.85rem; font-family:inherit;
+    background:var(--bg); color:var(--text);
+  }
+  .fill-input:focus { outline:none; border-color:var(--primary); }
+
+  .btn {
+    display:inline-block; padding:10px 22px; border-radius:10px;
+    font-size:0.83rem; font-weight:600; border:none; cursor:pointer;
+    margin:4px 5px 0 0; transition:all 0.12s;
+  }
+  .btn:active { transform:scale(0.96); }
+  .btn-pri { background:var(--primary); color:#fff; }
+  .btn-out { background:var(--card); color:var(--primary); border:1.5px solid var(--primary); }
+  .btn-gray { background:var(--border); color:var(--text); }
+
+  .toast {
+    position:fixed; top:60px; left:50%; transform:translateX(-50%);
+    background:#333; color:#fff; padding:10px 24px; border-radius:20px;
+    font-size:0.82rem; z-index:200; opacity:0; pointer-events:none; transition:opacity 0.3s;
+  }
+  .toast.show { opacity:1; }
+
+  .bottom-nav {
+    position:fixed; bottom:0; left:0; right:0; background:var(--tab-bg);
+    box-shadow:0 -2px 12px rgba(0,0,0,0.08); display:flex;
+    justify-content:space-around; padding:8px 0 12px; z-index:100;
+  }
+  @supports (padding-bottom: env(safe-area-inset-bottom)) {
+    .bottom-nav { padding-bottom:calc(12px + env(safe-area-inset-bottom)); }
+  }
+  .nav-item {
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    background:none; border:none; cursor:pointer; color:var(--sub);
+    font-size:0.66rem; padding:4px 10px; transition:color 0.2s;
+  }
+  .nav-item .icon { font-size:1.2rem; }
+  .nav-item.active { color:var(--primary); font-weight:600; }
+
+  .progress-bar { height:5px; background:var(--border); border-radius:3px; margin:6px 0 12px; overflow:hidden; }
+  .progress-bar .fill { height:100%; background:var(--primary); border-radius:3px; transition:width 0.4s; }
+</style>
+</head>
+<body>
+
+<div class="toast" id="toast"></div>
+
+<header class="header">
+  <div class="logo">📖 常州高一·<span>核心知识点</span></div>
+  <div class="streak">🔥 连续 <b id="streakDays">0</b> 天</div>
+</header>
+
+<div class="stats-row">
+  <div class="stat-card"><div class="num" id="statDone">0</div><div class="lbl">✅ 已学知识点</div></div>
+  <div class="stat-card"><div class="num" id="statEx">0</div><div class="lbl">📝 完成练习</div></div>
+  <div class="stat-card"><div class="num" id="statScore">0%</div><div class="lbl">🎯 练习正确率</div></div>
+</div>
+
+<!-- 单元导航 -->
+<div class="module-nav">
+  <details open>
+    <summary>📚 模块导航（点击展开/收起）</summary>
+    <div class="module-list" id="moduleList"></div>
+  </details>
+</div>
+
+<!-- 知识点内容 -->
+<div id="kpContainer"></div>
+
+<!-- 底部导航 -->
+<nav class="bottom-nav">
+  <button class="nav-item active" id="nav-kp" onclick="switchView('kp')">
+    <span class="icon">🎯</span> 知识点
+  </button>
+  <button class="nav-item" id="nav-summary" onclick="switchView('summary')">
+    <span class="icon">📊</span> 学习总览
+  </button>
+</nav>
+
+<script>
+// ==================== 核心知识点数据 ====================
+// 按译林版牛津高中英语模块顺序整理
+
+const knowledgePoints = [
+  // ========== 模块一 Unit 1: School Life ==========
+  {
+    id: 'm1u1-1',
+    module: '模块一',
+    unit: 'Unit 1',
+    topic: '校园生活',
+    tag: 'grammar',
+    tagText: '语法',
+    title: '定语从句（一）：关系代词 who / whom / which / that',
+    desc: '定语从句是高一最重要的语法之一，用来修饰名词或代词。本课学习关系代词的基本用法。',
+    rule: `<b>📐 结构：</b>先行词 + <b>关系代词</b> + 从句<br><br>
+<b>🔹 who</b> — 指<b>人</b>，在从句中作<b>主语</b><br>
+&nbsp;&nbsp;The girl <b>who</b> sits next to me is from Changzhou.<br>
+<b>🔹 whom</b> — 指<b>人</b>，在从句中作<b>宾语</b>（口语中常省略或用who代替）<br>
+&nbsp;&nbsp;The boy <b>whom</b> you met is my classmate.<br>
+<b>🔹 which</b> — 指<b>物</b>，作主语或宾语<br>
+&nbsp;&nbsp;The book <b>which</b> is on the desk belongs to me.<br>
+<b>🔹 that</b> — 指<b>人或物</b>，最万能，但不能用于非限制性定语从句<br>
+&nbsp;&nbsp;This is the best film <b>that</b> I have ever seen.<br><br>
+⚠️ <b>只能用 that 的情况：</b>先行词被最高级、序数词、all/any/every/no等修饰时`,
+    example: 'The teacher who taught us English is now in America. 那位教过我们英语的老师现在在美国。',
+    exercises: [
+      { type:'choice', q:'The man ___ is standing at the school gate is our head teacher.', opts:['A. who','B. which','C. whom','D. what'], ans:0, hint:'指人，在从句中作主语 → 用 who' },
+      { type:'choice', q:'This is the most interesting book ___ I have ever read.', opts:['A. which','B. that','C. who','D. what'], ans:1, hint:'先行词被最高级 most interesting 修饰 → 只能用 that' },
+      { type:'choice', q:'The girl ___ you talked to just now is my deskmate.', opts:['A. who','B. whom','C. which','D. A and B'], ans:3, hint:'指人，作宾语 → who/whom 都可以' },
+      { type:'fill', q:'用 who / which / that 填空：The classroom ___ is on the third floor is very bright.', ans:'which', hint:'指物 classroom → which/that 都可以' },
+    ]
+  },
+  {
+    id: 'm1u1-2',
+    module: '模块一',
+    unit: 'Unit 1',
+    topic: '校园生活',
+    tag: 'vocab',
+    tagText: '词汇',
+    title: '校园生活核心词汇 · School Life',
+    desc: '以下词汇是谈论学校生活的必备词汇，常出现在阅读和写作中。',
+    rule: `<b>📝 必会词汇：</b><br>
+• <b>attend</b> v. 参加；出席 → attend classes / attend a meeting<br>
+• <b>earn</b> v. 获得；赚取 → earn respect / earn money<br>
+• <b>respect</b> n.&v. 尊重 → show respect for... / respect others<br>
+• <b>achieve</b> v. 达到；取得 → achieve one's goal / achieve success<br>
+• <b>challenging</b> adj. 有挑战性的 → a challenging task<br>
+• <b>extra</b> adj. 额外的 → extra practice / extra homework<br>
+• <b>average</b> adj.&n. 平均的；平均数 → on average / above average<br>
+• <b>experience</b> n.&v. 经验；经历 → gain experience / an unforgettable experience<br>
+• <b>exchange</b> n.&v. 交换；交流 → exchange student / cultural exchange<br>
+• <b>former</b> adj. 以前的 → former school / former classmate<br><br>
+<b>🔑 易混词辨析：</b>attend（正式参加） / take part in（参与活动） / join（加入组织）`,
+    example: 'I am happy to attend such a challenging course and hope to achieve good results. 我很高兴参加这么有挑战性的课程，希望能取得好成绩。',
+    exercises: [
+      { type:'choice', q:'She decided to ___ the school English club to improve her speaking skills.', opts:['A. attend','B. join','C. take part in','D. enter'], ans:1, hint:'join + 组织/团体；attend + 会议/课程；take part in + 活动' },
+      { type:'choice', q:'Studying abroad is a(n) ___ experience that I will never forget.', opts:['A. challenging','B. average','C. unforgettable','D. extra'], ans:2, hint:'unforgettable = 难忘的，与 "never forget" 呼应' },
+      { type:'fill', q:'用 respect 的适当形式填空：We should ___（尊重）our teachers and classmates.', ans:'respect', hint:'should + 动词原形' },
+    ]
+  },
+
+  // ========== 模块一 Unit 2: Growing Pains ==========
+  {
+    id: 'm1u2-1',
+    module: '模块一',
+    unit: 'Unit 2',
+    topic: '成长的烦恼',
+    tag: 'grammar',
+    tagText: '语法',
+    title: '定语从句（二）：介词 + which/whom',
+    desc: '当关系代词在从句中作介词宾语时，介词可以提前到关系代词之前，形成"介词 + which/whom"结构。这是高一难点！',
+    rule: `<b>📐 结构：</b>先行词 + <b>介词 + which/whom</b> + 从句<br><br>
+<b>🔹 正式用法（介词提前）：</b><br>
+&nbsp;&nbsp;The school <b>in which</b> I study is very old. = The school which I study <b>in</b> is very old.<br>
+&nbsp;&nbsp;The teacher <b>from whom</b> I learned a lot is Ms. Li. = The teacher whom I learned a lot <b>from</b> is Ms. Li.<br><br>
+<b>⚠️ 关键规则：</b><br>
+① 介词提前后，<b>只能用 which/whom，不能用 that/who！</b><br>
+② 含有介词的短语动词（look after, take care of等）介词<b>不提前</b><br>
+③ 关系代词作宾语时<b>不能省略</b>（介词提前时）<br><br>
+<b>🔹 常用介词搭配：</b>in which, for which, from whom, to whom, about which, with whom`,
+    example: 'The problem about which we argued was finally solved. 我们争论的那个问题终于解决了。',
+    exercises: [
+      { type:'choice', q:'The house ___ I was born has been pulled down.', opts:['A. in that','B. in which','C. which','D. in where'], ans:1, hint:'be born in... → 介词 in + which；in that 语法错误' },
+      { type:'choice', q:'This is the boy ___ I played tennis yesterday.', opts:['A. with whom','B. with who','C. whom','D. with that'], ans:0, hint:'play tennis with sb → 介词提前只能用 whom' },
+      { type:'choice', q:'The baby ___ she is looking after is very cute.', opts:['A. after whom','B. whom','C. after which','D. which'], ans:1, hint:'look after 是短语动词，介词不提前' },
+    ]
+  },
+  {
+    id: 'm1u2-2',
+    module: '模块一',
+    unit: 'Unit 2',
+    topic: '成长的烦恼',
+    tag: 'grammar',
+    tagText: '语法',
+    title: '现在完成时 vs 一般过去时',
+    desc: '这是高一最易混淆的时态对比！核心区别：现在完成时连接现在，一般过去时只讲过去。',
+    rule: `<b>🔹 现在完成时 (have/has + done)：</b>强调对<b>现在的影响</b>或<b>持续至今</b><br>
+&nbsp;&nbsp;I <b>have lived</b> in Changzhou for 16 years.（现在还住在常州）<br>
+&nbsp;&nbsp;She <b>has finished</b> her homework.（现在可以玩了）<br><br>
+<b>🔹 一般过去时 (did)：</b>单纯描述<b>过去发生</b>的动作<br>
+&nbsp;&nbsp;I <b>lived</b> in Nanjing 5 years ago.（现在不住了）<br>
+&nbsp;&nbsp;She <b>finished</b> her homework last night.（只说昨晚的事）<br><br>
+<b>🔑 关键标志词：</b><br>
+<b>现在完成时：</b>already, yet, ever, never, just, since, for+时间段, so far, recently<br>
+<b>一般过去时：</b>yesterday, ago, last week, in 2025, just now<br><br>
+<b>⚠️ since 从句用一般过去时，主句用现在完成时：</b><br>
+&nbsp;&nbsp;I <b>have known</b> him since he <b>moved</b> here.`,
+    example: 'I have studied English for 7 years.（现在还在学） vs. I studied English yesterday.（只说昨天学了）',
+    exercises: [
+      { type:'choice', q:'— ___ you ___ the film yet? — Yes, I ___ it last Sunday.', opts:['A. Did...see; saw','B. Have...seen; saw','C. Have...seen; have seen','D. Did...see; have seen'], ans:1, hint:'yet → 现在完成时；last Sunday → 一般过去时' },
+      { type:'choice', q:'Mr. Li ___ in this school since 2020.', opts:['A. teaches','B. taught','C. has taught','D. is teaching'], ans:2, hint:'since 2020 → 现在完成时，表示从2020年持续至今' },
+      { type:'fill', q:'用括号内动词的适当形式填空：So far, the boy ___ (learn) over 500 English words.', ans:'has learned', hint:'so far → 现在完成时标志；主语 the boy 是单数 → has learned' },
+    ]
+  },
+  {
+    id: 'm1u2-3',
+    module: '模块一',
+    unit: 'Unit 2',
+    topic: '成长的烦恼',
+    tag: 'vocab',
+    tagText: '词汇',
+    title: '情感表达核心词汇 · Growing Pains',
+    desc: '描述成长烦恼和家庭关系的高频词汇，阅读理解中经常出现。',
+    rule: `<b>📝 必会词汇：</b><br>
+• <b>argument</b> n. 争论 → have an argument with sb<br>
+• <b>upset</b> adj. 难过的；心烦的 → feel upset about...<br>
+• <b>trust</b> v.&n. 信任 → trust sb / have trust in...<br>
+• <b>limit</b> v.&n. 限制 → set a limit / be limited to...<br>
+• <b>balance</b> n.&v. 平衡 → keep a balance / balance A and B<br>
+• <b>independent</b> adj. 独立的 → be independent of...<br>
+• <b>patience</b> n. 耐心 → have patience with...<br>
+• <b>communicate</b> v. 沟通 → communicate with sb<br>
+• <b>solve</b> v. 解决 → solve the problem<br>
+• <b>misunderstand</b> v. 误解 → be misunderstood by...`,
+    example: 'Good communication helps solve misunderstandings between parents and children. 良好的沟通有助于解决父母和孩子之间的误解。',
+    exercises: [
+      { type:'choice', q:'Parents should have more ___ with their teenage children.', opts:['A. patience','B. argument','C. limit','D. balance'], ans:0, hint:'have patience with = 对...有耐心' },
+      { type:'fill', q:'用括号内单词的适当形式填空：Learning to be ___ (independence) is an important part of growing up.', ans:'independent', hint:'be + adj. 作表语 → independent' },
+    ]
+  },
+
+  // ========== 模块一 Unit 3: Looking Good, Feeling Good ==========
+  {
+    id: 'm1u3-1',
+    module: '模块一',
+    unit: 'Unit 3',
+    topic: '外表与健康',
+    tag: 'grammar',
+    tagText: '语法',
+    title: '反意疑问句 (Tag Questions)',
+    desc: '反意疑问句是日常对话中常用结构，表示"是不是？对吧？"考试经常出！',
+    rule: `<b>📐 结构：</b>陈述句 + 简短疑问<br><br>
+<b>🔹 基本规则：前肯后否，前否后肯</b><br>
+&nbsp;&nbsp;You like English, <b>don't you?</b>（前肯定 → 后否定）<br>
+&nbsp;&nbsp;You don't smoke, <b>do you?</b>（前否定 → 后肯定）<br><br>
+<b>🔹 特殊考点（必考！）：</b><br>
+① <b>I am... → aren't I?</b>（不说 am I not?）<br>
+&nbsp;&nbsp;I'm right, <b>aren't I?</b><br>
+② 祈使句 → <b>will you? / won't you?</b><br>
+&nbsp;&nbsp;Open the door, <b>will you?</b><br>
+③ <b>Let's... → shall we?</b> / <b>Let us... → will you?</b><br>
+&nbsp;&nbsp;Let's go, <b>shall we?</b> / Let us go, <b>will you?</b><br>
+④ 含否定词(never, hardly, seldom等) → 看作否定，疑问部分用肯定<br>
+&nbsp;&nbsp;He never smokes, <b>does he?</b><br>
+⑤ <b>There be → be there?</b><br>
+&nbsp;&nbsp;There is a pen, <b>isn't there?</b>`,
+    example: 'You have been to Shanghai, haven\'t you? 你去过上海，对吧？',
+    exercises: [
+      { type:'choice', q:'I\'m a good student, ___?', opts:['A. am I','B. aren\'t I','C. don\'t I','D. amn\'t I'], ans:1, hint:'I am 的反意疑问固定用 aren\'t I' },
+      { type:'choice', q:'She hardly watches TV, ___?', opts:['A. doesn\'t she','B. does she','C. isn\'t she','D. is she'], ans:1, hint:'hardly 看作否定 → 疑问部分用肯定' },
+      { type:'choice', q:'Let\'s have a break, ___?', opts:['A. will you','B. shall we','C. do we','D. don\'t we'], ans:1, hint:'Let\'s 固定配 shall we' },
+    ]
+  },
+  {
+    id: 'm1u3-2',
+    module: '模块一',
+    unit: 'Unit 3',
+    topic: '外表与健康',
+    tag: 'grammar',
+    tagText: '语法',
+    title: '现在分词 & 过去分词作定语',
+    desc: '分词可以放在名词前面作定语（像形容词一样），这个知识点阅读中频率超高！',
+    rule: `<b>🔹 现在分词 (doing) — 表示主动 / 正在进行：</b><br>
+&nbsp;&nbsp;the <b>rising</b> sun = the sun that is rising（正在升起的太阳）<br>
+&nbsp;&nbsp;a <b>surprising</b> result = a result that surprises people（令人惊讶的结果）<br>
+&nbsp;&nbsp;the <b>sleeping</b> baby = the baby who is sleeping（正在睡觉的婴儿）<br><br>
+<b>🔹 过去分词 (done) — 表示被动 / 已完成：</b><br>
+&nbsp;&nbsp;a <b>broken</b> window = a window that was broken（被打碎的窗户）<br>
+&nbsp;&nbsp;a <b>surprised</b> look = a look showing surprise（感到惊讶的表情）<br>
+&nbsp;&nbsp;<b>polluted</b> water = water that is polluted（被污染的水）<br><br>
+<b>🔑 感情类动词的 -ing/-ed 区别（高频考点！）：</b><br>
+• -ing → 令人...的（修饰事物）→ interesting, exciting, surprising, disappointing...<br>
+• -ed → 感到...的（修饰人的感受）→ interested, excited, surprised, disappointed...<br><br>
+&nbsp;&nbsp;The news is <b>exciting</b>. I am <b>excited</b> about it.`,
+    example: 'The excited children = 兴奋的孩子们 | The exciting news = 令人兴奋的消息',
+    exercises: [
+      { type:'choice', q:'The ___ look on his face showed that he was ___ at the news.', opts:['A. surprised; surprised','B. surprising; surprising','C. surprised; surprising','D. surprising; surprised'], ans:0, hint:'感到惊讶的表情(surprised look) + 对消息感到惊讶(was surprised)' },
+      { type:'choice', q:'There is a ___ pool near our home. We often go ___ there in summer.', opts:['A. swimming; swimming','B. swimming; swim','C. swim; swimming','D. swim; swim'], ans:0, hint:'swimming pool(游泳池) + go swimming(去游泳)' },
+      { type:'choice', q:'The problem ___ at yesterday\'s meeting is very important.', opts:['A. discussing','B. discussed','C. being discussed','D. to discuss'], ans:1, hint:'被讨论的问题 → 过去分词表示被动+完成' },
+    ]
+  },
+  {
+    id: 'm1u3-3',
+    module: '模块一',
+    unit: 'Unit 3',
+    topic: '外表与健康',
+    tag: 'vocab',
+    tagText: '词汇',
+    title: '健康生活核心词汇 · Health & Fitness',
+    desc: '谈论健康、饮食和锻炼的高频词汇。',
+    rule: `<b>📝 必会词汇：</b><br>
+• <b>diet</b> n. 饮食 → a balanced diet / go on a diet<br>
+• <b>exercise</b> n.&v. 锻炼 → do exercise / exercise regularly<br>
+• <b>nutrition</b> n. 营养 → good nutrition / nutritional value<br>
+• <b>energy</b> n. 精力；能量 → full of energy / solar energy<br>
+• <b>concentrate</b> v. 集中注意力 → concentrate on...<br>
+• <b>pressure</b> n. 压力 → under pressure / peer pressure<br>
+• <b>appearance</b> n. 外貌 → physical appearance / judge by appearance<br>
+• <b>skip</b> v. 跳过；略过 → skip breakfast / skip class<br>
+• <b>recover</b> v. 恢复 → recover from illness<br>
+• <b>affect</b> v. 影响 → be affected by...`,
+    example: 'A balanced diet and regular exercise can help you stay full of energy. 均衡饮食和规律锻炼能让你精力充沛。',
+    exercises: [
+      { type:'choice', q:'You should ___ on your studies instead of playing games all day.', opts:['A. concentrate','B. depend','C. insist','D. base'], ans:0, hint:'concentrate on = 集中注意力于' },
+      { type:'choice', q:'Skipping breakfast will ___ your health in the long run.', opts:['A. effect','B. affect','C. afford','D. effort'], ans:1, hint:'affect v. 影响 / effect n. 效果' },
+    ]
+  },
+
+  // ========== 模块二 Unit 1: Tales of the Unexplained ==========
+  {
+    id: 'm2u1-1',
+    module: '模块二',
+    unit: 'Unit 1',
+    topic: '未解之谜',
+    tag: 'grammar',
+    tagText: '语法',
+    title: '现在完成时的时间状语',
+    desc: '现在完成时与不同时间状语的搭配规则，是模块二的重点时态深化。',
+    rule: `<b>🔹 常用时间状语分类：</b><br>
+<b>① 表频率：</b>ever, never, once, twice, many times...<br>
+&nbsp;&nbsp;Have you <b>ever</b> been to Beijing?<br>
+<b>② 表刚刚/已经/还没：</b>just, already, yet<br>
+&nbsp;&nbsp;I have <b>just</b> arrived. / I haven't finished <b>yet</b>.<br>
+<b>③ 表持续(接时间段)：</b>for + 时间段, since + 时间点<br>
+&nbsp;&nbsp;I have studied here <b>for 3 years / since 2023</b>.<br>
+<b>④ 表至今为止：</b>so far, up to now, until now, recently<br>
+&nbsp;&nbsp;<b>So far</b>, everything has been going well.<br>
+<b>⑤ 表次数：</b>It is the first/second time that... (从句用现在完成时)<br>
+&nbsp;&nbsp;It is the <b>first time</b> that I <b>have visited</b> Nanjing.<br><br>
+⚠️ <b>have been to</b>（去过已回）/ <b>have gone to</b>（去了未归）的区别务必掌握！`,
+    example: 'This is the second time that I have read this book. 这是我第二次读这本书了。',
+    exercises: [
+      { type:'choice', q:'— Where is Tom? — He ___ the library. He\'ll be back in an hour.', opts:['A. has been to','B. has gone to','C. went to','D. goes to'], ans:1, hint:'人不在此处（去了未归）→ has gone to' },
+      { type:'choice', q:'It is the third time that the athlete ___ the gold medal.', opts:['A. wins','B. won','C. has won','D. is winning'], ans:2, hint:'It is the + 序数词 time that... → 从句用现在完成时' },
+      { type:'fill', q:'用括号内动词的适当形式填空：So far, no one ___ (be) able to explain the mystery.', ans:'has been', hint:'so far → 现在完成时；no one 看作单数' },
+    ]
+  },
+  {
+    id: 'm2u1-2',
+    module: '模块二',
+    unit: 'Unit 1',
+    topic: '未解之谜',
+    tag: 'reading',
+    tagText: '阅读',
+    title: '推测与可能性表达 · Making Speculations',
+    desc: '阅读科普类文章时，经常遇到表达推测的语言，掌握这些表达能快速理解作者态度。',
+    rule: `<b>📝 表示"可能/也许"：</b><br>
+• may/might have done → 可能已经做了...<br>
+&nbsp;&nbsp;They <b>may have discovered</b> a new species.<br>
+• could have done → 本来可能...<br>
+&nbsp;&nbsp;The ancient people <b>could have built</b> this with simple tools.<br><br>
+<b>📝 表示"一定/肯定"：</b><br>
+• must have done → 一定已经做了...<br>
+&nbsp;&nbsp;He <b>must have left</b> early. （推测他一定早走了）<br><br>
+<b>📝 表示"据说/据报道"：</b><br>
+• It is said that... / It is reported that... / It is believed that...<br>
+&nbsp;&nbsp;<b>It is said that</b> the temple was built 1000 years ago.<br><br>
+<b>📝 表示"似乎/好像"：</b><br>
+• seem to do / It seems that...<br>
+&nbsp;&nbsp;The creature <b>seems to have</b> disappeared.`,
+    example: 'Scientists believe that the ancient city must have been destroyed by a natural disaster. 科学家们认为这座古城一定是被自然灾害摧毁的。',
+    exercises: [
+      { type:'choice', q:'It ___ that no one has ever seen this kind of animal before.', opts:['A. seems','B. looks','C. appears','D. all of the above'], ans:3, hint:'It seems/appears/looks that... 都可以表示"似乎"' },
+      { type:'choice', q:'The door is open. He ___ to lock it before leaving.', opts:['A. must forget','B. must have forgotten','C. should forget','D. could forget'], ans:1, hint:'对过去事情的肯定推测 → must have done' },
+    ]
+  },
+
+  // ========== 模块二 Unit 2: Wish You Were Here ==========
+  {
+    id: 'm2u2-1',
+    module: '模块二',
+    unit: 'Unit 2',
+    topic: '旅行',
+    tag: 'grammar',
+    tagText: '语法',
+    title: '将来进行时 (Future Continuous)',
+    desc: '将来进行时表示将来某个时间点正在进行的动作，是高一新接触的时态。',
+    rule: `<b>📐 结构：</b>will be + doing<br><br>
+<b>🔹 用法一：将来某时刻正在进行的动作</b><br>
+&nbsp;&nbsp;This time tomorrow, I <b>will be flying</b> to Beijing.<br>
+&nbsp;&nbsp;（明天这个时候，我正飞往北京）<br><br>
+<b>🔹 用法二：按计划安排好的将来动作</b><br>
+&nbsp;&nbsp;We <b>will be visiting</b> the Great Wall next Monday.<br>
+&nbsp;&nbsp;（下周一我们按计划将参观长城）<br><br>
+<b>🔹 用法三：礼貌询问对方计划（不想干涉对方）</b><br>
+&nbsp;&nbsp;<b>Will</b> you <b>be using</b> your car this afternoon?<br>
+&nbsp;&nbsp;（今天下午你会用车吗？— 比 Will you use... 更委婉）<br><br>
+⚠️ <b>将来进行时 vs 一般将来时：</b>将来进行时强调"按计划、自然发生"，一般不表意愿。`,
+    example: 'This time next week, I will be lying on the beach! 下周这个时候，我就躺在沙滩上了！',
+    exercises: [
+      { type:'choice', q:'This time tomorrow, we ___ a meeting in the school hall.', opts:['A. will have','B. will be having','C. are having','D. have'], ans:1, hint:'this time tomorrow → 将来某个具体时刻 → 将来进行时' },
+      { type:'choice', q:'— Will you ___ your bike this afternoon? — No, you can use it.', opts:['A. use','B. be using','C. have used','D. used'], ans:1, hint:'委婉询问对方的安排 → 将来进行时更礼貌' },
+    ]
+  },
+  {
+    id: 'm2u2-2',
+    module: '模块二',
+    unit: 'Unit 2',
+    topic: '旅行',
+    tag: 'grammar',
+    tagText: '语法',
+    title: '过去完成时 (Past Perfect)',
+    desc: '表示"过去的过去"，即某个动作发生在过去某个时间点之前。叙事类文章高频出现！',
+    rule: `<b>📐 结构：</b>had + done<br><br>
+<b>🔹 用法一：过去的过去</b><br>
+&nbsp;&nbsp;When I arrived at the station, the train <b>had</b> already <b>left</b>.<br>
+&nbsp;&nbsp;（我到车站时，火车已经开走了 → 火车先走，我后到）<br><br>
+<b>🔹 用法二：到过去某时间为止</b><br>
+&nbsp;&nbsp;By the end of last term, we <b>had learned</b> 2000 English words.<br>
+&nbsp;&nbsp;（到上学期末为止，我们已经学了2000个单词）<br><br>
+<b>🔹 用法三：hope/expect/plan/want 等用过去完成时表"未曾实现的愿望"</b><br>
+&nbsp;&nbsp;I <b>had hoped</b> to visit you, but I was too busy.<br>
+&nbsp;&nbsp;（我本希望去看你，但太忙了）<br><br>
+<b>🔑 常用标志词：</b>by + 过去时间, before + 过去时间, when/after + 过去动作`,
+    example: 'By the time we got to the cinema, the film had already begun. 我们到电影院时，电影已经开始了。',
+    exercises: [
+      { type:'choice', q:'By the end of last month, they ___ the project.', opts:['A. finished','B. have finished','C. had finished','D. would finish'], ans:2, hint:'by + 过去时间 → 过去完成时' },
+      { type:'fill', q:'用括号内动词的适当形式填空：When I got home, my mother ___ (already cook) dinner.', ans:'had already cooked', hint:'我到家之前妈妈已经做好了饭 → 过去的过去' },
+    ]
+  },
+  {
+    id: 'm2u2-3',
+    module: '模块二',
+    unit: 'Unit 2',
+    topic: '旅行',
+    tag: 'vocab',
+    tagText: '词汇',
+    title: '旅行与探险核心词汇 · Travel & Adventure',
+    desc: '旅行和探险话题的高频词汇，写作和阅读都需要掌握。',
+    rule: `<b>📝 必会词汇：</b><br>
+• <b>adventure</b> n. 冒险 → go on an adventure<br>
+• <b>explore</b> v. 探索 → explore the world<br>
+• <b>arrange</b> v. 安排 → arrange for...<br>
+• <b>supply</b> n.&v. 供应 → water supply / supply...with...<br>
+• <b>distance</b> n. 距离 → in the distance / long distance<br>
+• <b>schedule</b> n. 时间表 → on schedule / ahead of schedule<br>
+• <b>view</b> n. 景色；观点 → a beautiful view / in my view<br>
+• <b>destination</b> n. 目的地 → reach one's destination<br>
+• <b>pack</b> v. 打包 → pack up / pack one's bags<br>
+• <b>worthwhile</b> adj. 值得的 → a worthwhile trip`,
+    example: 'Exploring new places is always an exciting adventure worth remembering. 探索新地方总是值得铭记的激动人心的冒险。',
+    exercises: [
+      { type:'choice', q:'We need to ___ the meeting for next Friday. Can everyone make it?', opts:['A. explore','B. arrange','C. supply','D. pack'], ans:1, hint:'arrange the meeting = 安排会议' },
+      { type:'choice', q:'The Great Wall is a famous tourist ___ that attracts millions of visitors.', opts:['A. view','B. destination','C. schedule','D. adventure'], ans:1, hint:'tourist destination = 旅游目的地' },
+    ]
+  },
+
+  // ========== 模块二 Unit 3: Amazing People ==========
+  {
+    id: 'm2u3-1',
+    module: '模块二',
+    unit: 'Unit 3',
+    topic: '杰出人物',
+    tag: 'grammar',
+    tagText: '语法',
+    title: '被动语态全面复习',
+    desc: '模块二最后一单元的语法重点，全面掌握各种时态的被动语态。',
+    rule: `<b>📐 结构：</b>be + 过去分词（时态由 be 体现）<br><br>
+<b>🔹 各种时态的被动语态：</b><br>
+• 一般现在：am/is/are + done → The classroom <b>is cleaned</b> every day.<br>
+• 一般过去：was/were + done → The bridge <b>was built</b> in 2010.<br>
+• 一般将来：will be + done → The letter <b>will be sent</b> tomorrow.<br>
+• 现在完成：have/has been + done → The work <b>has been finished</b>.<br>
+• 过去完成：had been + done → The work <b>had been finished</b> before I came.<br>
+• 情态动词：can/must/should + be + done → Rules <b>must be followed</b>.<br>
+• 现在进行：am/is/are being + done → The road <b>is being repaired</b>.<br><br>
+⚠️ <b>不能变被动的不及物动词：</b>happen, appear, disappear, belong, take place, break out<br>
+⚠️ <b>双宾语动词的被动：</b>give/show/tell/send等有两个宾语的词，有两种被动形式`,
+    example: 'The scientist is respected by people all over the world. 这位科学家受到全世界人民的尊敬。',
+    exercises: [
+      { type:'choice', q:'The 2028 Olympic Games ___ in Los Angeles.', opts:['A. will hold','B. will be held','C. hold','D. are holding'], ans:1, hint:'奥运会是被举办 → 将来被动' },
+      { type:'choice', q:'Great changes ___ in my hometown in the past few years.', opts:['A. have taken place','B. have been taken place','C. took place','D. were taken place'], ans:0, hint:'take place 不及物 → 不能变被动！' },
+      { type:'choice', q:'The book ___ into more than 30 languages since it was published.', opts:['A. translated','B. has translated','C. has been translated','D. was translating'], ans:2, hint:'书被翻译 + since → 现在完成被动' },
+    ]
+  },
+  {
+    id: 'm2u3-2',
+    module: '模块二',
+    unit: 'Unit 3',
+    topic: '杰出人物',
+    tag: 'grammar',
+    tagText: '语法',
+    title: '强调句 (Emphatic Sentences)',
+    desc: '强调句是高一最后一个重要语法结构，用于强调句子中除谓语外的任何成分。',
+    rule: `<b>📐 结构：</b>It is/was + 被强调部分 + that/who + 其余部分<br><br>
+<b>🔹 可以强调：主语、宾语、状语（时间/地点/方式）</b><br>
+&nbsp;&nbsp;原句：I read this book in the library yesterday.<br>
+&nbsp;&nbsp;→ <b>It was I that/who</b> read this book in the library yesterday. （强调主语）<br>
+&nbsp;&nbsp;→ <b>It was this book that</b> I read in the library yesterday. （强调宾语）<br>
+&nbsp;&nbsp;→ <b>It was in the library that</b> I read this book yesterday. （强调地点）<br>
+&nbsp;&nbsp;→ <b>It was yesterday that</b> I read this book in the library. （强调时间）<br><br>
+⚠️ <b>不能强调谓语动词！</b>（要用 do/does/did 强调谓语）<br>
+⚠️ 强调人时 that/who 都可以；强调物/状语时只能用 <b>that</b><br>
+⚠️ 即使被强调部分是复数，仍用 <b>It is/was</b>，不用 They are/were`,
+    example: 'It is through hard work that he achieved his dream. 正是通过努力，他实现了梦想。',
+    exercises: [
+      { type:'choice', q:'It was in this school ___ he studied for three years.', opts:['A. where','B. that','C. which','D. when'], ans:1, hint:'强调地点状语 → 用 that（不是定语从句，不选where）' },
+      { type:'choice', q:'___ was Tom and Jerry that broke the window.', opts:['A. It','B. They','C. That','D. This'], ans:0, hint:'强调句固定用 It is/was，即使被强调部分是复数' },
+      { type:'choice', q:'It is not who is right but what is right ___ is important.', opts:['A. which','B. it','C. that','D. this'], ans:2, hint:'强调主语从句 → 用 that' },
+    ]
+  },
+  {
+    id: 'm2u3-3',
+    module: '模块二',
+    unit: 'Unit 3',
+    topic: '杰出人物',
+    tag: 'writing',
+    tagText: '写作',
+    title: '人物描写写作模板 · Describing People',
+    desc: '学会用英语描写人物，是高一写作的重要考点。掌握以下模板轻松应对！',
+    rule: `<b>📝 人物描写三段式结构：</b><br><br>
+<b>第一段（引入）：</b>介绍人物是谁 + 总体印象<br>
+&nbsp;&nbsp;The person I admire most is ___ who/that ___.<br>
+&nbsp;&nbsp;She/He is known as / famous for ___.<br><br>
+<b>第二段（展开）：</b>外貌+性格+成就/事迹<br>
+&nbsp;&nbsp;Physically, she/he is ___（外貌）. What impresses me most is her/his ___（性格特点）.<br>
+&nbsp;&nbsp;For example, when ___, she/he ___（具体事迹）.<br>
+&nbsp;&nbsp;Not only does she/he ___, but she/he also ___（倒装加分！）.<br><br>
+<b>第三段（总结）：</b>对我的影响+感悟<br>
+&nbsp;&nbsp;Inspired by her/him, I have decided to ___.<br>
+&nbsp;&nbsp;In a word, she/he sets a good example for me to follow.`,
+    example: 'The person I admire most is my English teacher, who not only teaches us knowledge but also inspires us to dream big. 我最敬佩的人是我的英语老师，她不仅教我们知识，还激励我们敢于梦想。',
+    exercises: [
+      { type:'choice', q:'在人物描写中，以下哪个句子最适合表达"他不仅学习好，还乐于助人"？', opts:['A. He studies well and helps others.','B. Not only does he study well, but he is also willing to help others.','C. He is good at studying, also helping.','D. He studies well also helps others.'], ans:1, hint:'Not only...but also 倒装结构是加分句型！' },
+      { type:'fill', q:'用适当的引导词填空：The person ___ I admire most is my father, ___ always supports me.', ans:'who/whom; who', hint:'第一个空 person 后是定语从句，第二个空 father 后也是定语从句' },
+    ]
+  },
+];
+
+// ==================== 状态管理 ====================
+let completedKP = new Set(JSON.parse(localStorage.getItem('gaoyi_kp_done') || '[]'));
+let kpAnswers = JSON.parse(localStorage.getItem('gaoyi_kp_answers') || '{}');
+let totalCorrectEx = parseInt(localStorage.getItem('gaoyi_ex_correct') || '0');
+let totalAttemptsEx = parseInt(localStorage.getItem('gaoyi_ex_attempts') || '0');
+let streakDays = parseInt(localStorage.getItem('gaoyi_streak') || '0');
+let lastVisit = localStorage.getItem('gaoyi_last_visit') || '';
+let currentView = 'kp';
+let currentModule = 'all'; // 'all' | module name
+
+// 打卡
+(function recordVisit() {
+  const today = new Date().toDateString();
+  if (lastVisit !== today) {
+    const yesterday = new Date(Date.now() - 86400000).toDateString();
+    streakDays = (lastVisit === yesterday) ? streakDays + 1 : 1;
+    localStorage.setItem('gaoyi_streak', streakDays);
+    localStorage.setItem('gaoyi_last_visit', today);
+  }
+  document.getElementById('streakDays').textContent = streakDays;
+})();
+
+function saveAll() {
+  localStorage.setItem('gaoyi_kp_done', JSON.stringify([...completedKP]));
+  localStorage.setItem('gaoyi_kp_answers', JSON.stringify(kpAnswers));
+  localStorage.setItem('gaoyi_ex_correct', totalCorrectEx);
+  localStorage.setItem('gaoyi_ex_attempts', totalAttemptsEx);
+}
+
+function updateStats() {
+  document.getElementById('statDone').textContent = completedKP.size;
+  document.getElementById('statEx').textContent = totalAttemptsEx;
+  const pct = totalAttemptsEx > 0 ? Math.round(totalCorrectEx / totalAttemptsEx * 100) : 0;
+  document.getElementById('statScore').textContent = pct + '%';
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+// ==================== 模块导航 ====================
+function buildModuleNav() {
+  const modules = [...new Set(knowledgePoints.map(k => k.module))];
+  const list = document.getElementById('moduleList');
+  let html = `<button class="mod-btn ${currentModule==='all'?'active':''}" onclick="filterModule('all')">📚 全部</button>`;
+  modules.forEach(m => {
+    const mKps = knowledgePoints.filter(k => k.module === m);
+    const mDone = mKps.every(k => completedKP.has(k.id));
+    html += `<button class="mod-btn${currentModule===m?' active':''}${mDone?' done':''}" onclick="filterModule('${m}')">${m}</button>`;
+  });
+  list.innerHTML = html;
+}
+
+function filterModule(mod) {
+  currentModule = mod;
+  buildModuleNav();
+  renderAllKP();
+}
+
+// ==================== 渲染知识点 ====================
+function renderAllKP() {
+  const container = document.getElementById('kpContainer');
+  let filtered = knowledgePoints;
+  if (currentModule !== 'all') {
+    filtered = knowledgePoints.filter(k => k.module === currentModule);
+  }
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<div style="text-align:center;padding:40px;color:var(--sub);">该模块暂无知识点</div>';
+    return;
+  }
+
+  let html = '';
+  let lastUnit = '';
+
+  filtered.forEach((kp, idx) => {
+    // 单元标题
+    if (kp.unit !== lastUnit) {
+      const uKps = filtered.filter(k => k.unit === kp.unit);
+      const uDone = uKps.every(k => completedKP.has(k.id));
+      html += `<div style="font-size:0.9rem;font-weight:700;color:var(--primary);padding:14px 0 6px 4px;display:flex;align-items:center;gap:6px;">
+        ${uDone ? '✅' : '📘'} ${kp.module} · ${kp.unit}：${kp.topic}
+      </div>`;
+      lastUnit = kp.unit;
+    }
+
+    const done = completedKP.has(kp.id);
+    const tagCls = kp.tag;
+    const tagTxt = kp.tagText;
+
+    html += `<div class="kp-card" id="kp-${kp.id}" style="${done ? 'border-left:4px solid var(--success);' : ''}">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+        <span class="kp-tag ${tagCls}">${tagTxt}</span>
+        <span style="font-size:0.72rem;color:var(--sub);">${kp.module} · ${kp.unit}</span>
+        ${done ? '<span style="font-size:0.75rem;color:var(--success);font-weight:600;">✅ 已完成</span>' : ''}
+      </div>
+      <div class="kp-title">${idx+1}. ${kp.title}</div>
+      <div class="kp-desc">${kp.desc}</div>
+      <div class="kp-rule">${kp.rule}</div>
+      <div class="kp-example">📌 <b>例句：</b>${kp.example}</div>
+
+      <!-- 练习题 -->
+      <div class="exercise">
+        <div class="ex-title">📝 配套练习（共 ${kp.exercises.length} 题）</div>
+        ${renderExercises(kp, done)}
+        ${done ? '' : `<button class="btn btn-pri" onclick="checkAllExercises('${kp.id}')">✅ 提交本课练习</button>`}
+        ${done ? `<button class="btn btn-out" onclick="resetKP('${kp.id}')">🔄 重新练习</button>` : ''}
+      </div>
+    </div>`;
+  });
+
+  container.innerHTML = html;
+  buildModuleNav();
+  updateStats();
+}
+
+function renderExercises(kp, done) {
+  return kp.exercises.map((ex, ei) => {
+    const exKey = `${kp.id}_${ei}`;
+    const userAns = kpAnswers[exKey];
+    const isCorrect = done && userAns !== undefined;
+    let correctAns = null;
+
+    if (done) {
+      if (ex.type === 'choice') correctAns = ex.ans;
+      else correctAns = ex.ans;
+    }
+
+    if (ex.type === 'choice') {
+      return `<div class="ex-item">
+        <div class="ex-q">${ei+1}. ${ex.q}</div>
+        <div class="ex-opts">
+          ${ex.opts.map((opt, oi) => {
+            let cls = 'ex-opt';
+            if (done) {
+              if (oi === ex.ans) cls += ' corr';
+              else if (userAns === oi && oi !== ex.ans) cls += ' wrng';
+            } else if (userAns === oi) {
+              cls += ' sel';
+            }
+            return `<div class="${cls}" onclick="${done ? '' : `selectExOpt('${kp.id}',${ei},${oi})`}">${opt}</div>`;
+          }).join('')}
+        </div>
+        ${done ? `<div class="ex-feedback show ${userAns === ex.ans ? 'ok' : 'no'}">💡 ${userAns === ex.ans ? '✅ 回答正确！' : '❌ 正确答案是 ' + ex.opts[ex.ans] + '。'} ${ex.hint}</div>` : ''}
+      </div>`;
+    } else {
+      // 填空题
+      const userFill = kpAnswers[exKey] || '';
+      const correct = ex.ans.toLowerCase().trim();
+      const isFillCorrect = done && userFill.toLowerCase().trim() === correct;
+      return `<div class="ex-item">
+        <div class="ex-q">${ei+1}. ${ex.q}</div>
+        <input class="fill-input" type="text" id="fill-${exKey}" value="${userFill}" placeholder="输入你的答案..."
+          ${done ? 'disabled' : ''} onchange="saveFillAnswer('${kp.id}',${ei},this.value)">
+        ${done ? `<div class="ex-feedback show ${isFillCorrect ? 'ok' : 'no'}">💡 ${isFillCorrect ? '✅ 回答正确！' : '❌ 正确答案是：' + correct + '。'} ${ex.hint}</div>` : ''}
+      </div>`;
+    }
+  }).join('');
+}
+
+function selectExOpt(kpId, ei, oi) {
+  const exKey = `${kpId}_${ei}`;
+  kpAnswers[exKey] = oi;
+  saveAll();
+  renderAllKP();
+  // 滚动回当前位置
+  const el = document.getElementById('kp-' + kpId);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function saveFillAnswer(kpId, ei, val) {
+  const exKey = `${kpId}_${ei}`;
+  kpAnswers[exKey] = val;
+  saveAll();
+}
+
+function checkAllExercises(kpId) {
+  const kp = knowledgePoints.find(k => k.id === kpId);
+  if (!kp) return;
+
+  // 检查是否都做了
+  let allDone = true;
+  kp.exercises.forEach((ex, ei) => {
+    const exKey = `${kpId}_${ei}`;
+    const ans = kpAnswers[exKey];
+    if (ans === undefined || (typeof ans === 'string' && ans.trim() === '')) {
+      allDone = false;
+    }
+  });
+
+  if (!allDone) {
+    showToast('⚠️ 请先完成所有练习题哦~');
+    return;
+  }
+
+  // 计分
+  let correct = 0;
+  kp.exercises.forEach((ex, ei) => {
+    const exKey = `${kpId}_${ei}`;
+    const userAns = kpAnswers[exKey];
+    if (ex.type === 'choice') {
+      if (userAns === ex.ans) correct++;
+    } else {
+      if (typeof userAns === 'string' && userAns.toLowerCase().trim() === ex.ans.toLowerCase().trim()) correct++;
+    }
+  });
+
+  totalAttemptsEx += kp.exercises.length;
+  totalCorrectEx += correct;
+  completedKP.add(kpId);
+  saveAll();
+  updateStats();
+
+  const pct = Math.round(correct / kp.exercises.length * 100);
+  const emoji = pct === 100 ? '🌟' : pct >= 60 ? '👏' : '💪';
+  showToast(`${emoji} 答对 ${correct}/${kp.exercises.length}！继续加油～`);
+
+  renderAllKP();
+  document.getElementById('kp-' + kpId).scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function resetKP(kpId) {
+  const kp = knowledgePoints.find(k => k.id === kpId);
+  if (!kp) return;
+  completedKP.delete(kpId);
+  kp.exercises.forEach((ex, ei) => {
+    const exKey = `${kpId}_${ei}`;
+    delete kpAnswers[exKey];
+    if (ex.type === 'choice') {
+      // 重新计算统计（回退）
+    }
+  });
+  // 重新计算统计
+  recalcStats();
+  saveAll();
+  updateStats();
+  renderAllKP();
+  document.getElementById('kp-' + kpId).scrollIntoView({ behavior: 'smooth', block: 'center' });
+  showToast('🔄 已重置，重新挑战吧！');
+}
+
+function recalcStats() {
+  totalCorrectEx = 0;
+  totalAttemptsEx = 0;
+  knowledgePoints.forEach(kp => {
+    if (completedKP.has(kp.id)) {
+      kp.exercises.forEach((ex, ei) => {
+        const exKey = `${kp.id}_${ei}`;
+        const userAns = kpAnswers[exKey];
+        totalAttemptsEx++;
+        if (ex.type === 'choice') {
+          if (userAns === ex.ans) totalCorrectEx++;
+        } else {
+          if (typeof userAns === 'string' && userAns.toLowerCase().trim() === ex.ans.toLowerCase().trim()) totalCorrectEx++;
+        }
+      });
+    }
+  });
+}
+
+// ==================== 视图切换 ====================
+function switchView(view) {
+  currentView = view;
+  document.getElementById('nav-kp').classList.toggle('active', view === 'kp');
+  document.getElementById('nav-summary').classList.toggle('active', view === 'summary');
+
+  if (view === 'kp') {
+    document.getElementById('kpContainer').style.display = 'block';
+    renderAllKP();
+  } else {
+    renderSummary();
+  }
+}
+
+function renderSummary() {
+  document.getElementById('kpContainer').style.display = 'block';
+
+  const modules = [...new Set(knowledgePoints.map(k => k.module))];
+  let html = '<div style="padding:0 0 20px;">';
+  html += '<div style="font-size:1.1rem;font-weight:700;padding:16px 0 8px;">📊 学习总览</div>';
+
+  modules.forEach(m => {
+    const mKps = knowledgePoints.filter(k => k.module === m);
+    const mDone = mKps.filter(k => completedKP.has(k.id)).length;
+    html += `<div style="background:var(--card);border-radius:14px;padding:16px;box-shadow:var(--shadow);margin-bottom:12px;">
+      <div style="font-weight:700;margin-bottom:8px;">📘 ${m}（${mDone}/${mKps.length}）</div>
+      <div class="progress-bar"><div class="fill" style="width:${Math.round(mDone/mKps.length*100)}%"></div></div>`;
+
+    const units = [...new Set(mKps.map(k => k.unit))];
+    units.forEach(u => {
+      const uKps = mKps.filter(k => k.unit === u);
+      const uDone = uKps.filter(k => completedKP.has(k.id)).length;
+      html += `<div style="font-size:0.82rem;padding:6px 0;display:flex;justify-content:space-between;border-bottom:1px solid var(--border);">
+        <span>📖 ${u}：${uKps[0].topic}</span>
+        <span style="color:${uDone===uKps.length?'var(--success)':'var(--sub)'};">${uDone}/${uKps.length} ✅</span>
+      </div>`;
+      uKps.forEach(k => {
+        const d = completedKP.has(k.id);
+        html += `<div style="font-size:0.76rem;color:var(--sub);padding:3px 0 3px 20px;">${d ? '✅' : '⬜'} ${k.title}</div>`;
+      });
+    });
+
+    html += '</div>';
+  });
+
+  // 全局统计
+  html += `<div style="background:var(--card);border-radius:14px;padding:16px;box-shadow:var(--shadow);margin-bottom:12px;">
+    <div style="font-weight:700;margin-bottom:8px;">🎯 全局统计</div>
+    <div style="font-size:0.85rem;">完成知识点：<b>${completedKP.size}</b> / ${knowledgePoints.length}</div>
+    <div style="font-size:0.85rem;">完成练习题：<b>${totalAttemptsEx}</b> 题</div>
+    <div style="font-size:0.85rem;">正确率：<b>${totalAttemptsEx>0?Math.round(totalCorrectEx/totalAttemptsEx*100):0}%</b></div>
+    <button class="btn btn-gray" style="margin-top:10px;" onclick="resetAll()">🗑️ 重置全部进度</button>
+  </div>`;
+
+  html += '</div>';
+  document.getElementById('kpContainer').innerHTML = html;
+}
+
+function resetAll() {
+  if (confirm('确定要清除所有学习进度吗？这个操作不可恢复哦！')) {
+    completedKP.clear();
+    kpAnswers = {};
+    totalCorrectEx = 0;
+    totalAttemptsEx = 0;
+    saveAll();
+    updateStats();
+    renderAllKP();
+    showToast('🔄 所有进度已重置');
+  }
+}
+
+// ==================== 初始化 ====================
+function init() {
+  buildModuleNav();
+  renderAllKP();
+  updateStats();
+}
+init();
+</script>
+</body>
+</html>

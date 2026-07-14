@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>江苏常州高一物理核心知识点复习</title>
+<style>
+  :root {
+    --bg: #f8f9fb;
+    --card: #fff;
+    --text: #2c3e50;
+    --muted: #6b7280;
+    --accent: #4f6ef7;
+    --accent-light: #eef1fe;
+    --border: #e5e7eb;
+    --tag-bg: #f0f4ff;
+    --danger: #e74c3c;
+    --success: #27ae60;
+    --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+    --shadow-lg: 0 4px 16px rgba(0,0,0,.08);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 24px;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+
+  /* 头部 */
+  .header {
+    background: linear-gradient(135deg, #4f6ef7 0%, #7c5cfc 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 32px 36px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow-lg);
+  }
+  .header h1 { font-size: 26px; margin-bottom: 6px; }
+  .header .sub { opacity: .85; font-size: 14px; }
+
+  /* 统计条 */
+  .stats {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .stat {
+    flex: 1;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .stat .num { font-size: 28px; font-weight: 700; color: var(--accent); }
+  .stat .label { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* 模块标题 */
+  .module-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 32px 0 16px;
+    padding-left: 14px;
+    border-left: 4px solid var(--accent);
+  }
+
+  /* 卡片 */
+  .card {
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: box-shadow .2s;
+  }
+  .card:hover { box-shadow: var(--shadow-lg); }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .card-header:hover { background: #fafbfc; }
+  .card-num {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    background: var(--accent-light);
+    color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .card-title { font-weight: 600; font-size: 15px; flex:1; }
+  .card-arrow { color: var(--muted); font-size: 12px; transition: transform .25s; }
+  .card.open .card-arrow { transform: rotate(180deg); }
+
+  .card-body { display: none; padding: 0 20px 20px; }
+  .card.open .card-body { display: block; }
+
+  /* 表格 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  th, td {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #f9fafb;
+    font-weight: 600;
+    width: 90px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  td { line-height: 1.65; }
+
+  /* 习题区 */
+  .problem {
+    background: #fefdf5;
+    border: 1px solid #f0ecc8;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .problem strong { color: #b8860b; }
+
+  .toggle-answer {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+  }
+  .toggle-answer:hover { text-decoration: underline; }
+  .answer {
+    display: none;
+    margin-top: 10px;
+    padding: 12px 14px;
+    background: #f0faf4;
+    border-left: 3px solid var(--success);
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+  }
+  .answer.show { display: block; }
+  .answer .ans-label { font-weight: 700; color: var(--success); }
+  .answer .highlight { color: var(--danger); font-weight: 600; }
+
+  /* 速查表 */
+  .quick-table {
+    font-size: 13px;
+  }
+  .quick-table th { width: auto; text-align: center; }
+  .quick-table td:last-child {
+    font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* 底部 */
+    /* 答案专区 */
+  .answer-key {
+    background: var(--card);
+    border-radius: 14px;
+    box-shadow: var(--shadow-lg);
+    padding: 28px 28px 20px;
+    margin: 28px 0;
+    border: 2px solid var(--accent);
+  }
+  .answer-key h3 {
+    font-size: 18px;
+    margin-bottom: 18px;
+    color: var(--accent);
+  }
+  .answer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 10px;
+  }
+  .answer-item {
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13px;
+    border-left: 3px solid var(--success);
+  }
+  .answer-item .q-num {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 12px;
+  }
+  .answer-item .q-ans {
+    font-weight: 600;
+    color: #1a1a2e;
+  }
+  .print-only { display: none; }
+  @media print {
+    .print-only { display: block; }
+  }
+
+  .footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 36px;
+    padding: 20px;
+  }
+
+  /* 响应式 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    .header { padding: 20px; }
+    .header h1 { font-size: 20px; }
+    .stats { flex-wrap: wrap; }
+    .stat { min-width: 45%; }
+    .card-header { padding: 12px 14px; }
+    .card-body { padding: 0 14px 14px; }
+    table { font-size: 13px; }
+    th, td { padding: 6px 8px; }
+  }
+
+  @media print {
+    body { background: #fff; }
+    .card { box-shadow: none; border: 1px solid #e5e7eb; break-inside: avoid; }
+    .card-body { display: block !important; }
+    .card-arrow { display: none; }
+    .answer { display: block !important; }
+    .toggle-answer { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ========== 头部 ========== -->
+<div class="header">
+  <h1>📚 江苏常州高一物理核心知识点复习</h1>
+  <div class="sub">人教版 · 必修一 + 必修二 ｜ 28 个知识点 + 28 道配套习题 ｜ 适合期末/学考复习</div>
+  <div style="margin-top:14px;">
+    <a href="#answer-key" style="display:inline-block;background:rgba(255,255,255,.2);color:#fff;padding:8px 18px;border-radius:20px;font-size:13px;text-decoration:none;border:1px solid rgba(255,255,255,.35);transition:background .2s;" onmouseover="this.style.background='rgba(255,255,255,.35)'" onmouseout="this.style.background='rgba(255,255,255,.2)'">📋 做完题直接对答案 →</a>
+  </div>
+</div>
+
+<!-- ========== 统计 ========== -->
+<div class="stats">
+  <div class="stat"><div class="num">28</div><div class="label">知识点</div></div>
+  <div class="stat"><div class="num">28</div><div class="label">配套习题</div></div>
+  <div class="stat"><div class="num">7</div><div class="label">章节覆盖</div></div>
+  <div class="stat"><div class="num">2</div><div class="label">教材册数</div></div>
+</div>
+
+<!-- ========== 必修一 ========== -->
+<h2 class="module-title">必修一</h2>
+
+<!-- 第一章 -->
+<h3 style="font-size:16px;color:var(--muted);margin:20px 0 12px;">第一章 · 运动的描述</h3>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">1</div>
+    <div class="card-title">质点与参考系</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>质点是理想化模型，当物体的大小和形状对所研究问题影响可忽略时即可视为质点；参考系是描述运动时选作参照的物体，任何物体都可选作参考系。</td></tr>
+      <tr><th>易错提醒</th><td>① 同一个物体在某些问题中是质点、另一些中不是，取决于研究问题<br>② 参考系不同，运动描述可能完全不同<br>③ 平动的物体不一定都是质点，转动的物体不一定都不是质点</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 1</strong><br>
+      下列关于质点的说法中，正确的是（ ）<br>
+      A. 研究地球自转时，地球可视为质点<br>
+      B. 研究火车从北京到上海的时间时，火车可视为质点<br>
+      C. 体积很小的物体一定能看成质点<br>
+      D. 质量很大的物体一定不能看成质点
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：B</span><br><br>
+      <strong>解析：</strong>A 选项中研究自转时地球各部分运动不同，不能视为质点；B 选项中火车长度相对于北京到上海的距离可忽略，可视为质点；C 和 D 中能否看成质点取决于研究问题而非物体大小或质量。
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">2</div>
+    <div class="card-title">位移与路程</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>位移是矢量，由初位置指向末位置的有向线段；路程是标量，是运动轨迹的长度。单向直线运动中位移大小等于路程，其他情况路程大于位移大小。</td></tr>
+      <tr><th>易错提醒</th><td>① 位移只与初末位置有关，与路径无关<br>② 说"位移"时必须指明方向和大小<br>③ 单位都是米(m)</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 2</strong><br>
+      一个人沿半径为 R 的圆形跑道跑了一圈，回到出发点，则他的位移大小和路程分别是（ ）<br>
+      A. 0，0 &nbsp; B. 2πR，0 &nbsp; C. 0，2πR &nbsp; D. 2R，2πR
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：C</span><br><br>
+      <strong>解析：</strong>回到出发点，初末位置相同，位移为 0；路程是实际经过的路径长度，一圈 = 周长 = 2πR。
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">3</div>
+    <div class="card-title">速度与速率</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>平均速度 v̄ = Δx/Δt（矢量）；瞬时速度是 Δt→0 时的极限；平均速率 = 路程/时间（标量）；瞬时速率 = 瞬时速度的大小。</td></tr>
+      <tr><th>易错提醒</th><td>① 平均速度 ≠ 速度的平均值<br>② 平均速度大小 ≤ 平均速率（只有单向直线运动时相等）<br>③ 速度的正负仅表示方向，不代表大小</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 3</strong><br>
+      一辆汽车先以 60km/h 的速度行驶了 1/3 的路程，接着以 30km/h 的速度行驶了剩下的 2/3 路程。求全程的平均速度大小。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：36 km/h</span><br><br>
+      <strong>解析：</strong>设总路程为 S，<br>
+      t₁ = (S/3) / 60 = S/180<br>
+      t₂ = (2S/3) / 30 = 2S/90 = S/45 = 4S/180<br>
+      t 总 = 5S/180 = S/36<br>
+      v̄ = S / (S/36) = <span class="highlight">36 km/h</span><br>
+      注意：单向直线运动，平均速度大小 = 平均速率。
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">4</div>
+    <div class="card-title">加速度</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>a = Δv/Δt，描述速度变化快慢的矢量；方向与 Δv 方向相同；匀变速运动中 a 恒定不变。</td></tr>
+      <tr><th>易错提醒</th><td>① a 大不代表 v 大（如启动瞬间 v=0 但 a 很大）<br>② a 减小不意味着 v 减小（只要 a 与 v 同向，v 就增大）<br>③ a 为负不代表减速——a 与 v 同向则加速，反向则减速</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 4</strong><br>
+      关于速度和加速度的关系，下列说法正确的是（ ）<br>
+      A. 速度变化量越大，加速度越大<br>
+      B. 速度变化越快，加速度越大<br>
+      C. 加速度方向保持不变，速度方向也一定保持不变<br>
+      D. 加速度大小不断变小，速度大小也一定不断变小
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：B</span><br><br>
+      <strong>解析：</strong>A 中 Δv 大但若 Δt 也大，a 不一定大；B 正确，"变化快慢"正是加速度的物理意义；C 如竖直上抛运动中 a = g 方向始终向下，但速度方向会反向；D 中若 a 与 v 同向，a 变小只是加速变慢，v 仍在增大。
+    </div>
+  </div>
+</div>
+
+<!-- 第二章 -->
+<h3 style="font-size:16px;color:var(--muted);margin:24px 0 12px;">第二章 · 匀变速直线运动</h3>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">5</div>
+    <div class="card-title">速度公式 v = v₀ + at</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>匀变速直线运动中速度随时间均匀变化；v₀ 为初速度，a 为加速度（同向取正，反向取负）。</td></tr>
+      <tr><th>易错提醒</th><td>① 刹车问题注意<span class="highlight">"刹车陷阱"</span>——先判断停车时间，超出后 v=0<br>② 注意 a 的正负号选取</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 5</strong><br>
+      一辆汽车以 10m/s 的速度匀速行驶，因前方有障碍紧急刹车，加速度大小为 2m/s²。求：<br>
+      (1) 刹车后 3s 末的速度；<br>
+      (2) 刹车后 6s 末的速度。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：(1) 4m/s；(2) 0</span><br><br>
+      <strong>解析：</strong>取初速度方向为正，则 a = -2m/s²。<br>
+      先求刹车时间：t₀ = (0 - 10)/(-2) = <span class="highlight">5s</span><br>
+      (1) t = 3s &lt; 5s，v = 10 - 2×3 = 4m/s<br>
+      (2) t = 6s &gt; 5s，车已停下，v = 0<br>
+      🔑 <span class="highlight">典型刹车陷阱：超出刹车时间后速度为零而非负数！</span>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">6</div>
+    <div class="card-title">位移公式 x = v₀t + ½at²</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>匀变速直线运动位移公式；注意正负号统一；结合速度公式可推导出其他推论。</td></tr>
+      <tr><th>易错提醒</th><td>① 位移 x 可以是负值（表示在出发点反方向）<br>② 先确定正方向，再统一正负号</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 6</strong><br>
+      一物体做匀加速直线运动，初速度为 2m/s，加速度为 0.5m/s²。求：<br>
+      (1) 前 10s 内的位移；<br>
+      (2) 第 10s 内的位移。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：(1) 45m；(2) 6.75m</span><br><br>
+      <strong>解析：</strong><br>
+      (1) x₁₀ = 2×10 + ½×0.5×10² = 20 + 25 = 45m<br>
+      (2) 第 10s 内 = 前 10s - 前 9s<br>
+      x₉ = 2×9 + ½×0.5×81 = 18 + 20.25 = 38.25m<br>
+      Δx = 45 - 38.25 = 6.75m
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">7</div>
+    <div class="card-title">推论 v² - v₀² = 2ax</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>不含时间 t，适合解决"已知位移求速度"或"已知速度求位移"类问题。</td></tr>
+      <tr><th>易错提醒</th><td>① 确定正方向并统一符号<br>② 仅适用于匀变速直线运动<br>③ 匀减速时 a 取负值</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 7</strong><br>
+      一辆汽车以 72km/h 的速度行驶，紧急刹车后滑行 40m 停下。求：<br>
+      (1) 刹车过程中的加速度大小；<br>
+      (2) 刹车后滑行 20m 时的速度。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：(1) 5m/s²；(2) 10√2 ≈ 14.1m/s</span><br><br>
+      <strong>解析：</strong>v₀ = 72km/h = 20m/s<br>
+      (1) v² - v₀² = 2ax → 0 - 20² = 2a×40 → a = -5m/s²，大小为 5m/s²<br>
+      (2) v² - 20² = 2×(-5)×20 → v² = 400 - 200 = 200 → v = √200 = 10√2 m/s ≈ 14.1m/s
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">8</div>
+    <div class="card-title">自由落体运动</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>v₀=0，a=g≈10m/s²（江苏高考一般取 g=10m/s²）；公式：v=gt，h=½gt²，v²=2gh。</td></tr>
+      <tr><th>易错提醒</th><td>① 自由落体 ≠ 一般的竖直下落（必须 v₀=0 + 仅受重力）<br>② 所有物体在同一地点 g 相同，与质量无关</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 8</strong><br>
+      从离地面 80m 的高处自由释放一个小球，不计空气阻力，g 取 10m/s²。求：<br>
+      (1) 小球落地时的速度大小；<br>
+      (2) 小球下落一半高度时的速度大小。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：(1) 40m/s；(2) 20√2 ≈ 28.3m/s</span><br><br>
+      <strong>解析：</strong><br>
+      (1) v² = 2gh = 2×10×80 = 1600 → v = 40m/s<br>
+      (2) h' = 40m，v'² = 2×10×40 = 800 → v' = 20√2 ≈ 28.3m/s
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">9</div>
+    <div class="card-title">竖直上抛运动</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>全程为匀减速直线运动（a = -g）；H = v₀²/(2g)；上升时间 = 下落回原点时间 = v₀/g；对称性：同一高度速率相等、时间对称。</td></tr>
+      <tr><th>易错提醒</th><td>① 取竖直向上为正方向时 a = -g 全程不变<br>② 利用对称性可快速解题<br>③ 落回抛出点下方时位移为负</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 9</strong><br>
+      以 30m/s 的初速度竖直向上抛出一小球，g 取 10m/s²。求：<br>
+      (1) 小球能上升的最大高度；<br>
+      (2) 小球上升到最高点所用的时间；<br>
+      (3) 抛出后 5s 末小球的位置（以抛出点为原点，向上为正）。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：(1) 45m；(2) 3s；(3) 25m（抛出点上方 25m）</span><br><br>
+      <strong>解析：</strong><br>
+      (1) H = v₀²/(2g) = 30²/20 = 45m<br>
+      (2) t = v₀/g = 30/10 = 3s<br>
+      (3) x = 30×5 - ½×10×25 = 150 - 125 = 25m<br>
+      (抛出 3s 到最高点，下落 2s，下落距离 20m，45-20=25m ✓)
+    </div>
+  </div>
+</div>
+
+<!-- 第三章 -->
+<h3 style="font-size:16px;color:var(--muted);margin:24px 0 12px;">第三章 · 相互作用</h3>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">10</div>
+    <div class="card-title">重力与弹力</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>重力 G=mg，方向竖直向下；弹力产生条件：接触 + 弹性形变；胡克定律 F=kx；弹力方向垂直于接触面指向受力物体。</td></tr>
+      <tr><th>易错提醒</th><td>① 重心不一定在物体上（如圆环重心在圆心）<br>② 绳的拉力只沿绳的方向<br>③ 弹簧弹力可由压缩或拉伸产生，注意方向判断</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 10</strong><br>
+      一根轻弹簧，在 10N 的拉力作用下长度为 12cm，在 20N 的拉力作用下长度为 14cm。求弹簧的原长和劲度系数。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：原长 10cm；劲度系数 500N/m</span><br><br>
+      <strong>解析：</strong>设原长为 L₀ m，劲度系数为 k<br>
+      F₁ = k(L₁ - L₀)：10 = k(0.12 - L₀) ...①<br>
+      F₂ = k(L₂ - L₀)：20 = k(0.14 - L₀) ...②<br>
+      ②-①：10 = k × 0.02 → k = 500 N/m<br>
+      代入①：10 = 500(0.12 - L₀) → L₀ = 0.10m = 10cm
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">11</div>
+    <div class="card-title">摩擦力</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>静摩擦力：0 ≤ f ≤ f_max，方向与相对运动趋势方向相反；滑动摩擦力：f = μF_N，方向与相对运动方向相反。</td></tr>
+      <tr><th>易错提醒</th><td>① 摩擦力不一定是阻力——也可以是动力（如人走路时地面给的静摩擦力）<br>② f = μF_N 中 F_N 不一定等于 mg<br>③ 静摩擦力是被动力，大小随外力变化</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 11</strong><br>
+      一个质量为 2kg 的物体放在水平地面上，物体与地面的动摩擦因数为 0.4，最大静摩擦力为 10N。现用水平力 F 拉物体，分别求 F = 5N、F = 8N、F = 12N 时物体受到的摩擦力。（g 取 10m/s²）
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：5N（静）；8N（静）；8N（滑动）</span><br><br>
+      <strong>解析：</strong>F_N = mg = 20N，滑动摩擦力 f = μF_N = 0.4×20 = <span class="highlight">8N</span>，最大静摩擦力 = 10N<br>
+      - F=5N &lt; 10N：物体未动，f = F = 5N（静摩擦力）<br>
+      - F=8N &lt; 10N：物体未动，f = F = 8N（静摩擦力）<br>
+      - F=12N &gt; 10N：物体运动，f = 8N（滑动摩擦力，不再随 F 增大而增大）
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">12</div>
+    <div class="card-title">力的合成与分解</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>遵循平行四边形定则；两个力合力范围：|F₁-F₂| ≤ F_合 ≤ F₁+F₂；正交分解法：将力沿两个相互垂直的方向分解，分别列方程。</td></tr>
+      <tr><th>易错提醒</th><td>① 合力不一定比分力大<br>② 分力不是实际存在的力，是等效替代<br>③ 正交分解是解题的核心方法，务必熟练掌握</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 12</strong><br>
+      两个共点力 F₁ 和 F₂ 的合力为 F，下列说法正确的是（ ）<br>
+      A. F 一定大于 F₁ 和 F₂ 中的任何一个<br>
+      B. F 可能小于 F₁ 和 F₂ 中的任何一个<br>
+      C. F 的大小随 F₁ 和 F₂ 间夹角的增大而增大<br>
+      D. 若 F₁:F₂ = 3:4，则 F 一定等于 5
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：B</span><br><br>
+      <strong>解析：</strong>A 错误，合力可能小于分力（如夹角很大时）；B 正确；C 错误，合力随夹角增大而减小；D 错误，仅当夹角为 90° 时 F=5，其他角度不一定。
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">13</div>
+    <div class="card-title">共点力平衡</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>平衡条件：合力为零（∑F=0）；常用方法：正交分解法（∑F_x=0，∑F_y=0）、三角形法、相似三角形法。</td></tr>
+      <tr><th>易错提醒</th><td>① 受力分析按"重力→弹力→摩擦力→其他力"顺序避免遗漏<br>② 注意"缓慢移动"（动态平衡）vs"加速运动"的区别</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 13</strong><br>
+      用两根轻绳 AO 和 BO 悬挂一个质量为 m 的物体，AO 与竖直方向夹角为 37°，BO 水平。求两绳的拉力大小。（sin37°=0.6，cos37°=0.8）
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：AO 绳拉力 = 1.25mg；BO 绳拉力 = 0.75mg</span><br><br>
+      <strong>解析：</strong>对 O 点受力分析，设 AO 拉力为 T_A，BO 拉力为 T_B<br>
+      竖直方向：T_A·cos37° = mg → T_A × 0.8 = mg → T_A = 1.25mg<br>
+      水平方向：T_A·sin37° = T_B → 1.25mg × 0.6 = T_B → T_B = 0.75mg
+    </div>
+  </div>
+</div>
+
+<!-- 第四章 -->
+<h3 style="font-size:16px;color:var(--muted);margin:24px 0 12px;">第四章 · 牛顿运动定律</h3>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">14</div>
+    <div class="card-title">牛顿三定律</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>第一定律（惯性定律）：不受力时保持静止或匀速直线运动；第二定律：F_合 = ma；第三定律：作用力与反作用力等大、反向、共线、作用在不同物体上。</td></tr>
+      <tr><th>易错提醒</th><td>① 惯性只与质量有关，与速度无关<br>② 作用力与反作用力不能抵消（作用在不同物体上）<br>③ F_合 = ma 中 F_合 是物体所受所有外力的合力</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 14</strong><br>
+      关于惯性的说法正确的是（ ）<br>
+      A. 物体运动速度越大，惯性越大<br>
+      B. 汽车刹车时乘客前倾是因为受到了向前的惯性力<br>
+      C. 物体静止时没有惯性<br>
+      D. 质量是惯性大小的唯一量度
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：D</span><br><br>
+      <strong>解析：</strong>惯性只与质量有关，与运动状态（静止/运动、速度快慢）无关；刹车时乘客前倾是因为乘客具有惯性保持原来的运动状态，不是受到"惯性力"。
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">15</div>
+    <div class="card-title">超重与失重</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>超重：F_N > mg，a 向上（加速上升或减速下降）；失重：F_N < mg，a 向下（加速下降或减速上升）；完全失重：F_N = 0，a = g 向下。</td></tr>
+      <tr><th>易错提醒</th><td>① 超重不是重力变大，失重不是重力变小——重力始终是 mg<br>② 超重/失重只与加速度方向有关，与速度方向无关<br>③ 物体在超重/失重状态下重力依然存在</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 15</strong><br>
+      一个质量为 60kg 的人站在电梯的体重计上，g 取 10m/s²。分别求下列情况下体重计的示数：<br>
+      (1) 电梯以 2m/s² 加速上升；<br>
+      (2) 电梯以 2m/s² 加速下降；<br>
+      (3) 电梯以 2m/s 的速度匀速上升。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：(1) 720N；(2) 480N；(3) 600N</span><br><br>
+      <strong>解析：</strong>体重计示数 = 人对体重计的压力 F_N（即视重）<br>
+      (1) a 向上，超重：F_N - mg = ma → F_N = 600 + 120 = 720N<br>
+      (2) a 向下，失重：mg - F_N = ma → F_N = 600 - 120 = 480N<br>
+      (3) 匀速 a = 0：F_N = mg = 600N
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">16</div>
+    <div class="card-title">连接体问题（整体法与隔离法）</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>整体法：将多个物体看作一个系统，F_外 = (m₁+m₂+...)a；隔离法：单独分析某个物体受力，求相互作用力。</td></tr>
+      <tr><th>易错提醒</th><td>① 一般先用整体法求 a，再用隔离法求内力<br>② 整体法的前提是各部分加速度相同<br>③ 若加速度不同则只能用隔离法</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 16</strong><br>
+      质量分别为 m_A = 4kg 和 m_B = 2kg 的两个物体紧靠在一起，放在光滑水平面上。用水平力 F = 30N 推 A 物体。求：<br>
+      (1) 两物体的加速度；<br>
+      (2) A 对 B 的推力。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：(1) 5m/s²；(2) 10N</span><br><br>
+      <strong>解析：</strong><br>
+      (1) 整体法：F = (m_A + m_B)·a → 30 = 6a → a = 5m/s²<br>
+      (2) 隔离 B：F_AB = m_B·a = 2 × 5 = 10N
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">17</div>
+    <div class="card-title">临界问题</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>临界状态是物体从一种运动状态过渡到另一种的转折点；常见临界：恰好滑动（f = f_max）、恰好分离（F_N = 0）、绳恰好绷紧或松弛（T = 0）。</td></tr>
+      <tr><th>易错提醒</th><td>① 找准临界条件是关键<br>② 临界条件往往是某个力恰好为零或恰好达到最大值<br>③ 找出临界加速度或临界力后，比较实际值与临界值做判断</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 17</strong><br>
+      质量 m = 1kg 的小球用长为 L = 0.5m 的细线悬挂，在水平面内做匀速圆周运动（圆锥摆）。当角速度 ω = 5rad/s 时，求细线与竖直方向的夹角 θ。（g 取 10m/s²）
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：θ ≈ 36.9°（cosθ = 0.8）</span><br><br>
+      <strong>解析：</strong>小球受重力和绳拉力，合力提供向心力<br>
+      水平方向：Tsinθ = mω²r = mω²(Lsinθ)<br>
+      sinθ ≠ 0 时，T = mω²L = 1×25×0.5 = 12.5N<br>
+      竖直方向：Tcosθ = mg → cosθ = mg/T = 10/12.5 = 0.8 → θ = arccos(0.8) ≈ 36.9°
+    </div>
+  </div>
+</div>
+
+<!-- ========== 必修二 ========== -->
+<h2 class="module-title">必修二</h2>
+
+<!-- 第五章 -->
+<h3 style="font-size:16px;color:var(--muted);margin:20px 0 12px;">第五章 · 曲线运动</h3>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">18</div>
+    <div class="card-title">运动的合成与分解</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>合运动与分运动具有等时性、独立性、等效性；小船过河模型：最短时间 t = d/v_船；最短位移需判断 v_船 与 v_水 的大小关系。</td></tr>
+      <tr><th>易错提醒</th><td>① 各分运动互不干扰、独立进行<br>② 合运动的性质由两个分运动的性质共同决定<br>③ 两直线运动的合运动不一定是直线运动</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 18</strong><br>
+      一条河宽 200m，水流速度为 3m/s，小船在静水中的速度为 5m/s。求：<br>
+      (1) 小船以最短时间过河，过河时间？到达对岸的位置？<br>
+      (2) 小船以最短位移过河，船头应指向什么方向？过河时间？
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：(1) 40s，正对岸下游 120m；(2) 船头偏向上游与河岸夹角 53°，50s</span><br><br>
+      <strong>解析：</strong><br>
+      (1) 最短时间：船头垂直对岸，t = d/v_船 = 200/5 = 40s<br>
+      下游漂移：x = v_水 × t = 3 × 40 = 120m<br>
+      (2) v_船 &gt; v_水，可实现垂直过河（最短位移 = 河宽）<br>
+      cosθ = 3/5 → θ = 53°（船头与河岸夹角）<br>
+      v_合 = √(5²-3²) = 4m/s → t = 200/4 = 50s
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">19</div>
+    <div class="card-title">平抛运动</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>水平：匀速直线运动 x = v₀t；竖直：自由落体 y = ½gt²；合速度 v = √(v₀²+(gt)²)；速度偏转角 tanα = gt/v₀——是位移偏转角 tanθ = gt/(2v₀) 的 2 倍。</td></tr>
+      <tr><th>易错提醒</th><td>① 平抛是匀变速曲线运动（a=g 恒定）<br>② 落地时间只由高度决定 t = √(2h/g)<br>③ 速度反向延长线过水平位移中点</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 19</strong><br>
+      从 20m 高的地方以 10m/s 的水平速度抛出一物体，g 取 10m/s²。求：<br>
+      (1) 物体在空中运动的时间；<br>
+      (2) 落地点与抛出点的水平距离；<br>
+      (3) 落地时的速度大小。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：(1) 2s；(2) 20m；(3) 10√5 ≈ 22.4m/s</span><br><br>
+      <strong>解析：</strong><br>
+      (1) y = ½gt² → 20 = ½×10×t² → t = 2s<br>
+      (2) x = v₀t = 10 × 2 = 20m<br>
+      (3) v_y = gt = 20m/s，v = √(10² + 20²) = √500 = 10√5 ≈ 22.4m/s
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">20</div>
+    <div class="card-title">圆周运动基本概念</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>v = 2πr/T = ωr；ω = 2π/T；a_n = v²/r = ω²r。同轴转动 ω 相同，皮带/齿轮传动 v 相同。</td></tr>
+      <tr><th>易错提醒</th><td>① 同轴转动物体 ω 相同，同带传动物体 v 相同<br>② v、ω、T、n 之间的关系要熟练转换<br>③ 匀速圆周运动中 v 大小不变但方向时刻改变，是变加速运动</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 20</strong><br>
+      一个大轮通过皮带带动小轮转动，大轮半径是小轮的 2 倍。大轮上一点 A 到轴的距离为 r（r = 小轮半径），小轮边缘一点为 B。求 A 和 B 的线速度之比和角速度之比。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：v_A : v_B = 1 : 2；ω_A : ω_B = 1 : 2</span><br><br>
+      <strong>解析：</strong>设小轮半径为 r，则大轮半径为 2r。<br>
+      皮带传动：两轮边缘线速度相等，设大轮边缘线速度为 v。<br>
+      A 点与大轮边缘同轴转动，ω 相同：v_A / v = r / (2r) = 1/2 → v_A = v/2<br>
+      B 点在小轮边缘，v_B = v → v_A : v_B = 1 : 2<br>
+      ω_A = v_A/r_A = (v/2)/r = v/(2r)，ω_B = v_B/r_B = v/r<br>
+      ω_A : ω_B = 1/2 : 1 = 1 : 2
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">21</div>
+    <div class="card-title">向心力</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>F_n = mv²/r = mω²r = m(4π²/T²)r；向心力是效果力，由某种力或几个力的合力提供；"供需关系"分析：提供的向心力 = 需要的向心力时做匀速圆周运动。</td></tr>
+      <tr><th>易错提醒</th><td>① 向心力不是一种新的性质的力<br>② 变速圆周运动中合力不指向圆心<br>③ 离心运动不是因为受到"离心力"</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 21</strong><br>
+      一辆质量为 1000kg 的汽车以 10m/s 的速度通过一座半径为 50m 的拱桥最高点。g 取 10m/s²。求：<br>
+      (1) 汽车在最高点时对桥的压力；<br>
+      (2) 汽车以多大速度通过最高点时，对桥没有压力？
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：(1) 8000N；(2) 10√5 ≈ 22.4m/s</span><br><br>
+      <strong>解析：</strong><br>
+      (1) 最高点：mg - F_N = mv²/r<br>
+      F_N = 10000 - 1000×100/50 = 10000 - 2000 = 8000N<br>
+      由牛顿第三定律，对桥压力 = 8000N<br>
+      (2) 恰好无压力时 F_N = 0：mg = mv²/r → v = √(gr) = √500 = 10√5 ≈ 22.4m/s
+    </div>
+  </div>
+</div>
+
+<!-- 第六章 -->
+<h3 style="font-size:16px;color:var(--muted);margin:24px 0 12px;">第六章 · 万有引力</h3>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">22</div>
+    <div class="card-title">开普勒定律</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>第一定律（轨道定律）：行星沿椭圆轨道运动，太阳在焦点上；第二定律（面积定律）：行星与太阳连线在相等时间内扫过相等面积；第三定律（周期定律）：a³/T² = k（k 只与中心天体有关）。</td></tr>
+      <tr><th>易错提醒</th><td>① 第三定律中的 k 只与中心天体质量有关，与行星质量无关<br>② 中学阶段多数问题将轨道近似为圆形处理</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 22</strong><br>
+      关于开普勒行星运动定律，下列说法正确的是（ ）<br>
+      A. 所有行星绕太阳运动的轨道都是圆，太阳处在圆心上<br>
+      B. 对任意一个行星来说，它与太阳的连线在相等的时间内扫过相等的面积<br>
+      C. 对不同的行星，它们绕太阳运动的公转周期与轨道半长轴的比值都相等<br>
+      D. 开普勒定律只适用于行星绕太阳的运动
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：B</span><br><br>
+      <strong>解析：</strong>A 错误，轨道是椭圆，太阳在焦点上；B 正确，即开普勒第二定律；C 错误，k = a³/T² 相同而非 a/T 相同；D 错误，也适用于卫星绕行星等其他系统。
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">23</div>
+    <div class="card-title">万有引力定律</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>F = GMm/r²，适用于两个质点之间（均质球体可视为质量集中在球心的质点）；黄金代换：GM = gR²（在地球表面）；g_h = g·R²/(R+h)²。</td></tr>
+      <tr><th>易错提醒</th><td>① 公式中 r 为两质点间距离（不是半径也不是高度）<br>② g 在不同星球不同<br>③ 天体表面 mg = GMm/R²</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 23</strong><br>
+      已知地球半径为 R，地面重力加速度为 g，一颗离地面高度为 R 的人造地球卫星，其绕地球运行的向心加速度大小为（ ）<br>
+      A. g/4 &nbsp; B. g/2 &nbsp; C. g &nbsp; D. 2g
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：A</span><br><br>
+      <strong>解析：</strong>卫星轨道半径 r = R + h = 2R<br>
+      万有引力提供向心力：GMm/r² = ma → a = GM/r² = GM/(4R²)<br>
+      地面：GM/R² = g → GM = gR²<br>
+      所以 a = gR²/(4R²) = g/4
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">24</div>
+    <div class="card-title">卫星与宇宙速度</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>第一宇宙速度 v₁ = √(gR) = 7.9km/s（最小发射速度、最大环绕速度）；第二宇宙速度 11.2km/s（脱离地球）；第三宇宙速度 16.7km/s（脱离太阳系）；高轨低速长周期：r↑→v↓ ω↓ T↑。</td></tr>
+      <tr><th>易错提醒</th><td>① 发射速度 ≠ 环绕速度<br>② 同步卫星轨道高度约 36000km，周期 24h，定点赤道上空<br>③ 第一宇宙速度是所有卫星环绕速度中的最大值</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 24</strong><br>
+      关于地球的第一宇宙速度，下列说法正确的是（ ）<br>
+      A. 它是人造卫星绕地球做匀速圆周运动的最大速度<br>
+      B. 它是人造卫星绕地球做匀速圆周运动的最小速度<br>
+      C. 它是能使卫星进入近地圆形轨道的最小发射速度<br>
+      D. 所有绕地球运行的卫星的线速度都等于 7.9km/s
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：A、C</span><br><br>
+      <strong>解析：</strong>第一宇宙速度双重含义：① 最小发射速度（发射速度小于它无法成为卫星）；② 最大环绕速度（轨道越高速度越小，近地卫星环绕速度最大）。D 错误，不同轨道高度卫星线速度不同。
+    </div>
+  </div>
+</div>
+
+<!-- 第七章 -->
+<h3 style="font-size:16px;color:var(--muted);margin:24px 0 12px;">第七章 · 机械能守恒</h3>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">25</div>
+    <div class="card-title">功与功率</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>功 W = Fs·cosα；α&lt;90° 正功，α=90° 不做功，α&gt;90° 负功；功率 P = W/t（平均功率），P = Fv·cosα（瞬时功率）；机车两种启动：恒定功率、恒定加速度。</td></tr>
+      <tr><th>易错提醒</th><td>① 功是标量，正负仅表示动力做功还是阻力做功<br>② 一对作用力与反作用力做的总功不一定为零<br>③ 区分平均功率与瞬时功率</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 25</strong><br>
+      一个质量为 2kg 的物体，在水平拉力 F 作用下沿水平面运动。物体在 0~4s 内从静止开始做匀加速运动，4s 末速度为 4m/s。已知物体与水平面的动摩擦因数为 0.1，g 取 10m/s²。求：<br>
+      (1) 拉力 F 的大小；<br>
+      (2) 拉力在 4s 内做的功；<br>
+      (3) 拉力的平均功率。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：(1) 4N；(2) 32J；(3) 8W</span><br><br>
+      <strong>解析：</strong>a = Δv/Δt = 4/4 = 1m/s²，f = μmg = 0.1×2×10 = 2N<br>
+      (1) F - f = ma → F = 2×1 + 2 = 4N<br>
+      (2) s = ½at² = ½×1×16 = 8m，W = Fs = 4×8 = 32J<br>
+      (3) P_平均 = W/t = 32/4 = 8W
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">26</div>
+    <div class="card-title">动能定理</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>W_合 = ΔE_k = ½mv₂² - ½mv₁²；合外力做的功等于动能的变化量；适用于恒力与变力、直线与曲线——最通用的动力学方法之一。</td></tr>
+      <tr><th>易错提醒</th><td>① W_合 是合外力的功，不是某个力的功<br>② 动能定理是"状态方程"，只需初末状态<br>③ 注意区分"动能"和"动量"</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 26</strong><br>
+      一个质量为 0.5kg 的物体，从离地面 10m 的高处自由下落，陷入沙坑 0.1m 后停下。g 取 10m/s²，空气阻力不计。求沙对物体的平均阻力。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：505N</span><br><br>
+      <strong>解析：</strong>全程由动能定理：重力做正功 + 阻力做负功 = 动能变化（0 - 0 = 0）<br>
+      mg(h+d) - f·d = 0<br>
+      0.5×10×(10+0.1) - f×0.1 = 0<br>
+      5×10.1 - 0.1f = 0 → f = <span class="highlight">505N</span>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">27</div>
+    <div class="card-title">机械能守恒定律</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>条件：只有重力（或弹簧弹力）做功；E_k₁ + E_p₁ = E_k₂ + E_p₂；重力势能 E_p = mgh（h 相对于零势能面）。</td></tr>
+      <tr><th>易错提醒</th><td>① "只有重力做功"≠"只受重力"——可受其他力但其他力不做功<br>② 零势能面的选取影响 E_p 的数值，但不影响 ΔE_p<br>③ 先判断是否满足守恒条件再列方程</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 27</strong><br>
+      一个质量为 m 的小球从离地面高为 H 处自由下落，与地面碰撞后反弹的最大高度为 3H/4。忽略空气阻力，求碰撞过程中损失的机械能。
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：mgH/4</span><br><br>
+      <strong>解析：</strong>以地面为零势能面<br>
+      初始机械能：E₁ = mgH<br>
+      反弹到最高点机械能：E₂ = 3mgH/4<br>
+      损失 = E₁ - E₂ = <span class="highlight">mgH/4</span><br>
+      注：碰撞过程有非保守力做功，机械能不守恒。
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="card-num">28</div>
+    <div class="card-title">功能关系与能量守恒</div>
+    <div class="card-arrow">▼</div>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr><th>核心要点</th><td>重力做功 = -ΔE_p；除重力和弹簧弹力外的其他力做功 = ΔE_机械；摩擦生热 Q = f·s_相对；能量守恒定律：能量不会凭空产生或消失。</td></tr>
+      <tr><th>易错提醒</th><td>① 一对滑动摩擦力做的总功一定为负（生热）<br>② "功是能量转化的量度"<br>③ 传送带问题中 Q = f·s_相对，不要用 f·s_地</td></tr>
+    </table>
+    <div class="problem">
+      <strong>📝 配套习题 28</strong><br>
+      一个质量为 1kg 的物体从倾角为 37° 的斜面顶端由静止滑下，斜面高为 3m，长为 5m，物体与斜面间的动摩擦因数为 0.5。g 取 10m/s²，sin37°=0.6，cos37°=0.8。求物体滑到底端时的速度。（用动能定理求解）
+    </div>
+    <span class="toggle-answer" onclick="event.stopPropagation(); this.nextElementSibling.classList.toggle('show')">✅ 点击查看答案与解析</span>
+    <div class="answer">
+      <span class="ans-label">答案：2√5 ≈ 4.47m/s</span><br><br>
+      <strong>解析：</strong>由动能定理：<br>
+      mgh - μmgcos37°×L = ½mv² - 0<br>
+      1×10×3 - 0.5×1×10×0.8×5 = ½×1×v²<br>
+      30 - 20 = ½v² → v² = 20 → v = √20 = 2√5 ≈ 4.47 m/s
+    </div>
+  </div>
+</div>
+
+<!-- ========== 速查总表 ========== -->
+<h2 class="module-title">📊 知识点速查总表</h2>
+
+<div style="overflow-x:auto;">
+<table class="quick-table">
+  <thead>
+    <tr><th>#</th><th>模块</th><th>章节</th><th>知识点</th><th>核心公式</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>必修一</td><td>运动的描述</td><td>质点与参考系</td><td>—</td></tr>
+    <tr><td>2</td><td>必修一</td><td>运动的描述</td><td>位移与路程</td><td>Δx = x₂ - x₁</td></tr>
+    <tr><td>3</td><td>必修一</td><td>运动的描述</td><td>速度与速率</td><td>v̄ = Δx/Δt</td></tr>
+    <tr><td>4</td><td>必修一</td><td>运动的描述</td><td>加速度</td><td>a = Δv/Δt</td></tr>
+    <tr><td>5</td><td>必修一</td><td>匀变速直线运动</td><td>速度公式</td><td>v = v₀ + at</td></tr>
+    <tr><td>6</td><td>必修一</td><td>匀变速直线运动</td><td>位移公式</td><td>x = v₀t + ½at²</td></tr>
+    <tr><td>7</td><td>必修一</td><td>匀变速直线运动</td><td>速度-位移推论</td><td>v² - v₀² = 2ax</td></tr>
+    <tr><td>8</td><td>必修一</td><td>匀变速直线运动</td><td>自由落体</td><td>v = gt, h = ½gt²</td></tr>
+    <tr><td>9</td><td>必修一</td><td>匀变速直线运动</td><td>竖直上抛</td><td>H = v₀²/(2g)</td></tr>
+    <tr><td>10</td><td>必修一</td><td>相互作用</td><td>重力与弹力</td><td>G=mg, F=kx</td></tr>
+    <tr><td>11</td><td>必修一</td><td>相互作用</td><td>摩擦力</td><td>f = μF_N</td></tr>
+    <tr><td>12</td><td>必修一</td><td>相互作用</td><td>力的合成与分解</td><td>平行四边形定则</td></tr>
+    <tr><td>13</td><td>必修一</td><td>相互作用</td><td>共点力平衡</td><td>ΣF = 0</td></tr>
+    <tr><td>14</td><td>必修一</td><td>牛顿运动定律</td><td>牛顿三定律</td><td>F = ma</td></tr>
+    <tr><td>15</td><td>必修一</td><td>牛顿运动定律</td><td>超重与失重</td><td>F_N - mg = ±ma</td></tr>
+    <tr><td>16</td><td>必修一</td><td>牛顿运动定律</td><td>连接体问题</td><td>整体法+隔离法</td></tr>
+    <tr><td>17</td><td>必修一</td><td>牛顿运动定律</td><td>临界问题</td><td>f=f_max / F_N=0</td></tr>
+    <tr><td>18</td><td>必修二</td><td>曲线运动</td><td>运动合成与分解</td><td>t_min = d/v_船</td></tr>
+    <tr><td>19</td><td>必修二</td><td>曲线运动</td><td>平抛运动</td><td>x=v₀t, y=½gt²</td></tr>
+    <tr><td>20</td><td>必修二</td><td>曲线运动</td><td>圆周运动</td><td>v=ωr, a_n=v²/r</td></tr>
+    <tr><td>21</td><td>必修二</td><td>曲线运动</td><td>向心力</td><td>F_n = mv²/r</td></tr>
+    <tr><td>22</td><td>必修二</td><td>万有引力</td><td>开普勒定律</td><td>a³/T² = k</td></tr>
+    <tr><td>23</td><td>必修二</td><td>万有引力</td><td>万有引力定律</td><td>F = GMm/r²</td></tr>
+    <tr><td>24</td><td>必修二</td><td>万有引力</td><td>卫星与宇宙速度</td><td>v₁ = √(gR)</td></tr>
+    <tr><td>25</td><td>必修二</td><td>机械能守恒</td><td>功与功率</td><td>W=Fs cosα, P=Fv</td></tr>
+    <tr><td>26</td><td>必修二</td><td>机械能守恒</td><td>动能定理</td><td>W_合 = ΔE_k</td></tr>
+    <tr><td>27</td><td>必修二</td><td>机械能守恒</td><td>机械能守恒</td><td>E_k+E_p = 常数</td></tr>
+    <tr><td>28</td><td>必修二</td><td>机械能守恒</td><td>功能关系与能量守恒</td><td>Q = f·s_相对</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ========== 答案专区 ========== -->
+<div class="answer-key" id="answer-key">
+  <h3>📋 28 道习题 · 答案速查（做完再来看！）</h3>
+  <div class="answer-grid">
+    <div class="answer-item"><span class="q-num">题1</span> <span class="q-ans">B</span> — 质点取决于研究问题，与大小质量无关</div>
+    <div class="answer-item"><span class="q-num">题2</span> <span class="q-ans">C</span> — 位移0，路程2πR</div>
+    <div class="answer-item"><span class="q-num">题3</span> <span class="q-ans">36 km/h</span> — 设总路程S，加权求时间</div>
+    <div class="answer-item"><span class="q-num">题4</span> <span class="q-ans">B</span> — 加速度 = 速度变化快慢</div>
+    <div class="answer-item"><span class="q-num">题5</span> <span class="q-ans">(1) 4m/s (2) 0</span> — 刹车陷阱！先算刹车时间5s</div>
+    <div class="answer-item"><span class="q-num">题6</span> <span class="q-ans">(1) 45m (2) 6.75m</span> — 第10s内=前10s-前9s</div>
+    <div class="answer-item"><span class="q-num">题7</span> <span class="q-ans">(1) 5m/s² (2) 10√2 m/s</span> — v²-v₀²=2ax</div>
+    <div class="answer-item"><span class="q-num">题8</span> <span class="q-ans">(1) 40m/s (2) 20√2 m/s</span> — v²=2gh</div>
+    <div class="answer-item"><span class="q-num">题9</span> <span class="q-ans">(1) 45m (2) 3s (3) 25m</span> — 对称性：上升下落时间相等</div>
+    <div class="answer-item"><span class="q-num">题10</span> <span class="q-ans">原长10cm，k=500N/m</span> — 列方程组消元</div>
+    <div class="answer-item"><span class="q-num">题11</span> <span class="q-ans">5N(静), 8N(静), 8N(滑动)</span> — 先判断是否滑动</div>
+    <div class="answer-item"><span class="q-num">题12</span> <span class="q-ans">B</span> — 合力可能小于分力</div>
+    <div class="answer-item"><span class="q-num">题13</span> <span class="q-ans">T_A=1.25mg, T_B=0.75mg</span> — 正交分解法</div>
+    <div class="answer-item"><span class="q-num">题14</span> <span class="q-ans">D</span> — 惯性只与质量有关</div>
+    <div class="answer-item"><span class="q-num">题15</span> <span class="q-ans">(1)720N (2)480N (3)600N</span> — 超重a↑，失重a↓</div>
+    <div class="answer-item"><span class="q-num">题16</span> <span class="q-ans">(1) 5m/s² (2) 10N</span> — 整体法求a，隔离法求内力</div>
+    <div class="answer-item"><span class="q-num">题17</span> <span class="q-ans">θ≈36.9°</span> — cosθ=0.8，圆锥摆</div>
+    <div class="answer-item"><span class="q-num">题18</span> <span class="q-ans">(1)40s/下游120m (2)53°,50s</span> — v_船>v_水可垂直过河</div>
+    <div class="answer-item"><span class="q-num">题19</span> <span class="q-ans">(1)2s (2)20m (3)10√5 m/s</span> — 落地时间只和高度有关</div>
+    <div class="answer-item"><span class="q-num">题20</span> <span class="q-ans">v_A:v_B=1:2, ω_A:ω_B=1:2</span> — 同轴ω同，皮带v同</div>
+    <div class="answer-item"><span class="q-num">题21</span> <span class="q-ans">(1)8000N (2)10√5 m/s</span> — 拱桥最高点 mg-F_N=mv²/r</div>
+    <div class="answer-item"><span class="q-num">题22</span> <span class="q-ans">B</span> — 开普勒第二定律</div>
+    <div class="answer-item"><span class="q-num">题23</span> <span class="q-ans">A (g/4)</span> — r=2R，a=GM/(4R²)=g/4</div>
+    <div class="answer-item"><span class="q-num">题24</span> <span class="q-ans">A、C</span> — 第一宇宙速度：最小发射+最大环绕</div>
+    <div class="answer-item"><span class="q-num">题25</span> <span class="q-ans">(1)4N (2)32J (3)8W</span> — F-f=ma先求F</div>
+    <div class="answer-item"><span class="q-num">题26</span> <span class="q-ans">505N</span> — 全程动能定理：mg(h+d)=f·d</div>
+    <div class="answer-item"><span class="q-num">题27</span> <span class="q-ans">mgH/4</span> — 初机械能-末机械能</div>
+    <div class="answer-item"><span class="q-num">题28</span> <span class="q-ans">2√5 ≈ 4.47m/s</span> — 动能定理：mgh-fL=½mv²</div>
+  </div>
+</div>
+
+<div class="footer">
+  🎉 整理完毕！建议按章节顺序逐个过一遍，先看表格回顾基础，再做配套习题巩固。<br>
+  错题重点关注"易错提醒"部分。物理不难，公式吃透 + 多做题找感觉 = 💪
+</div>
+
+</div>
+
+<script>
+// 页面加载时展开第一个卡片作为示例
+document.querySelector('.card').classList.add('open');
+</script>
+</body>
+</html>

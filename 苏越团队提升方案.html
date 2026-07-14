@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>常州苏越会计服务有限公司 · 团队全面跃升方案 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+
+  :root {
+    --primary: #4F46E5; --primary-light: #EEF2FF;
+    --accent: #F97316; --accent-light: #FFF7ED;
+    --success: #10B981; --success-light: #ECFDF5;
+    --pink: #EC4899; --pink-light: #FDF2F8;
+    --sky: #0EA5E9; --sky-light: #F0F9FF;
+    --bg: #F8FAFC; --card: #FFFFFF; --text: #1E293B;
+    --text-secondary: #64748B; --border: #E2E8F0;
+    --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.05);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.08);
+    --radius: 12px; --radius-sm: 8px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 40%, #EC4899 100%);
+    color: white; padding: 80px 24px 60px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(255,255,255,0.06) 0%, transparent 50%);
+  }
+  .hero * { position: relative; z-index: 1; }
+  .hero .badge {
+    display: inline-block; background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.25);
+    padding: 6px 18px; border-radius: 99px; font-size: 14px;
+    font-weight: 500; letter-spacing: 1px; margin-bottom: 24px;
+  }
+  .hero h1 { font-size: 42px; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 12px; }
+  .hero .subtitle { font-size: 18px; opacity: 0.9; font-weight: 300; }
+  .hero .meta-row { margin-top: 32px; display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+  .hero .meta-chip {
+    background: rgba(255,255,255,0.15); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2); padding: 10px 20px;
+    border-radius: 99px; font-size: 14px; font-weight: 500;
+  }
+
+  /* Sections */
+  .section { margin: 48px auto; max-width: 1000px; padding: 0 24px; }
+  .section-title {
+    font-size: 28px; font-weight: 900; color: var(--text);
+    margin-bottom: 8px; display: flex; align-items: center; gap: 12px;
+  }
+  .section-title .icon {
+    width: 44px; height: 44px; border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+  .section-desc { color: var(--text-secondary); font-size: 15px; margin-bottom: 28px; margin-left: 56px; }
+
+  /* Cards */
+  .card {
+    background: var(--card); border-radius: var(--radius);
+    box-shadow: var(--shadow); border: 1px solid var(--border);
+    padding: 28px 32px; margin-bottom: 20px;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+  .card-header { font-size: 18px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .card-header .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+  /* Grids */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  @media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 28px; }
+  }
+
+  /* Tables */
+  .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: var(--radius-sm); border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th {
+    background: #1E293B; color: white; padding: 12px 14px;
+    text-align: left; font-weight: 600; font-size: 12px; letter-spacing: 0.5px;
+  }
+  tbody td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tbody tr:nth-child(even) { background: #F8FAFC; }
+  tbody tr:hover { background: #EEF2FF; }
+
+  /* DISC Cards */
+  .disc-card { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--border); background: white; }
+  .disc-card .disc-header { padding: 20px 16px 14px; text-align: center; color: white; }
+  .disc-card .disc-header .disc-letter { font-size: 42px; font-weight: 900; line-height: 1; }
+  .disc-card .disc-header .disc-label { font-size: 13px; opacity: 0.9; margin-top: 4px; }
+  .disc-card .disc-body { padding: 18px; font-size: 13px; line-height: 1.7; }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 32px; margin: 24px 0; }
+  .timeline::before {
+    content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--pink), var(--accent));
+  }
+  .tl-item { position: relative; margin-bottom: 28px; }
+  .tl-item::before {
+    content: ''; position: absolute; left: -21px; top: 6px;
+    width: 14px; height: 14px; border-radius: 50%;
+    border: 3px solid white; box-shadow: 0 0 0 3px var(--primary);
+    background: var(--primary);
+  }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; }
+  .tl-title { font-weight: 700; font-size: 16px; margin: 2px 0 4px; }
+  .tl-desc { color: var(--text-secondary); font-size: 14px; }
+
+  /* Quote / Highlight boxes */
+  .quote-box {
+    border-left: 4px solid var(--accent); background: var(--accent-light);
+    padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-style: italic; color: #9A3412; font-size: 14px; margin: 16px 0;
+  }
+  .hl-box { padding: 20px 24px; border-radius: var(--radius); margin: 16px 0; font-size: 14px; }
+  .hl-box.warn { background: #FFFBEB; border: 1px solid #FDE68A; color: #92400E; }
+  .hl-box.info { background: var(--primary-light); border: 1px solid #C7D2FE; color: #3730A3; }
+  .hl-box.ok   { background: var(--success-light); border: 1px solid #A7F3D0; color: #065F46; }
+  .hl-box.pink { background: var(--pink-light); border: 1px solid #FBCFE8; color: #9D174D; }
+  .hl-box.sky  { background: var(--sky-light); border: 1px solid #BAE6FD; color: #075985; }
+  .hl-box .hl-title { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+
+  /* Tags */
+  .tag {
+    display: inline-block; padding: 4px 12px; border-radius: 99px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.3px; margin: 2px 3px;
+  }
+  .tag-purple { background: #EEF2FF; color: #4F46E5; }
+  .tag-orange { background: #FFF7ED; color: #EA580C; }
+  .tag-green  { background: #ECFDF5; color: #059669; }
+  .tag-pink   { background: #FDF2F8; color: #DB2777; }
+  .tag-sky    { background: #F0F9FF; color: #0284C7; }
+  .tag-red    { background: #FEE2E2; color: #DC2626; }
+  .tag-gray   { background: #F1F5F9; color: #64748B; }
+
+  .step-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; border-radius: 50%;
+    font-weight: 900; font-size: 15px; color: white; flex-shrink: 0;
+  }
+  .text-sm { font-size: 13px; color: var(--text-secondary); }
+  .text-xs { font-size: 11px; color: var(--text-secondary); }
+  .mt-2 { margin-top: 8px; } .mt-4 { margin-top: 16px; } .mb-4 { margin-bottom: 16px; }
+  .text-center { text-align: center; }
+  .text-right { text-align: right; }
+
+  /* Footer */
+  .footer-bar {
+    text-align: center; padding: 40px 24px;
+    color: var(--text-secondary); font-size: 13px;
+  }
+
+  /* ===== Tax Calendar ===== */
+  .tax-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 99px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.5px; margin-left: 6px;
+  }
+  .tax-big   { background: #FEE2E2; color: #DC2626; border: 1px solid #FCA5A5; }
+  .tax-month { background: #FFF7ED; color: #EA580C; border: 1px solid #FDBA74; }
+  .tax-free  { background: #ECFDF5; color: #059669; border: 1px solid #6EE7B7; }
+  .tax-holiday { background: #FDF2F8; color: #DB2777; border: 1px solid #F9A8D4; }
+
+  /* Week plan table */
+  .week-plan-table { font-size: 11px; }
+  .week-plan-table thead th { font-size: 10px; padding: 8px 6px; text-align: center; }
+  .week-plan-table tbody td { padding: 6px 8px; font-size: 10px; }
+  .week-plan-table .w-num { font-weight: 900; font-size: 13px; text-align: center; color: var(--primary); }
+  .week-plan-table tr.row-big { background: #FFF5F5 !important; }
+  .week-plan-table tr.row-month { background: #FFFBF5 !important; }
+  .week-plan-table tr.row-holiday { background: #FDF5FA !important; }
+  .week-plan-table tr.row-normal:nth-child(even) { background: #F8FAFC; }
+
+  /* Summary boxes */
+  .tax-summary-card {
+    display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;
+  }
+  .tax-summary-item {
+    flex: 1; min-width: 200px; padding: 16px;
+    border-radius: var(--radius-sm); text-align: center;
+  }
+  .tax-summary-item.big { background: #FEE2E2; border: 2px solid #FCA5A5; }
+  .tax-summary-item.monthly { background: #FFF7ED; border: 2px solid #FDBA74; }
+  .tax-summary-item.safe { background: #ECFDF5; border: 2px solid #6EE7B7; }
+
+  /* Nav */
+  .toc {
+    max-width: 1000px; margin: -30px auto 20px; padding: 0 24px;
+    position: relative; z-index: 10;
+  }
+  .toc-inner {
+    background: white; border-radius: var(--radius);
+    box-shadow: var(--shadow-md); padding: 20px 24px;
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .toc-inner a {
+    font-size: 13px; color: var(--primary); text-decoration: none;
+    padding: 4px 12px; border-radius: 99px; font-weight: 500;
+    transition: background 0.2s;
+  }
+  .toc-inner a:hover { background: var(--primary-light); }
+
+  @media print {
+    .hero { padding: 40px 24px; }
+    .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+    body { background: white; }
+    .toc { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== HERO ==================== -->
+<div class="hero">
+  <div class="badge">2026 · 团队赋能计划</div>
+  <h1>常州苏越会计服务有限公司</h1>
+  <div class="subtitle">从「做账的」到「老板的财务顾问」—— 5 人主力军 · 171 天全面跃升</div>
+  <div class="meta-row">
+    <div class="meta-chip">📅 2026年7月14日 → 12月31日</div>
+    <div class="meta-chip">👥 5 名核心成员</div>
+    <div class="meta-chip">💰 月度激励 400 元</div>
+    <div class="meta-chip">🎯 专业 + 销售 + 文化</div>
+    <div class="meta-chip">🚫 已避开所有征期高峰</div>
+  </div>
+</div>
+
+<!-- ==================== 总目录 ==================== -->
+<div class="toc">
+  <div class="toc-inner">
+    <a href="#s0">📋 征期避让指南</a>
+    <a href="#s1">🔍 DISC 行为诊断</a>
+    <a href="#s1b">👩‍💼 财务人 DISC 画像</a>
+    <a href="#s2">📚 专业提升</a>
+    <a href="#s3">💬 咨询能力</a>
+    <a href="#s4">🎁 激励机制</a>
+    <a href="#s5">📊 质量评估</a>
+    <a href="#s6">🎮 成长追踪</a>
+    <a href="#s7">💎 企业文化</a>
+    <a href="#s8">👔 老板角色</a>
+    <a href="#s9">🗓️ 里程碑</a>
+    <a href="#s10">💰 预算</a>
+    <a href="#s11">📋 每周执行计划</a>
+  </div>
+</div>
+
+<!-- ==================== 前置参考：财税征期日历 ==================== -->
+<div class="section" id="s0">
+  <div class="section-title">
+    <span class="icon" style="background:#FEE2E2;color:#DC2626;">📅</span>
+    前置参考：2026年7-12月财税征期日历与学习活动避让指南
+  </div>
+  <div class="section-desc">所有学习安排均已避开以下高峰时段。大征期前后 5 天不安排高强度学习，月度征期前后 3 天仅保留轻量任务。</div>
+
+  <div class="card">
+    <div class="tax-summary-card">
+      <div class="tax-summary-item big">
+        <div style="font-size:32px;margin-bottom:4px;">🔴</div>
+        <strong>大征期（季度申报）</strong><br>
+        <span style="font-size:12px;">申报内容最多、工作量最大</span>
+        <hr style="margin:8px 0;border-color:#FCA5A5;">
+        <strong>7月1-15日</strong> · Q2 季度<br>
+        <strong>10月8-15日</strong> · Q3 季度<br>
+        <span style="font-size:11px;color:#DC2626;">⚠️ 该时段学习活动暂停</span>
+      </div>
+      <div class="tax-summary-item monthly">
+        <div style="font-size:32px;margin-bottom:4px;">🟠</div>
+        <strong>月度征期（月报）</strong><br>
+        <span style="font-size:12px;">每月 1-15 日例行申报</span>
+        <hr style="margin:8px 0;border-color:#FDBA74;">
+        8月 → 截止 17 日（周六顺延）<br>
+        9月 → 截止 15 日<br>
+        11月 → 截止 16 日（周日顺延）<br>
+        12月 → 截止 15 日<br>
+        <span style="font-size:11px;color:#EA580C;">⚠️ 征期学习强度减半</span>
+      </div>
+      <div class="tax-summary-item safe">
+        <div style="font-size:32px;margin-bottom:4px;">🟢</div>
+        <strong>安全窗口（全力学习）</strong><br>
+        <span style="font-size:12px;">征期结束后到月底</span>
+        <hr style="margin:8px 0;border-color:#6EE7B7;">
+        7月 16-31 日<br>
+        8月 18-31 日<br>
+        9月 16-30 日<br>
+        10月 16-31 日<br>
+        11月 17-30 日<br>
+        12月 16-31 日<br>
+        <span style="font-size:11px;color:#059669;">✅ 黄金学习窗口</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:#DC2626;"></span>逐月详细日历 & 学习强度标记</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>月份</th><th>征期类型</th><th>截止日</th><th>高峰时段</th><th>学习强度</th><th>可安排内容</th></tr></thead>
+        <tbody>
+          <tr style="background:#FFF5F5;">
+            <td><strong>7月</strong></td>
+            <td><span class="tax-badge tax-big">大征期</span></td>
+            <td><strong>7月15日（周三）</strong></td>
+            <td>7月1日-15日</td>
+            <td>🔴 暂停</td>
+            <td>仅做轻量 DISC 测评（每人15分钟手机完成），不安排集体学习</td>
+          </tr>
+          <tr style="background:#FFFBF5;">
+            <td><strong>8月</strong></td>
+            <td><span class="tax-badge tax-month">月度征期</span></td>
+            <td><strong>8月17日（周一）</strong><br><span class="text-xs">15日为周六，顺延</span></td>
+            <td>8月10日-15日</td>
+            <td>🟠 轻量</td>
+            <td>周二学习会照常，但分享内容≤30分钟，不加考试，周四互问互答取消</td>
+          </tr>
+          <tr style="background:#FFFBF5;">
+            <td><strong>9月</strong></td>
+            <td><span class="tax-badge tax-month">月度征期</span></td>
+            <td><strong>9月15日（周二）</strong></td>
+            <td>9月11日-15日</td>
+            <td>🟠 轻量</td>
+            <td>周二学习会照常，暂停周考，当周项目交付顺延至征期后</td>
+          </tr>
+          <tr style="background:#FFF5F5;">
+            <td><strong>10月</strong></td>
+            <td><span class="tax-badge tax-big">大征期</span><span class="tax-badge tax-holiday">国庆</span></td>
+            <td><strong>10月15日（周四）</strong></td>
+            <td>10月8日-15日<br>（1-7日放假）</td>
+            <td>🔴 暂停</td>
+            <td>10月1-7日国庆假期+10月8-15日大征期，学习会暂停。可利用国庆闲暇布置"自学阅读材料"</td>
+          </tr>
+          <tr style="background:#FFFBF5;">
+            <td><strong>11月</strong></td>
+            <td><span class="tax-badge tax-month">月度征期</span></td>
+            <td><strong>11月16日（周一）</strong><br><span class="text-xs">15日为周日，顺延</span></td>
+            <td>11月9日-14日</td>
+            <td>🟠 轻量</td>
+            <td>周二学习会照常，周三笔记不强制，实战面谈建议安排在征期后</td>
+          </tr>
+          <tr style="background:#FFFBF5;">
+            <td><strong>12月</strong></td>
+            <td><span class="tax-badge tax-month">月度征期</span></td>
+            <td><strong>12月15日（周二）</strong></td>
+            <td>12月11日-15日</td>
+            <td>🟠 轻量</td>
+            <td>周二学习会照常。12月下旬进入年度收官+盛典筹备，学习内容减量提效</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="hl-box warn mt-4">
+      <div class="hl-title">⚠️ 三个铁律</div>
+      <ol style="padding-left:18px;font-size:13px;">
+        <li><strong>征期不考试、不考核、不给压力</strong>——每月1-15日是全团队工作量最大的时段，此时增加学习任务不是在培养人，是在消耗人。学习安排在征期结束后才能真正内化。</li>
+        <li><strong>大征期（7月上半月、10月上半月）学习会完全暂停</strong>——只保留群内轻分享（自愿参与，不强求）</li>
+        <li><strong>月度征期当周，周二学习会内容砍半</strong>（60分钟），取消考试/互问互答，让大家安心做申报</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 一、DISC ==================== -->
+<div class="section" id="s1">
+  <div class="section-title">
+    <span class="icon" style="background:#EEF2FF;color:#4F46E5;">🔍</span>
+    一、DISC 行为诊断实操指南
+  </div>
+  <div class="section-desc">DISC 行为模型源自心理学家 William Moulton Marston 于 1928 年出版的《Emotions of Normal People》，后经 Wiley 出版公司发展为 Everything DiSC® 评估体系。本方案只取其核心应用——不是给员工贴标签，而是帮助管理者看清：<strong>同样一个任务，为什么不同的人会有截然不同的反应。</strong>以下是一套完整的落地流程。</div>
+
+  <!-- Step 1 -->
+  <div class="card">
+    <div class="card-header"><span class="step-num" style="background:var(--primary);">1</span>怎么测？三步走，当天出结果</div>
+    <div class="grid-3">
+      <div class="hl-box info">
+        <div class="hl-title">📱 第一步：手机免费测评</div>
+        <p style="margin-top:4px;">微信搜索「甄有才」小程序 → "DISC测评" → 完成 24 道选择题（约12分钟）。免费版输出完整报告。备选：123test.com 免费 DISC。</p>
+        <p style="margin-top:8px;font-size:12px;">⭐ 关键：凭第一反应选，不要多想。测评不是考试，没有"正确答案"。</p>
+      </div>
+      <div class="hl-box info">
+        <div class="hl-title">👀 第二步：同事互判</div>
+        <p style="margin-top:4px;">测评前，老板和其他同事分别凭日常印象给这个人预判一个类型。</p>
+        <p style="margin-top:8px;font-size:12px;">⭐ 预判和报告差很大的→最有价值，说明这个人有"隐藏面"，值得深入聊。完全一致的→说明她在工作中表现得很真实。</p>
+      </div>
+      <div class="hl-box info">
+        <div class="hl-title">💬 第三步：一对一反馈对话</div>
+        <p style="margin-top:4px;">老板和每人单独聊 20 分钟。开场白："报告中哪一点让你最意外？"</p>
+        <p style="margin-top:8px;font-size:12px;">⭐ 目的是启发自我觉察，不是老板"鉴定"对方。最后让对方用自己的话总结"我最适合什么类型的工作方式"。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2: Four types -->
+  <div class="card">
+    <div class="card-header"><span class="step-num" style="background:var(--accent);">2</span>测出来怎么判断？四种类型完整参照手册</div>
+
+    <div class="grid-2" style="margin-top:16px;">
+      <!-- D -->
+      <div class="disc-card">
+        <div class="disc-header" style="background:linear-gradient(135deg,#DC2626,#B91C1C);">
+          <div class="disc-letter">D</div><div class="disc-label">支配型 · Dominance</div>
+        </div>
+        <div class="disc-body">
+          <p style="font-weight:700;margin-bottom:4px;">🟡 一句话画像</p>
+          <p style="margin-bottom:10px;">"别跟我讲过程，告诉我结果就行。"</p>
+          <p style="font-weight:700;margin-bottom:4px;">🔍 日常识别（5个信号）</p>
+          <ul style="padding-left:16px;margin-bottom:10px;font-size:12px;">
+            <li>开会总是第一个发言，语气坚定不犹豫</li>
+            <li>喜欢挑战别人观点，不畏惧冲突</li>
+            <li>听不懂时会直接说"你讲重点"</li>
+            <li>微信/邮件极少用表情包，用词简短直接</li>
+            <li>被布置任务第一反应是"截止时间？"而不是"怎么做？"</li>
+          </ul>
+          <p style="font-weight:700;margin-bottom:4px;">💪 最佳用法</p>
+          <p style="font-size:12px;margin-bottom:4px;">牵头攻坚项目（税务稽查应对、大客户谈判），给目标不给路径。激活语："这个客户只有你能搞得定。"</p>
+          <p style="font-weight:700;margin-bottom:4px;color:#DC2626;">⚠️ 坑</p>
+          <p style="font-size:12px;">觉得别人太慢自己上手做→团队没成长。需练习"忍住不说答案，让别人先讲"。</p>
+          <div style="margin-top:8px;"><span class="tag tag-red">怕被控制</span><span class="tag tag-red">要赢</span><span class="tag tag-red">行动快</span></div>
+        </div>
+      </div>
+
+      <!-- I -->
+      <div class="disc-card">
+        <div class="disc-header" style="background:linear-gradient(135deg,#F97316,#EA580C);">
+          <div class="disc-letter">I</div><div class="disc-label">影响型 · Influence</div>
+        </div>
+        <div class="disc-body">
+          <p style="font-weight:700;margin-bottom:4px;">🟡 一句话画像</p>
+          <p style="margin-bottom:10px;">"这事儿太有意思了！我们一起搞！"</p>
+          <p style="font-weight:700;margin-bottom:4px;">🔍 日常识别（5个信号）</p>
+          <ul style="padding-left:16px;margin-bottom:10px;font-size:12px;">
+            <li>办公室气氛担当，消息传播最快的人</li>
+            <li>跟客户打电话能聊半小时，从财税跑到孩子上学</li>
+            <li>微信充满表情包和感叹号，段落很长</li>
+            <li>新想法很兴奋，但下周可能忘了上周那个</li>
+            <li>遇到压力找人倾诉，而不是自己闷头解决</li>
+          </ul>
+          <p style="font-weight:700;margin-bottom:4px;">💪 最佳用法</p>
+          <p style="font-size:12px;margin-bottom:4px;">客户破冰、分享会主持、团队活动组织。用掌声和公开表扬驱动，不要用 deadline 威胁。</p>
+          <p style="font-weight:700;margin-bottom:4px;color:#DC2626;">⚠️ 坑</p>
+          <p style="font-size:12px;">三分钟热度，专业深度不够。配 C 型做复核。给 I 型"有观众"的场景保持投入。</p>
+          <div style="margin-top:8px;"><span class="tag tag-orange">怕被冷落</span><span class="tag tag-orange">要掌声</span><span class="tag tag-orange">感染力强</span></div>
+        </div>
+      </div>
+
+      <!-- S -->
+      <div class="disc-card">
+        <div class="disc-header" style="background:linear-gradient(135deg,#10B981,#059669);">
+          <div class="disc-letter">S</div><div class="disc-label">稳健型 · Steadiness</div>
+        </div>
+        <div class="disc-body">
+          <p style="font-weight:700;margin-bottom:4px;">🟡 一句话画像</p>
+          <p style="margin-bottom:10px;">"别急，我们先看看情况，稳一点。"</p>
+          <p style="font-weight:700;margin-bottom:4px;">🔍 日常识别（5个信号）</p>
+          <ul style="padding-left:16px;margin-bottom:10px;font-size:12px;">
+            <li>从不拒绝同事求助，但很少主动提需求</li>
+            <li>变更提前一天通知和提前五分钟通知，反应完全不同</li>
+            <li>老客户关系特别好，但不主动推销新服务</li>
+            <li>遇到冲突第一反应"别伤了和气"</li>
+            <li>答应的事一定做，但很少主动揽新活</li>
+          </ul>
+          <p style="font-weight:700;margin-bottom:4px;">💪 最佳用法</p>
+          <p style="font-size:12px;margin-bottom:4px;">团队的压舱石。老客户维护、复杂账务、带新人。给安全感+清晰SOP，别搞突然袭击。</p>
+          <p style="font-weight:700;margin-bottom:4px;color:#DC2626;">⚠️ 坑</p>
+          <p style="font-size:12px;">不敢拒绝客户不合理要求，被动等指令。需练习"温和地说不"+"主动向老板汇报"。</p>
+          <div style="margin-top:8px;"><span class="tag tag-green">怕变动</span><span class="tag tag-green">要安全</span><span class="tag tag-green">超可靠</span></div>
+        </div>
+      </div>
+
+      <!-- C -->
+      <div class="disc-card">
+        <div class="disc-header" style="background:linear-gradient(135deg,#0EA5E9,#0284C7);">
+          <div class="disc-letter">C</div><div class="disc-label">谨慎型 · Conscientiousness</div>
+        </div>
+        <div class="disc-body">
+          <p style="font-weight:700;margin-bottom:4px;">🟡 一句话画像</p>
+          <p style="margin-bottom:10px;">"这个数据你有依据吗？让我查一下再回复你。"</p>
+          <p style="font-weight:700;margin-bottom:4px;">🔍 日常识别（5个信号）</p>
+          <ul style="padding-left:16px;margin-bottom:10px;font-size:12px;">
+            <li>桌面文件分类整齐，Excel 公式用得比领导还熟</li>
+            <li>跟客户说话滴水不漏，每一句都留有余地</li>
+            <li>新政策第一时间查原文，不靠别人转述</li>
+            <li>开会沉默很久，最后问出一个所有人都没想过的问题</li>
+            <li>最怕老板说"差不多就行"——差不多就是差很多</li>
+          </ul>
+          <p style="font-weight:700;margin-bottom:4px;">💪 最佳用法</p>
+          <p style="font-size:12px;margin-bottom:4px;">天生的质量守门员。税务方案复核、风险评估、分享质量审核。用"专业权威"驱动。</p>
+          <p style="font-weight:700;margin-bottom:4px;color:#DC2626;">⚠️ 坑</p>
+          <p style="font-size:12px;">过度完美主义→效率低，方案改8遍还不满意。需设定"80分就提交"+搭档辅助收尾。</p>
+          <div style="margin-top:8px;"><span class="tag tag-sky">怕出错</span><span class="tag tag-sky">要依据</span><span class="tag tag-sky">极致精准</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 3: Team diagnosis -->
+  <div class="card">
+    <div class="card-header"><span class="step-num" style="background:var(--success);">3</span>团队 DISC 组合诊断——5个人拼起来是一张完整的图吗？</div>
+    <div class="hl-box warn">
+      <div class="hl-title">⚠️ 需要警惕的组合</div>
+      <table style="margin-top:8px;">
+        <thead><tr><th>如果发现…</th><th>意味着…</th><th>怎么补</th></tr></thead>
+        <tbody>
+          <tr><td>全是 S + C</td><td>执行力强专业扎实，但没人敢出去谈客户</td><td>老板亲自带销售训练，引入外部销售教练陪跑</td></tr>
+          <tr><td>缺 D 型</td><td>团队温和但缺"推土机"，遇强硬客户退缩</td><td>刻意培养1-2人"专业自信"——专业知识就是底气</td></tr>
+          <tr><td>缺 I 型</td><td>客户关系"公事公办"，缺黏性和转介绍</td><td>安排团队中最高I倾向者做客户活动主持，慢慢激活</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hl-box ok mt-4">
+      <div class="hl-title">✅ 理想互补：1 D + 1 I + 2 S + 1 C = 完整闭环</div>
+      <p style="margin-top:4px;">天然缺少某种类型不可怕——用分工和训练来补位。</p>
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="card">
+    <div class="card-header"><span class="step-num" style="background:var(--pink);">4</span>输出：每人一张「学习路线卡」（模板）</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>姓名</th><th>DISC主型</th><th>优势战场</th><th>突破领域</th><th>最佳学习方式</th><th>搭档建议</th></tr></thead>
+        <tbody>
+          <tr><td>（示例）</td><td>D</td><td>客户谈判、攻坚</td><td>倾听、情绪管理</td><td>目标挑战制（给硬骨头啃）</td><td>配 S 型缓冲</td></tr>
+          <tr><td>（示例）</td><td>I</td><td>破冰、分享主持</td><td>专业深度、持久力</td><td>有观众的任务</td><td>配 C 型审核</td></tr>
+          <tr><td>（示例）</td><td>S</td><td>老客维护、复杂账</td><td>主动出击、拒绝</td><td>递进式挑战（低→高）</td><td>配 D 型壮胆</td></tr>
+          <tr><td>（示例）</td><td>C</td><td>风险评估、审核</td><td>决策速度、接受80分</td><td>数据说服法（给足资料）</td><td>配 I 型推动</td></tr>
+          <tr><td>（示例）</td><td>S+I</td><td>客户关系、执行</td><td>专业表达能力</td><td>混合式（案例+社交）</td><td>视任务灵活</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sm mt-2">* DISC 结果出来后每人填一行，贴在办公室共享看板上。</p>
+  </div>
+</div>
+
+<!-- ==================== 特别参考：财务人员 DISC 画像 ==================== -->
+<div class="section" id="s1b">
+  <div class="section-title">
+    <span class="icon" style="background:#FDF2F8;color:#EC4899;">👩‍💼</span>
+    特别参考：财务人员天生的 DISC 画像——给管理者的对照表（读懂你的财务团队）
+  </div>
+  <div class="section-desc">DISC 行为科学（源自 William Moulton Marston 1928年奠基研究，后经 Wiley 等机构持续完善）在数十年的职业数据积累中发现：不同行业对特定行为风格有显著的筛选和强化效应。以下数据为基于 DISC 通用职业分布规律的趋势估算，用于帮助管理者理解"为什么我的团队天然是这个样子"——精确数值会因地区、公司规模、业务类型等因素有所浮动，但方向性结论是稳定的。</div>
+
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:var(--pink);"></span>财务/会计人员的 DISC 分布规律</div>
+    <div class="grid-2">
+      <div>
+        <table>
+          <thead><tr><th>类型</th><th>在财务行业占比</th><th>在普通人群占比</th><th>差异</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong style="color:#0EA5E9;">C 型 · 谨慎型</strong></td>
+              <td><strong>35-40%</strong></td>
+              <td>20-25%</td>
+              <td><span class="tag tag-red">↑↑ 大幅偏高</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color:#10B981;">S 型 · 稳健型</strong></td>
+              <td><strong>30-35%</strong></td>
+              <td>30-35%</td>
+              <td><span class="tag tag-gray">→ 持平</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color:#DC2626;">D 型 · 支配型</strong></td>
+              <td><strong>8-12%</strong></td>
+              <td>10-15%</td>
+              <td><span class="tag tag-green">↓ 略偏低</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color:#F97316;">I 型 · 影响型</strong></td>
+              <td><strong>10-15%</strong></td>
+              <td>25-30%</td>
+              <td><span class="tag tag-red">↓↓ 大幅偏低</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="text-xs mt-2">数据说明：以上比例为基于 DISC 职业分布规律的趋势估算，非精确普查数据。来源参考：Wiley Everything DiSC® 研究文献、Marston (1928) 奠基理论、中国财税行业从业者行为特征观察。</p>
+      </div>
+      <div>
+        <div class="hl-box sky">
+          <div class="hl-title">🧠 为什么财务行业天然"高C低I"？</div>
+          <ol style="padding-left:18px;font-size:13px;">
+            <li><strong>职业筛选效应</strong>：会计工作本身就吸引喜欢规则、追求精确的人（C型）。一个讨厌数字和规则的人从一开始就不会选择做财务。</li>
+            <li><strong>职业强化效应</strong>：做了十年账，天天跟税务局、报表、审计打交道，每天都在强化"不能出错"——即使入职时是个 I 型，十年后也被磨成了 C/S。</li>
+            <li><strong>I 型在财务行业"不合群"</strong>：I 型财务人常常觉得自己"不够严谨"，被同事认为"太爱说话"。其实她们是钻石——是团队里唯一能跟客户笑着聊半小时的人。</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:var(--accent);"></span>对照你的 5 个人——不同类型在财务岗位上的真实表现</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类型</th><th>大概率在财务团队里长什么样</th><th>管理者容易有的误解</th><th>真相</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:#0EA5E9;">C 型财务</strong></td>
+            <td style="font-size:12px;">交的账干干净净，附注写得比正文还长。问一个问题，给你三个法规依据。客户说"差不多就行"时内心崩溃。</td>
+            <td style="font-size:12px;">"这个人怎么这么慢？一份方案改8遍还不交。"</td>
+            <td style="font-size:12px;">她改8遍不是在拖延，是怕出错。<strong>给她一个"80分就交"的明确标准</strong>，配一个 I 型帮她做最终决策。</td>
+          </tr>
+          <tr>
+            <td><strong style="color:#10B981;">S 型财务</strong></td>
+            <td style="font-size:12px;">从不迟到，从不拒绝同事，老客户点名要她服务。但从来不会主动跟客户说"我们还有个服务挺适合你的"。</td>
+            <td style="font-size:12px;">"她是不是没有上进心？怎么从不主动揽新活？"</td>
+            <td style="font-size:12px;">她不是没上进心，是<strong>怕破坏现有的和谐关系</strong>。给她递进式的小挑战，每步都先告诉她"这个不难，你先试试，不行我兜底"。</td>
+          </tr>
+          <tr>
+            <td><strong style="color:#DC2626;">D 型财务（罕见）</strong></td>
+            <td style="font-size:12px;">开会时敢跟老板拍桌子说"这个方案不合规"。客户耍赖时直接怼回去。全公司唯一敢催老板签字的人。</td>
+            <td style="font-size:12px;">"她是不是不服管？态度有问题？"</td>
+            <td style="font-size:12px;">她不是不服管，是<strong>只服道理和结果</strong>。跟她沟通"因为我是老板所以听我的"会爆炸；说"这个方案能帮客户省3万"她会冲第一个。</td>
+          </tr>
+          <tr>
+            <td><strong style="color:#F97316;">I 型财务（罕见）</strong></td>
+            <td style="font-size:12px;">客户都特别喜欢她，年会节目是她张罗的，群里气氛靠她活跃。但专业深度可能不如 C 型同事，偶尔被质疑"不够严谨"。</td>
+            <td style="font-size:12px;">"她是不是太浮躁了？做财务不够稳重？"</td>
+            <td style="font-size:12px;">她是你团队里<strong>唯一能让客户觉得"这公司有人情味"的人</strong>。别把她看成不严谨的财务，把她看成会做账的客户关系经理。配一个 C 型审核她的方案。</td>
+          </tr>
+          <tr>
+            <td><strong style="color:#7C3AED;">S+C 混合（最常见）</strong></td>
+            <td style="font-size:12px;">不声不响地把活干完，很少出错，从不多说话。问她"最近怎么样"她回答"还好"。开会坐最后一排。</td>
+            <td style="font-size:12px;">"她是不是对工作没热情？怎么从不主动分享想法？"</td>
+            <td style="font-size:12px;">她热情得很，只是<strong>不会表达</strong>。给她提前准备的时间（提前两天说"周五你分享一下XX案例"），她会给你一个惊喜——S+C 型的分享通常是最扎实的。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="hl-box ok mt-4">
+      <div class="hl-title">🎯 给管理者的核心建议</div>
+      <ol style="padding-left:18px;font-size:13px;">
+        <li><strong>如果5个人里3个以上是 C 或 S+C</strong>（基于DISC职业分布规律，财务团队出现此情况的概率较高）→ 专业没问题，销售和主动性是短板。方案里的销售训练要严格执行。</li>
+        <li><strong>如果恰好有一个 I 型</strong> → 宝贝她。让她主持分享会、做客户活动。全行业都缺I型财务，她是稀缺资源。</li>
+        <li><strong>如果恰好有一个 D 型</strong> → 给她攻坚任务。但别忘了给她配S型搭档，别让她一个人冲太猛得罪客户。</li>
+        <li><strong>如果全都是 C+S，一个 D 和 I 都没有</strong> → 这是最正常的情况。老板需要自己做那个"D+I"的角色，尤其在前三个月的销售训练中。</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 二、专业能力 ==================== -->
+<div class="section" id="s2">
+  <div class="section-title">
+    <span class="icon" style="background:#FDF2F8;color:#EC4899;">📚</span>
+    二、专业能力提升：项目制 + 分组实战
+  </div>
+  <div class="section-desc">成年人的学习效果不取决于"听了多少课"，而取决于"是否经历了完整的经验-反思-抽象-实验循环"（Kolb, 1984，体验式学习理论）。本方案用项目制驱动这个循环：周一发真实案例挑战→周二集体讨论与反思→周三输出个人笔记（抽象提炼）→周四互问互答（验证理解）→周五复盘与迭代。</div>
+
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:var(--pink);"></span>每周学习闭环（不依赖外培，内部造血）</div>
+    <div class="grid-5 text-center" style="font-size:13px;">
+      <div><div style="font-size:32px;margin-bottom:4px;">📅</div><strong>周一</strong><br>群内发布本周<br>「项目挑战题」</div>
+      <div><div style="font-size:32px;margin-bottom:4px;">🔥</div><strong>周二 14:00-16:00</strong><br>雷打不动的<br>集中学习会</div>
+      <div><div style="font-size:32px;margin-bottom:4px;">✏️</div><strong>周三</strong><br>每人输出200字<br>学习笔记发群</div>
+      <div><div style="font-size:32px;margin-bottom:4px;">🤝</div><strong>周四</strong><br>两两组队<br>互问互答</div>
+      <div><div style="font-size:32px;margin-bottom:4px;">🏆</div><strong>周五</strong><br>最佳笔记评选<br>学习MVP公布</div>
+    </div>
+    <div class="quote-box mt-4">
+      周一的项目挑战题是整个学习循环的引擎——不是"学习小微企业优惠政策"，而是"客户A公司今年利润80万，目前按25%交企业所得税，请找出3种合规的节税方案并说明风险点"。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:var(--accent);"></span>季度「攻坚项目制」——三大模块 × 三大项目</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>季度</th><th>项目主题</th><th>分组方式</th><th>交付物</th><th>评审</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Q3前半<br>(7-8月)</strong></td>
+            <td>🟢 <strong>税收优惠政策落地实战</strong><br>每人认领3个真实客户，梳理适用政策，输出节税测算表</td>
+            <td><strong>2人一组</strong>（老带新，DISC互补：D↔S / I↔C）</td>
+            <td>客户节税方案书（政策依据+测算+风险提示）</td>
+            <td>小组互审+老板终审</td>
+          </tr>
+          <tr>
+            <td><strong>Q3后半<br>(9月)</strong></td>
+            <td>🟠 <strong>金税四期合规自查项目</strong><br>每组认领一个行业赛道，对该行业客户做全量税务风险扫描</td>
+            <td><strong>2-3人一组</strong>（混合行业经验，每组至少1个C型把关）</td>
+            <td>行业税务风险地图（常见风险点+判定标准+整改模板）</td>
+            <td>跨组交叉审核+全员打分</td>
+          </tr>
+          <tr>
+            <td><strong>Q4<br>(10-12月)</strong></td>
+            <td>🔵 <strong>客户增值服务方案大赛</strong><br>每组针对指定客户画像，设计"基础代账+增值服务"组合方案并真实提案</td>
+            <td><strong>2人一组</strong>（按客户行业匹配）</td>
+            <td>方案书+20分钟提案演示+客户反馈记录</td>
+            <td>真实客户反馈50%+全员评审50%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hl-box info mt-4">
+      <div class="hl-title">💡 分组三条铁律</div>
+      <ol style="padding-left:18px;font-size:13px;">
+        <li><strong>DISC 互补优先</strong>：不把两个 D 放一组（会打起来），不把两个 S 放一组（等对方先动），遵循 D↔S、I↔C 互补</li>
+        <li><strong>老新搭配</strong>：每组至少1个熟悉客户业务的老人"带路"但不"包办"</li>
+        <li><strong>每次换组</strong>：每个项目结束后重新分组，让每个人跟不同风格的人合作过</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:var(--sky);"></span>周二学习会 120 分钟标准结构</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>时间</th><th>环节</th><th>内容</th><th>轮值角色</th></tr></thead>
+        <tbody>
+          <tr><td>14:00-14:15</td><td><strong>开场破冰</strong></td><td>每人1分钟：这周我在客户身上发现的一个问题</td><td>I 型员工轮流主持</td></tr>
+          <tr><td>14:15-14:55</td><td><strong>案例复盘</strong></td><td>上周项目挑战题拆解，各小组轮流展示，其他组"挑刺"</td><td>D 型员工主导挑战环节</td></tr>
+          <tr><td>14:55-15:25</td><td><strong>政策快拆</strong></td><td>本周一个新政策，主讲人用"老板听得懂的话"翻译，限时15分钟</td><td>轮值制</td></tr>
+          <tr><td>15:25-15:35</td><td><strong>休息</strong></td><td>茶歇，自由交流</td><td>—</td></tr>
+          <tr><td>15:35-15:55</td><td><strong>实战模拟</strong></td><td>一人扮老板问刁钻问题，一人作答。全程录像会后自看回放</td><td>S 型员工提前准备场景</td></tr>
+          <tr><td>15:55-16:00</td><td><strong>收尾</strong></td><td>老板一句话总结 + 下周挑战题发布</td><td>老板</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 大成云课程对接 -->
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:#7C3AED;"></span>📡 配套学习资源：大成云AI课程对接计划</div>
+    <div class="hl-box sky">
+      <div class="hl-title">💡 使用原则</div>
+      <p>以下课程作为<strong>每周学习会的预习和复习素材</strong>，不替代"项目制实战"。学习路径：<strong>先看大成云课程（输入）→ 周二会上分享讨论（消化）→ 项目制实战应用（输出）。</strong>课程全部选自大成云平台6大模块19门课程库，精准匹配苏越客户群（年收入50万-2000万的中小企业）的实际需求。客户群横跨微型、小型、中型三个发展阶段，财税需求从基础合规到战略筹划各有侧重——以下12门核心课程的筛选逻辑是：优先选"全客群通用"的实战型课程，特定专业领域课程（如高新技术企业认定）作为进阶选修，供有对应客户资源的团队成员按需学习。</p>
+    </div>
+
+    <h4 style="margin:20px 0 12px;color:var(--primary);">📚 三个学习阶段 × 大成云课程精准匹配（全部来自大成云平台6大模块19门课程库）</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:8%;">阶段</th><th style="width:10%;">时间</th><th style="width:38%;">大成云平台对应课程（真实课程名+讲师）</th><th style="width:24%;">与苏越客户群的关系</th><th style="width:20%;">配套实战产出</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="tag tag-green">阶段一</span></td>
+            <td><strong>7-8月</strong></td>
+            <td>
+              <strong>【AI智能体课程】</strong><br>
+              ① 财务AI通识课 — 峰瑞<br>
+              ② AI智能体应用与创建 — 忠超<br>
+              <strong>【AI稽查风控课程】</strong><br>
+              ③ 善用AI助力企业有效维权，降低税收风险 — 晨旭<br>
+              ④ 税务+AI背景下企业涉税风险自查与稽查应对 — 海湘
+            </td>
+            <td style="font-size:12px;">无论客户年收入是50万还是2000万，税务合规风险是所有中小企业老板的底线焦虑。被查一次，轻则补税罚款，重则信用降级、贷款受限——这对任何体量的企业都是真金白银的损失。晨旭和海湘的两门课覆盖了从"识别风险"到"应对稽查"的完整链路：对微型客户重点在发票合规和申报准确；对小型客户重点在应对金税四期的数据比对和风险预警；对中型客户则需要处理跨税种稽查和税务约谈等更复杂场景。峰瑞的通识课则为全员打好AI思维底座。</td>
+            <td>客户节税方案书（每人输出3份）</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-orange">阶段二</span></td>
+            <td><strong>9-10月</strong></td>
+            <td>
+              <strong>【AI经营分析课程】</strong><br>
+              ⑤ AI赋能财务报表分析 — 亚南<br>
+              ⑥ AI加持六招搞定经营分析 — 永佳<br>
+              ⑦ AI辅助企业经营分析 — 晓慧<br>
+              <strong>【AI成本及资金课程】</strong><br>
+              ⑧ DeepSeek赋能财务矩阵分析 — 汉祥
+            </td>
+            <td style="font-size:12px;">记账报税是"记录过去"，经营分析是"管理未来"——后者才是代账公司拉开同行差距的核心能力。亚南的报表分析课让团队能从数字里发现经营问题：50万体量的客户可能需要看懂"为什么利润表上有钱、银行卡里没钱"；2000万体量的客户则需要通过报表诊断"哪个业务线在赚钱、哪个在亏钱"。永佳的六招经营分析提供了与不同段位老板沟通的通用框架——不管客户大小，老板关心的本质是同一个问题："我的钱去哪了，怎么让它更值钱。"</td>
+            <td>行业税务风险地图（按行业分组输出）</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-purple">阶段三</span></td>
+            <td><strong>11-12月</strong></td>
+            <td>
+              <strong>【AI成本及资金课程】</strong><br>
+              ⑨ DeepSeek + AI 提升盈利能力与成本降本策略 — 一斌<br>
+              ⑩ 基于AI的营运资金建模分析 — 汉祥<br>
+              <strong>【AI预算课程】</strong><br>
+              ⑪ 全面预算实战与降本增效 — 文纺<br>
+              ⑫ AI助力预算管理，实现公司目标 — 一斌
+            </td>
+            <td style="font-size:12px;">年底是帮客户做来年财税规划的最佳窗口，也是代账公司展示"顾问价值"而非"跑腿价值"的关键时刻。一斌的降本策略和文纺的预算实战，让团队能针对不同体量客户输出差异化方案：对微型客户做"一张纸的来年税负预估"，对小型企业做"分季度的现金流规划"，对中型企业做"全面预算+税务筹划+高新申报路线图"——这种分层服务能力，正是代账公司从"做账工具"转型为"企业财务外脑"的核心分水岭。</td>
+            <td>客户增值服务方案+真实提案（每人至少1个新客户成交）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="hl-box info mt-4">
+      <div class="hl-title">📋 选课说明（为什么只选12门，不选全部19门）</div>
+      <ol style="padding-left:18px;font-size:13px;">
+        <li><strong>高新技术企业4门课程（枋銮、赵耀、刘月）暂不纳入核心课表</strong>：高新认定和专精特新申报主要适用于年营收1000万以上、且所处行业符合国家重点支持领域（如制造、研发、信息技术等）的企业。苏越客户群中部分中型企业恰好符合条件，但并非全客群通用需求——因此作为个人选修课，由有对应客户资源的成员自主学习，不占用全员学习会时间。</li>
+        <li><strong>生成式AI在财务报告中的应用（素其）暂不纳入</strong>：偏向大中型企业财务报告场景，对苏越以代账为主的客户群匹配度较低。</li>
+        <li><strong>优先选"学了明天就能在客户身上用"的课程</strong>：12门课全是实战导向，每门都能在当月的项目制实战中直接落地。</li>
+      </ol>
+    </div>
+
+    <h4 style="margin:20px 0 12px;color:var(--accent);">🔄 每周学习资源使用节奏</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>时间节点</th><th>动作</th><th>负责人</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td><strong>每周日 20:00前</strong></td><td>执行助理在群里发本周课程链接（1-2节课，每节不超过30分钟）</td><td>执行助理</td><td>提前选好课程，确保链接可访问。选短不选长——宁可看两遍10分钟的，不要看一遍1小时的。</td></tr>
+          <tr><td><strong>周一全天</strong></td><td>每人自行完成课程观看，在群里发一句"已看完+一个收获点"</td><td>全员</td><td>不要发"已看完"三个字，必须带一个收获点。执行助理记录完成情况。</td></tr>
+          <tr><td><strong>周二学习会</strong></td><td>课上不播放视频！直接进入：① 课程内容讨论（15min）；② 联系实际案例（40min）；③ 政策快拆（30min）；④ 实战模拟（50min）</td><td>当周分享人</td><td>课程只是"原材料"，学习会的价值在于加工和消化。如果有人没看课程，当场用5分钟快速过核心要点。</td></tr>
+          <tr><td><strong>周三</strong></td><td>学习笔记200字：结合课程内容和实际客户，写一个应用思考</td><td>全员</td><td>不要写"课程讲了XX政策"，要写"我服务的客户XX可以用这个政策，具体做法是XX"</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="hl-box info mt-4">
+      <div class="hl-title">📋 课程选品标准（执行助理和老板共同把关）</div>
+      <ol style="padding-left:18px;font-size:13px;">
+        <li><strong>实操优于理论</strong>：选"怎么操作""怎么填报""怎么计算"的课程，不选"概念与发展历史"类课程</li>
+        <li><strong>案例驱动</strong>：每节课必须包含至少1个真实案例（案例企业年收入需在50万-2000万区间内，而非大型集团或上市公司案例——后者的财税逻辑与中小企业完全不同）</li>
+        <li><strong>30分钟以内</strong>：超过30分钟的课拆成2次看，超过45分钟的直接不选（成年人注意力极限）</li>
+        <li><strong>紧扣中小企业场景</strong>：课程中的案例必须是年收入50万-2000万的中小企业场景，大型集团企业的财税案例对苏越客户群没有参考价值</li>
+        <li><strong>与周二挑战题联动</strong>：每周课程内容要和当周项目挑战题相关，形成"学什么→练什么"的闭环</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 三、销售训练 ==================== -->
+<div class="section" id="s3">
+  <div class="section-title">
+    <span class="icon" style="background:#FFF7ED;color:#F97316;">💬</span>
+    三、一对一咨询能力：从"做账的"到"老板信赖的财务顾问"
+  </div>
+  <div class="section-desc">B2B销售研究领域引用量最高的成果是 Neil Rackham 的 SPIN 模型（1988，基于12年对35,000次销售拜访的追踪研究），其核心发现与直觉相反：<strong>顶尖销售不是"最能说的"，而是"最会问的"。</strong>以下"三问三说"框架正是将SPIN原理落地到财税服务场景的实操工具。
+
+苏越的客户群覆盖年收入50万到2000万的中小企业，横跨了微型企业、小型企业和中型企业三个发展阶段。不同体量的企业在财务决策上的痛点和优先级差异显著——这不是凭感觉判断，而是有扎实的研究依据：哈佛商学院Michael Porter的竞争战略理论（1980）指出企业规模决定了成本结构和差异化空间；欧洲委员会2003/361/EC标准将年营收低于5000万欧元的企业按规模分层管理；诺贝尔经济学奖得主Kahneman和Tversky的前景理论（1979）则从行为层面证明——人对"损失"的心理感受强度约是等额"收益"的2倍。具体到苏越的客户场景：
+
+<strong>· 50-300万的微型企业</strong>——老板的财务管理还停留在"能过关就行"的阶段。利润薄、现金流紧，一笔意外罚款可能直接吃掉一两个月净利润。跟这类老板沟通，关键词是<strong>"安全"和"少惹麻烦"</strong>。
+
+<strong>· 300-1000万的小型企业</strong>——业务在增长，但财务管理没跟上业务速度。老板开始意识到"账上好像有钱，月底总是不够用"，开始怀疑"我是不是多交了税"。跟这类老板沟通，关键词是<strong>"算清账"和"堵漏洞"</strong>。
+
+<strong>· 1000-2000万的中型企业</strong>——已经过了"活着"的阶段，开始面对股权架构、跨区域税务筹划、高新企业认定、研发费用加计扣除等更复杂的决策。一步走错，多交的不是几千块，是几十万。跟这类老板沟通，关键词是<strong>"规划"和"竞争力"</strong>。
+
+不管客户体量多大，有一条铁律不变——<strong>帮老板看清自己正在损失什么，比告诉他"我能帮你省多少钱"有效得多。</strong>因为人对损失的敏感度天生就高于对收益的期待（Kahneman & Tversky, 1979）：你告诉老板"能省3万"，他觉得"哦不错"；你让他自己算出"已经亏了3万"，他会立刻想行动。</div>
+
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:var(--accent);"></span>三阶段训练路线</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">阶段一 · 7月16日-8月31日（避开征期后的黄金窗口）</div>
+        <div class="tl-title">🐣 破胆期：敢开口就是胜利</div>
+        <div class="tl-desc">
+          第1周：录音60秒自我介绍→自己听→写3个改进点<br>
+          第2周：角色扮演（熟人介绍场景，建立好感+问出关键信息）<br>
+          第3周：角色扮演（冷脸老板场景，练习抗压破冰）<br>
+          第4周：角色扮演（比价型老板，练习价值塑造）<br>
+          <span class="tag tag-purple">每次10分钟演完→3分钟复盘→当场重来一遍</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">阶段二 · 9月-10月</div>
+        <div class="tl-title">🛠️ 建术期：掌握「三问三说」框架</div>
+        <div class="tl-desc">
+          每周三午休30分钟：两人一组轮换角色练"三问三说"（详见下方框架表）<br>
+          每周五下午：全员考核，老板打分<br>
+          10月底结业考核：每人完成一次真实客户面谈（老板观察）
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">阶段三 · 11月-12月</div>
+        <div class="tl-title">🚀 实战期：拿真结果</div>
+        <div class="tl-desc">
+          11月第1-2周：免费为老客户做"财税健康体检"（练对话，不为销售）<br>
+          11月第3-4周：输出优化方案，尝试轻量增购<br>
+          12月：独立开发1个新客户，走完"接触→面谈→方案→成交"全流程
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:var(--success);"></span>「三问三说」咨询对话框架 — 每一步背后的心理原理</div>
+    <div class="hl-box sky mb-4">
+      <div class="hl-title">🧠 为什么"三问"在前、"三说"在后？</div>
+      <p style="font-size:13px;">大多数代账公司的人一上来就讲"我们服务多好多好"——这是推销，老板本能会防御。而"三问"的设计逻辑是：<strong>让老板自己说出痛点，你只负责提问和倾听。</strong>社会心理学中有一个反复验证的发现（自我感知理论，Bem, 1972）：当一个人自己说出某个观点后，他会更坚定地相信这个观点——因为人倾向于相信"自己说过的话"。所以前三个问题的唯一目的，是让老板亲口说出："这么一算，我确实亏了不少。"——当他亲口说出这句话，内心的防御就已经卸下了大半。</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:8%;">步骤</th><th style="width:15%;">话术逻辑</th><th style="width:17%;">背后的人性原理</th><th style="width:30%;">示例话术</th><th style="width:30%;">DISC 专属提示</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag tag-orange">第一问</span></td><td><strong>问现状</strong></td><td style="font-size:11px;"><strong>破冰+降低防御：</strong>不问"你需要什么服务"，而问"你现在是怎么做的"——前者是推销，后者是关心。老板对"关心"不设防。</td><td>"X总，您现在公司账是谁在做？一个月花多少时间在财务上？"</td><td>D型注意：不要直接跳到结论，先让对方说</td></tr>
+          <tr><td><span class="tag tag-orange">第二问</span></td><td><strong>问损失</strong></td><td style="font-size:11px;"><strong>唤醒痛感：</strong>中小老板最痛的不是"多花钱"，而是"本该是我的钱白白流走了"。用"亏多少"而不是"花多少"——同样的金额，亏损带来的心理冲击大约是收益的两倍（Kahneman & Tversky, 1979，损失厌恶效应）。</td><td>"您有没有算过，因为财税不合规被罚款或多交冤枉税，一年大概亏多少？"</td><td>S型注意：不怕问"损失"，这是帮客户不是冒犯</td></tr>
+          <tr><td><span class="tag tag-orange">第三问</span></td><td><strong>问期望</strong></td><td style="font-size:11px;"><strong>制造吸引+设定门槛：</strong>给出一个诱人但可信的数字（2-3万），同时用"20分钟"降低时间成本顾虑。关键是"愿不愿意"——把决定权交给他，反而让他更愿意说"愿意"。</td><td>"如果有一个方案能让您合规省下2-3万，且完全不用操心，您愿意花20分钟了解吗？"</td><td>C型注意：数字必须有客户数据支撑，不能随口编</td></tr>
+          <tr><td><span class="tag tag-green">第一说</span></td><td><strong>说案例</strong></td><td style="font-size:11px;"><strong>社会认同：</strong>老板不相信"你有多专业"，但他相信"跟我差不多的人用过都说好"。案例是最好的信任背书——但必须脱敏，保密本身也是信任信号。</td><td>"我们有个做建材的客户，情况跟您差不多，之前一年白交3万多，调整后合规又省钱"</td><td>I型注意：别太兴奋忘了保密（不透露客户名）</td></tr>
+          <tr><td><span class="tag tag-green">第二说</span></td><td><strong>说差异</strong></td><td style="font-size:11px;"><strong>定位锚定：</strong>不说"我们更好"，说"我们做的不一样"——前者引发比较和比价，后者创造不可替代性。"记录过去vs规划未来"让老板自己得出"那我需要规划"的结论。</td><td>"普通代账公司帮您记录过去，我们是帮您规划未来——省的钱比收的费多"</td><td>D型注意：别把同行说太狠，留余地。你的竞争力来自差异，不是贬低别人</td></tr>
+          <tr><td><span class="tag tag-green">第三说</span></td><td><strong>说承诺</strong></td><td style="font-size:11px;"><strong>消除最后一道防线：</strong>老板最后不成交，往往不是因为不信你的专业，而是怕"签了约就绑死了"。三个承诺每一条都在消除一个具体的恐惧——尤其是"不满意随时停"，把老板的沉没成本清零。</td><td>"三个承诺：合法合规、做完第一个月有效果、不满意随时停"</td><td>C型/S型：由你们说出来最有分量。在日常工作中你们给人的印象就是"不轻易承诺，但说到做到"——这种信誉是日积月累的，比任何销售技巧都管用</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- AI 对练 -->
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:#7C3AED;"></span>🤖 免费 AI 对练：用豆包 / DeepSeek 做无限次实战训练</div>
+    <div class="hl-box sky">
+      <div class="hl-title">💡 核心理念</div>
+      <p>财务人员最怕的不是学不会话术，是<strong>跟真人练时紧张、怕丢脸、不敢开口</strong>。AI 对练解决"从0到1"的开口障碍——零压力、24小时可用、无限次重复、说错不丢人。但 AI 有个致命缺陷：<strong>天生"讨好型人格"，会捧杀你。</strong>下面告诉你怎么驯服它。</p>
+    </div>
+
+    <h4 style="margin:20px 0 12px;color:var(--primary);">📱 工具选择：两个免费方案</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:15%;">工具</th><th style="width:20%;">获取方式</th><th style="width:20%;">优势</th><th style="width:20%;">劣势</th><th style="width:25%;">最佳用法</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>豆包</strong><br><span class="text-xs">字节跳动 · 免费</span></td>
+            <td>手机应用商店搜"豆包"下载 App，或访问 doubao.com 网页版</td>
+            <td>语音对话流畅，可以直接用嘴说不用打字，接近真实面谈体验</td>
+            <td>默认性格偏友善，需要强力 Prompt 才能"变凶"</td>
+            <td><strong>语音对练</strong>（推荐）：模拟电话或面谈场景，训练语速、停顿、语气</td>
+          </tr>
+          <tr>
+            <td><strong>DeepSeek</strong><br><span class="text-xs">深度求索 · 免费</span></td>
+            <td>手机应用商店搜"DeepSeek"下载 App，或访问 chat.deepseek.com</td>
+            <td>逻辑推理强，能提出专业质疑；擅长扮演"懂财税的内行老板"</td>
+            <td>语音功能不如豆包流畅（以文字见长）</td>
+            <td><strong>文字对练</strong>（推荐）：模拟微信/邮件沟通场景，训练逻辑和措辞</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 style="margin:20px 0 12px;color:#DC2626;">⚠️ 财税从业者用 AI 对练的七条致命边界（必须全员知晓）</h4>
+    <div class="hl-box warn">
+      <div class="hl-title">🔴 AI 不是财税专家，也不懂真实人性——下面这七条边界，每一条都可能让训练适得其反</div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:5%;">#</th><th style="width:22%;">边界</th><th style="width:40%;">具体风险</th><th style="width:33%;">应对方法</th></tr></thead>
+        <tbody>
+          <tr style="background:#FFF5F5;">
+            <td><strong>1</strong></td>
+            <td><strong>AI 会编造财税政策</strong></td>
+            <td style="font-size:12px;">AI 在扮演"老板"时可能说："我听说现在个体户核定征收全部取消了，你们怎么还推荐这个？"——实际上各地执行口径不同，AI 可能在虚构政策变化。学员如果信以为真，会把错误信息带到真实客户面前。</td>
+            <td style="font-size:12px;"><strong>铁律：AI 对练中提到的任何具体政策、税率、征管口径，必须在练习后到国家税务总局官网或当地税务局公告中核实。</strong>对练是练对话感觉，不是学政策内容。涉及具体数字的，一律以官方文件为准。</td>
+          </tr>
+          <tr style="background:#FFF5F5;">
+            <td><strong>2</strong></td>
+            <td><strong>AI 不懂地方执行差异</strong></td>
+            <td style="font-size:12px;">同一个政策，常州税务局和苏州税务局的执行口径可能完全不同。AI 无法感知这种差异，它的回答基于训练数据中的"普遍情况"，可能跟本地实际不符。</td>
+            <td style="font-size:12px;">对练场景限定在"通用销售对话"，不涉及具体地方执行细节。如果练习中需要引用操作流程，用公司内部经验，不用 AI 给的"标准答案"。</td>
+          </tr>
+          <tr style="background:#FFF5F5;">
+            <td><strong>3</strong></td>
+            <td><strong>AI 没有真实权力关系</strong></td>
+            <td style="font-size:12px;">真实客户面谈中，老板的一个皱眉、一次沉默、一个看手表的动作，都会给你真实的心理压力——因为你怕丢单。AI 对练中，你心里清楚"这只是个机器人"，焦虑感是模拟不出来的。练多了 AI 可能让你产生"我已经准备好了"的虚假自信。</td>
+            <td style="font-size:12px;"><strong>AI 对练只用于破胆阶段（7-8月），帮你克服"说不出口"的障碍。</strong>一旦你能完整说完一段话了，必须切换到真人角色扮演。AI 是拐杖，不是腿——该扔的时候要扔。</td>
+          </tr>
+          <tr style="background:#FFF5F5;">
+            <td><strong>4</strong></td>
+            <td><strong>AI 缺乏非语言信息感知</strong></td>
+            <td style="font-size:12px;">面对面咨询中，70%的信息通过表情、肢体、语气传递。老板嘴上说"我再考虑考虑"，同时身体后仰、双臂交叉——这才是真正的拒绝信号。AI 只能处理文字，永远捕捉不到这些。</td>
+            <td style="font-size:12px;">AI 对练仅限文字和语音对话。观察客户肢体语言的能力，必须通过周二学习会的<strong>真人角色扮演 + 录像回看</strong>来训练，这是 AI 完全替代不了的。</td>
+          </tr>
+          <tr style="background:#FFF5F5;">
+            <td><strong>5</strong></td>
+            <td><strong>AI 的记忆是虚假的</strong></td>
+            <td style="font-size:12px;">同一个 Prompt 用三次后，AI 看似"记住了你的风格"，实际上它在当前对话窗口中重新生成角色，前后逻辑可能矛盾。第三次练习时 AI 对某个政策的理解，跟第一次可能完全不同——这会误导你的学习路径。</td>
+            <td style="font-size:12px;">每次对练前清空对话历史，用全新对话。不要追求"AI 越来越了解我"，要追求"我越来越能应对不同类型的老板"——每次换一个 Prompt 模板，交叉训练不同场景。</td>
+          </tr>
+          <tr style="background:#FFF5F5;">
+            <td><strong>6</strong></td>
+            <td><strong>AI 无法模拟"利益博弈"</strong></td>
+            <td style="font-size:12px;">真实老板跟你谈价格时，他脑子里在算：这笔钱花得值不值？同行收多少钱？能不能再便宜点？AI 可以模仿"砍价"的语言，但无法模拟真实金钱博弈中的心理张力——那种"你报完价，空气凝固三秒钟"的压力。</td>
+            <td style="font-size:12px;">价格谈判场景<strong>必须在真人角色扮演中完成</strong>，尤其是那个"报价后的沉默"——AI 做不到让你手心出汗，但真人同事可以。</td>
+          </tr>
+          <tr style="background:#FFF5F5;">
+            <td><strong>7</strong></td>
+            <td><strong>过度依赖 AI 会钝化共情能力</strong></td>
+            <td style="font-size:12px;">最隐蔽的风险：习惯了对 AI"说了就行"，回到真人场景时可能会忽略对方的表情变化和情绪信号。就像用惯了导航的人方向感会退化——用惯了 AI 对练的人，对人脸的敏感度也会退化。</td>
+            <td style="font-size:12px;"><strong>每周 AI 对练次数上限：5 次。</strong>超过 5 次，边际收益趋近于零，风险曲线开始上升。保持 AI 对练 + 真人角色扮演 + 真实客户面谈的三角平衡。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 style="margin:20px 0 12px;color:#DC2626;">⚠️ AI 的"捧杀"陷阱——如何识别与避免</h4>
+    <div class="grid-2">
+      <div class="hl-box warn">
+        <div class="hl-title">🔴 AI 捧杀的 4 种表现（出现以下情况说明你在被 AI 骗）</div>
+        <ol style="padding-left:18px;font-size:12px;">
+          <li><strong>"你说得太好了！"</strong> — 你说什么都夸，不分优劣</li>
+          <li><strong>"老板一定会被打动的"</strong> — 毫无根据地给你信心</li>
+          <li><strong>从不追问具体数字</strong> — 你说"帮客户省很多钱"，AI不追问"省多少？怎么算的？有依据吗？"</li>
+          <li><strong>从不质疑你的前提</strong> — 你说"这个方案能省3万"，AI不追查计算过程是否合规</li>
+        </ol>
+      </div>
+      <div class="hl-box ok">
+        <div class="hl-title">🟢 好的 AI 对练是什么样的（这才是有效的训练）</div>
+        <ol style="padding-left:18px;font-size:12px;">
+          <li>你说话术中有一个漏洞，AI <strong>立刻追问</strong>："依据哪个政策文件？"</li>
+          <li>你报了一个数字，AI 反问："<strong>这个数字怎么算出来的？你把明细列一下。</strong>"</li>
+          <li>你说了3分钟，AI 回："<strong>讲太长了老板早走了，你用30秒重新说一遍。</strong>"</li>
+          <li>AI 最后会给出<strong>具体、可操作的改进建议</strong>而不是泛泛的"你已经很棒了"</li>
+        </ol>
+      </div>
+    </div>
+
+    <h4 style="margin:20px 0 12px;color:var(--success);">🔧 专用 Prompt 模板（复制粘贴到豆包或 DeepSeek 对话框）</h4>
+
+    <div style="background:#1E293B;color:#E2E8F0;padding:20px;border-radius:8px;font-size:12px;line-height:1.8;margin:12px 0;">
+      <p style="color:#F97316;font-weight:700;margin-bottom:8px;">【初级版 — 用于 7-8 月破胆期】</p>
+      <p>你现在扮演一个年收入 80 万的建材公司老板，40 岁，性格急、重利益、讨厌废话。我是代账公司的财务顾问，第一次通过熟人介绍跟你见面。你的目标是：① 测试我能不能在 3 分钟内让你产生兴趣；② 追问 2-3 个具体数字问题（比如"你说能省钱，大概省多少？怎么省的？"）；③ 如果你觉得我在说空话，直接打断我。对话结束后，给我 3 条具体的改进建议，标注我哪里做得不好，不要只说好话。开始。</p>
+    </div>
+
+    <div style="background:#1E293B;color:#E2E8F0;padding:20px;border-radius:8px;font-size:12px;line-height:1.8;margin:12px 0;">
+      <p style="color:#F97316;font-weight:700;margin-bottom:8px;">【中级版 — 用于 9-10 月建术期】</p>
+      <p>你现在扮演一个年收入 500 万的电商公司老板，在淘宝、抖音、拼多多三个平台同时运营，财务数据分散在三套系统里，从来没有做过系统的税务筹划。现在用的是某代账公司每月 300 块的基础记账服务。我是另一家财税公司的顾问来找你。你心里一直觉得"代账公司都差不多"，但最近被同行提醒"你这种体量应该做税务筹划了"。你的目标是：① 我一报价你就质疑"人家才 300，你们凭什么贵？"；② 我说"合规"、"筹划"这些词时你表示听不懂，让我用大白话解释；③ 追问真实案例——"你说的那个客户，具体是什么行业的？省多少钱？数据能给我看看吗？"。如果我说不出具体数字，你立刻表示不感兴趣。对练结束后给我 5 条改进建议，每一条都要有具体的改进方法。</p>
+    </div>
+
+    <div style="background:#1E293B;color:#E2E8F0;padding:20px;border-radius:8px;font-size:12px;line-height:1.8;margin:12px 0;">
+      <p style="color:#F97316;font-weight:700;margin-bottom:8px;">【高级版 — 用于 11-12 月实战期】</p>
+      <p>你现在扮演一个年收入 1500 万的制造业老板，公司有50多个员工，正在考虑申请高新技术企业认定。财务部有3个人，但都是记账型的，没有税务筹划能力。你对专业财务公司有偏见——之前被不靠谱的代账公司坑过一次，因为错误的税务处理多交了 20 万冤枉税。我今天来见你是经商会朋友推荐。你的目标是：① 一上来就给我甩冷脸："你们这些代账公司都差不多，说说你怎么证明你跟之前那些不一样？"；② 在我讲解过程中随时打断，问至少 3 个财税专业问题（如"你说金税四期查发票，具体查什么类型的发票？怎么查？"、"个体户和有限公司我到底用哪个更省税？"、"高新技术企业认定，你们操作过几家的案例？"）；③ 我报价后你沉默 5 秒不说话，看我怎么应对冷场。对练结束后给我 7 条改进建议，逐条指出我的话术漏洞和法律依据错误（如果有的话），要求给我打一个严厉的分数（满分10分），不许打8分以上。</p>
+    </div>
+
+    <h4 style="margin:20px 0 12px;color:var(--accent);">🎯 对练后自我复盘三步法</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>步骤</th><th>动作</th><th>具体问题</th></tr></thead>
+        <tbody>
+          <tr><td><strong>第1步</strong></td><td>看 AI 评分和建议</td><td>AI 给我提了哪些具体改进点？哪条让我最不舒服？（通常最不舒服的那条就是最对症的）</td></tr>
+          <tr><td><strong>第2步</strong></td><td>重听/重看对话记录</td><td>我哪里卡壳了？哪个问题我回避了？有没有用了专业术语没解释？</td></tr>
+          <tr><td><strong>第3步</strong></td><td>写一句改进承诺</td><td>"下次我再被问到XX问题时，我会这样回答：______"（写下来，下次对练前念一遍）</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="hl-box pink mt-4">
+      <div class="hl-title">🔴 三个千万不要（严格遵守）</div>
+      <ol style="padding-left:18px;font-size:13px;">
+        <li><strong>不要把 AI 对练当成"完成任务"</strong> — 每天练 3 次，每次不超过 5 分钟，效果远好于一周集中练一次 30 分钟。这背后是间隔重复效应（Ebbinghaus, 1885）：分散练习比集中练习的记忆留存率高出一倍以上。语言肌肉记忆尤其依赖高频短时刺激。</li>
+        <li><strong>不要用同一个 Prompt 练超过 3 次</strong> — AI 会记住你的套路，换着场景来（不同行业、不同性格的老板），保持新鲜感和挑战性。</li>
+        <li><strong>不要只看 AI 的夸奖部分</strong> — AI 天然倾向鼓励用户，即使你用了上面的 Prompt，也可能会在批评的后面悄悄加一句"但整体还是不错的"。请自动忽略这句——只看批评和具体改进建议。</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 四、激励机制 ==================== -->
+<div class="section" id="s4">
+  <div class="section-title">
+    <span class="icon" style="background:#ECFDF5;color:#10B981;">🎁</span>
+    四、学习激励机制：400元/月如何驱动持续主动学习
+  </div>
+  <div class="section-desc">自我决定理论（Deci & Ryan, 1985, 2000）在全球动机心理学领域被引量最高，其核心发现是：人的持续主动行为依赖三种基本心理需求的满足——<strong>自主权</strong>（我能选择怎么做）、<strong>胜任感</strong>（我能越做越好）、<strong>归属感</strong>（我被团队需要）。对30岁以上的专业人员而言，这三种需求比小额金钱的驱动力更持久。本方案将400元预算只投在"高质量分享"这一个动作上，其余激励全部围绕这三种心理需求设计。</div>
+
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:var(--success);"></span>唯一现金支出：周二学习会·主题分享红包</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>评级</th><th>评分标准</th><th>金额</th><th>预计月频次</th><th>月度预算</th></tr></thead>
+        <tbody>
+          <tr style="background:#FFF7ED;"><td>🏆 <strong>S级</strong></td><td>16-20分：真实案例+操作模板+引发3人以上讨论</td><td><strong>100元</strong></td><td>0-1次</td><td>0~100元</td></tr>
+          <tr style="background:#F0F9FF;"><td>⭐ <strong>A级</strong></td><td>12-15分：有案例有框架，值得全员学习</td><td><strong>66元</strong></td><td>1-2次</td><td>66~132元</td></tr>
+          <tr style="background:#ECFDF5;"><td>👍 <strong>B级</strong></td><td>8-11分：基本合格，有提升空间</td><td><strong>50元</strong></td><td>2-3次</td><td>100~150元</td></tr>
+          <tr style="background:#F1F5F9;"><td><strong>待提升</strong></td><td>7分以下：未达标，下周重来</td><td><strong>—</strong></td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sm mt-2">💰 每月4次分享，总预算 300~400元。评分维度详见第五章。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:var(--pink);"></span>非金钱激励工具箱（七种武器）</div>
+    <div class="grid-2">
+      <div class="hl-box pink"><div class="hl-title">🌟 公开表扬</div><p>周五复盘时老板当众说"谁做了什么事→产生什么结果"。具体到行为，禁止"大家辛苦了"。</p></div>
+      <div class="hl-box info"><div class="hl-title">🖼️ 荣誉上墙</div><p>办公室设"战功墙"。S级分享、客户好评、签单突破——A4打印头像+战绩+客户原话，每月更新。</p></div>
+      <div class="hl-box sky"><div class="hl-title">🔓 特权解锁</div><p>积分达段位后解锁：弹性打卡、选择服务行业、优先参加外部培训（详见第六章段位表）。</p></div>
+      <div class="hl-box ok"><div class="hl-title">👥 师徒名分</div><p>黄金顾问以上可官方任命导师。徒弟出单师傅获"带教积分"。</p></div>
+      <div class="hl-box warn"><div class="hl-title">🍜 老板午餐</div><p>月度MVP/突破者，老板请午饭。不聊工作，就是吃饭——老板的时间是最贵的奖励。</p></div>
+      <div class="hl-box info"><div class="hl-title">📱 朋友圈主角</div><p>升段/签单/获奖时制作专业海报，老板号+公司号转发配走心文案。</p></div>
+      <div class="hl-box pink"><div class="hl-title">🃏 免死金牌</div><p>季度积分最高者，下季度拥有"调休自由选"或"优先排年假"的特权。</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 五、质量评估 ==================== -->
+<div class="section" id="s5">
+  <div class="section-title">
+    <span class="icon" style="background:#F0F9FF;color:#0EA5E9;">📊</span>
+    五、分享质量评估：四维打分法
+  </div>
+  <div class="section-desc">50-100元的红包值不值，用这个标准一分钟定级。三方打分，杜绝人情分和老板偏见。</div>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:15%;">维度</th><th style="width:10%;">权重</th><th style="width:22%;">1分</th><th style="width:23%;">3分</th><th style="width:30%;">5分</th></tr></thead>
+        <tbody>
+          <tr><td><strong>🔧 实战性</strong></td><td><strong>30%</strong></td><td>照搬政策原文，无案例</td><td>有真实案例，但分析浅</td><td>真实案例+操作步骤+<strong>可复用模板/检查清单</strong></td></tr>
+          <tr><td><strong>📐 结构化</strong></td><td><strong>25%</strong></td><td>想到哪讲到哪</td><td>有基本框架</td><td>总分总结构，<strong>听众能用一句话记住核心</strong></td></tr>
+          <tr><td><strong>💡 启发性</strong></td><td><strong>25%</strong></td><td>听完跟没听一样</td><td>有一个"原来如此"的点</td><td>引发<strong>3人以上主动提问</strong>，2人以上表示要应用到工作</td></tr>
+          <tr><td><strong>🗣️ 表达力</strong></td><td><strong>20%</strong></td><td>念稿/念PPT</td><td>有互动有眼神，基本脱稿</td><td>有故事有金句，<strong>用老板听得懂的话翻译专业术语</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hl-box info mt-4">
+      <div class="hl-title">🔍 三方评分开源机制</div>
+      <div class="grid-3 text-center" style="margin-top:12px;font-size:14px;">
+        <div><strong style="color:var(--pink);">分享者自评</strong><br><span style="font-size:28px;font-weight:900;color:var(--pink);">20%</span><br><span class="text-sm">促进自我反思</span></div>
+        <div><strong style="color:var(--primary);">听众匿名打分</strong><br><span style="font-size:28px;font-weight:900;color:var(--primary);">50%</span><br><span class="text-sm">最真实的反馈</span></div>
+        <div><strong style="color:var(--accent);">老板/主管评分</strong><br><span style="font-size:28px;font-weight:900;color:var(--accent);">30%</span><br><span class="text-sm">战略视角把关</span></div>
+      </div>
+      <p class="text-sm mt-4 text-center">⚠️ 听众均分与老板评分相差超过5分→公开讨论差异原因，防止人情分和老板偏见。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 六、积分系统 ==================== -->
+<div class="section" id="s6">
+  <div class="section-title">
+    <span class="icon" style="background:#EEF2FF;color:#7C3AED;">🎮</span>
+    六、成长追踪体系：段位晋升积分系统
+  </div>
+  <div class="section-desc">行为心理学有一条基本规律：被记录的行为会自然增加，被反馈的行为会自然改善。段位晋升体系的作用不是"考核"，是让每个人在任何时候都知道自己走到了哪里、下一步够得着的是什么。</div>
+  <div class="card">
+    <div class="grid-2">
+      <div>
+        <h3 style="margin-bottom:12px;color:var(--primary);">🏅 段位权益表</h3>
+        <table>
+          <thead><tr><th>段位</th><th>积分</th><th>解锁权益</th></tr></thead>
+          <tbody>
+            <tr><td>🟤 青铜学徒</td><td>0-50</td><td>基础身份</td></tr>
+            <tr><td>⚪ 白银专员</td><td>51-120</td><td>可申请外部培训（公司出费）</td></tr>
+            <tr><td>🟡 黄金顾问</td><td>121-220</td><td>可带徒弟，徒弟出单师傅获10%积分加成</td></tr>
+            <tr><td>⚪ 铂金专家</td><td>221-350</td><td>弹性打卡（每周可1天远程办公）</td></tr>
+            <tr><td>💎 钻石合伙人</td><td>351-500</td><td>参与公司年度利润分红（0.5%-1%）</td></tr>
+            <tr><td>👑 王者CFO</td><td>500+</td><td>独立负责一条业务线，享该线利润5%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3 style="margin-bottom:12px;color:var(--accent);">⭐ 积分获取规则</h3>
+        <table>
+          <thead><tr><th>行为</th><th>积分</th><th>限制</th></tr></thead>
+          <tbody>
+            <tr><td>完成每日学习笔记</td><td>+2</td><td>每天1次</td></tr>
+            <tr><td>周二分享主讲</td><td>+10</td><td>每周1次</td></tr>
+            <tr><td>分享获评S级</td><td>+15</td><td>额外加分</td></tr>
+            <tr><td>独立完成客户面谈</td><td>+10</td><td>—</td></tr>
+            <tr><td>客户成交（新签/增购）</td><td>+20/+10</td><td>—</td></tr>
+            <tr><td>帮助同事解决问题</td><td>+5</td><td>每周2次</td></tr>
+            <tr><td>被采纳的改进建议</td><td>+15</td><td>—</td></tr>
+            <tr><td>客户书面好评</td><td>+10</td><td>—</td></tr>
+            <tr><td>主动分享错误和教训</td><td>+8</td><td>鼓励透明</td></tr>
+            <tr><td>月度学习全勤</td><td>+10</td><td>每月1次</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:var(--pink);"></span>趣味节点（零社死，纯正向）</div>
+    <div class="grid-3">
+      <div class="hl-box ok"><div class="hl-title">📊 每周积分榜</div><p>周五群内公布本周积分 TOP 3 + "本周跃升之星"（进步最大），不公布末位。</p></div>
+      <div class="hl-box info"><div class="hl-title">🎖️ 月度段位晋升</div><p>每月1号公布段位变动，升段者发公司统一设计的海报到朋友圈。</p></div>
+      <div class="hl-box pink"><div class="hl-title">🎤 季度吐槽大会</div><p>季度末每人吐槽一个流程问题+提方案。最有价值者获"首席吐槽官"流动红旗+老板请午饭。</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 七、企业文化 ==================== -->
+<div class="section" id="s7">
+  <div class="section-title">
+    <span class="icon" style="background:#FDF2F8;color:#EC4899;">💎</span>
+    七、企业文化体系：四大核心信条
+  </div>
+  <div class="section-desc">组织文化研究（Schein, 1985）表明：真正的文化不是写在员工手册里的，而是团队成员在不被监督时、面对不确定情境时，依然会做出的那个"默认选择"。以下四条信条的设计逻辑是：每条都对应一个每日可验证的具体动作——做到了就是文化在起作用，没做到就说明文化还停在纸上。</div>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:18%;">信条</th><th style="width:42%;">一句话</th><th style="width:40%;">每日验证</th></tr></thead>
+        <tbody>
+          <tr><td><strong>🔒 专业立身</strong></td><td>我们卖的不是代账，是老板的财务安全感。</td><td>每天问："今天我为客户的财务安全多做了一件事吗？"</td></tr>
+          <tr><td><strong>🤝 互撑不磕</strong></td><td>同事的问题就是我的问题。</td><td>周五复盘公开说出"本周XX帮了我XX"。老板每周至少表扬1个互助案例。</td></tr>
+          <tr><td><strong>🗣️ 说人话</strong></td><td>把"增值税进项税额转出"翻译成"这笔钱不能抵税，因为……"</td><td>分享中听不懂的术语超3个→评级降一级。</td></tr>
+          <tr><td><strong>🚀 主动才有故事</strong></td><td>等客户问=被动接单。帮客户发现问题=专业顾问。</td><td>每个客户每月至少收到1次一对一的主动财税风险提醒。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:var(--success);"></span>文化落地节奏 + 月度健康检查</div>
+    <div class="grid-2">
+      <table>
+        <thead><tr><th>频率</th><th>动作</th></tr></thead>
+        <tbody>
+          <tr><td>每天早会</td><td>每人一句话："今天我能为客户多做什么？"轮流主持</td></tr>
+          <tr><td>每周二</td><td>学习会前齐读四大信条（30秒），当周分享人领读</td></tr>
+          <tr><td>每周五</td><td>"本周谁帮了你？"老板带头先说</td></tr>
+          <tr><td>每月</td><td>收集一个真实"践行文化"小故事，发全员群</td></tr>
+        </tbody>
+      </table>
+      <div class="hl-box sky">
+        <div class="hl-title">📋 月度文化健康检查（匿名）</div>
+        <ol style="padding-left:16px;font-size:13px;">
+          <li>"这个月，有没有人因为你帮他而让你觉得被认可？"</li>
+          <li>"这个月，你觉得在做代账还是在做顾问？"</li>
+          <li>"这个月，有没有不敢做的事但同事推了你一把？"</li>
+        </ol>
+        <p style="margin-top:6px;font-size:12px;">✅ 均分≥8分→健康 | ⚠️ 任一项&lt;6分→老板约谈</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 八、老板角色 ==================== -->
+<div class="section" id="s8">
+  <div class="section-title">
+    <span class="icon" style="background:#FFFBEB;color:#F59E0B;">👔</span>
+    八、老板的角色：不是监工，是教练
+  </div>
+  <div class="section-desc">五个人能不能带出来，50%取决于她们，50%取决于你怎么带。</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-header"><span class="dot" style="background:var(--success);"></span>✅ 每周必做三件事</div>
+      <table>
+        <tbody>
+          <tr><td><strong>1. 一次当众表扬</strong></td><td>周五复盘，具体说"谁做了什么事→什么结果"，不说"大家辛苦了"。</td></tr>
+          <tr><td><strong>2. 一次私下教练</strong></td><td>随机约一人午饭。聊"最有成就感的事？最纠结的事？"只听不评判。</td></tr>
+          <tr><td><strong>3. 一次以身作则</strong></td><td>老板也要分享，接受同样评分标准。<strong>你是第一个被考核的人。</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="dot" style="background:#DC2626;"></span>🚫 红线</div>
+      <table>
+        <tbody>
+          <tr><td><strong>1. 群里只回"收到"</strong></td><td>没有参与感，团队就没有。</td></tr>
+          <tr><td><strong>2. 当众批评</strong></td><td>公开表扬+私下教练。当众批评一次，修复信任需要的成本远高于当初建立信任的成本——尤其是对S型和C型员工，一次当众批评可能让他们退回"只做分内事、绝不多说一句话"的状态。</td></tr>
+          <tr><td><strong>3. 跳过规则发红包</strong></td><td>规则是所有人的规则，包括你。</td></tr>
+          <tr><td><strong>4. 只盯结果不盯成长</strong></td><td>第一个月没人成交但敢开口了→这就是巨大进步。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 执行助理 -->
+  <div class="card">
+    <div class="card-header"><span class="dot" style="background:#7C3AED;"></span>📋 执行助理：从 5 人中选 1 人做计划推进的"总管家"</div>
+    <div class="hl-box info">
+      <div class="hl-title">💡 为什么不建议老板亲自盯进度？</div>
+      <p>老板应该是教练，不是监工。如果老板每天追着问"笔记写了吗？""考核准备了吗？"，权威感会变成压迫感。安排一个<strong>执行助理（Peer Leader，平级牵头人）</strong>来负责日常推进，老板只需在周二学习会和周五复盘两个节点出现——保持"教练"的稀缺性和权威感。</p>
+    </div>
+
+    <h4 style="margin:20px 0 12px;color:var(--primary);">🎯 选什么样的人做执行助理？</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:15%;">DISC 类型</th><th style="width:20%;">适合度</th><th style="width:65%;">分析</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:#10B981;">S 型 · 稳健型</strong></td>
+            <td><span class="tag tag-green">⭐⭐⭐⭐⭐ 最佳</span></td>
+            <td>执行力强、守承诺、不遗漏任务、大家信任她。她牵头不会让人感到"被管"，而是"被照顾"。<strong>唯一短板：</strong>遇问题可能不主动汇报，需要老板每周主动问她一次"有什么困难需要我帮忙？"</td>
+          </tr>
+          <tr>
+            <td><strong style="color:#7C3AED;">S+C 混合型</strong></td>
+            <td><span class="tag tag-green">⭐⭐⭐⭐⭐ 最佳</span></td>
+            <td>既可靠又细致，适合管理积分、评分、交付物等需要精确跟踪的事务。<strong>特别适合</strong>：如果公司已经有这样一个"默默靠谱、大家有事都找她"的人，她就是天然的执行助理。</td>
+          </tr>
+          <tr>
+            <td><strong style="color:#0EA5E9;">C 型 · 谨慎型</strong></td>
+            <td><span class="tag tag-sky">⭐⭐⭐⭐ 适合</span></td>
+            <td>细心不出错，但可能过度关注细节而忽略大节奏。适合搭配一个 D 型老板定期给她"优先级指令"。<strong>注意：</strong>C 型助理可能会把"催别人交作业"变成一件让自己很焦虑的事——需要老板给她减压："催不动就告诉我，不用你一个人扛。"</td>
+          </tr>
+          <tr>
+            <td><strong style="color:#F97316;">I 型 · 影响型</strong></td>
+            <td><span class="tag tag-orange">⭐⭐⭐ 可考虑</span></td>
+            <td>善于沟通和活跃气氛，催人交笔记时不会让人反感。但<strong>容易忘事</strong>——如果选 I 型，必须给她配一个简单的跟踪工具（共享Excel或飞书多维表格），不能靠脑子记。</td>
+          </tr>
+          <tr>
+            <td><strong style="color:#DC2626;">D 型 · 支配型</strong></td>
+            <td><span class="tag tag-red">⭐ 不推荐</span></td>
+            <td>D 型催进度会让人感到压迫，"被她管着很不舒服"。她会把执行助理做成"第二老板"，反而破坏团队氛围。<strong>除非</strong>你的团队整体偏 S+C，需要一个推土机来推动——但这种情况很少见。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 style="margin:20px 0 12px;color:var(--accent);">📋 执行助理的具体职责清单</h4>
+    <div class="grid-2">
+      <div>
+        <table>
+          <thead><tr><th>频率</th><th>职责</th><th>预估耗时</th></tr></thead>
+          <tbody>
+            <tr><td><strong>每周一</strong></td><td>在群里发布本周「项目挑战题」+ 本周学习安排预告；提醒当周分享人准备</td><td>10 min</td></tr>
+            <tr><td><strong>每周二</strong></td><td>学习会前准备物料（投屏文件、签到表、评分表打印）；会中记录关键讨论点</td><td>15 min + 120 min 参会</td></tr>
+            <tr><td><strong>每周三</strong></td><td>检查昨日笔记提交情况，友善提醒未交者（"姐，昨天的笔记还没看到哦~"）</td><td>5 min</td></tr>
+            <tr><td><strong>每周五</strong></td><td>统计本周积分变动 + 公布积分榜 TOP 3 + 跃升之星；提醒下周分享人</td><td>15 min</td></tr>
+            <tr><td><strong>每月初</strong></td><td>结算月度积分 + 分享评分汇总 + 红包发放记录核对；公布段位变动</td><td>30 min</td></tr>
+            <tr><td><strong>项目节点</strong></td><td>跟踪项目交付进度，截止日前 3 天群内提醒（不是催，是"温馨提醒"）</td><td>5 min/次</td></tr>
+          </tbody>
+        </table>
+        <p class="text-sm mt-2">⏱️ 每周总计：约 1-2 小时（不含学习会参会时间）</p>
+      </div>
+      <div>
+        <div class="hl-box ok">
+          <div class="hl-title">🔑 执行助理需要什么"授权"？</div>
+          <ol style="padding-left:18px;font-size:13px;">
+            <li><strong>信息权</strong>：了解每个人的项目进度、积分情况（不是评价权，是记录权）</li>
+            <li><strong>提醒权</strong>：在截止日前友善提醒同事（不需要老板批准，自己就能发）</li>
+            <li><strong>积分记录权</strong>：日常积分变更由助理记录，老板月度审核签字</li>
+            <li><strong>直接汇报线</strong>：每周五给老板一个 2 分钟口头简报（"本周完成了XX，XX需要你关注"）</li>
+            <li><strong>不需要的权：</strong>不参与评分（评分仍是老板+听众），不参与人事决策，不参与奖金分配</li>
+          </ol>
+        </div>
+        <div class="hl-box info mt-4">
+          <div class="hl-title">🎁 执行助理有什么额外激励？</div>
+          <p style="font-size:13px;">不是加工资，而是：</p>
+          <ol style="padding-left:18px;font-size:13px;">
+            <li><strong>积分加成</strong>：每月额外 +15 积分（相当于多做了一次分享）</li>
+            <li><strong>荣誉头衔</strong>：正式称号"苏越学习官"，印名片、上战功墙</li>
+            <li><strong>优先发展</strong>：段位晋升时优先考虑，外部培训名额优先给</li>
+            <li><strong>年末专项奖</strong>：年度盛典设"最佳学习官"奖项（额外红包 100 元）</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="hl-box pink mt-4">
+      <div class="hl-title">⚠️ 老板注意：执行助理是桥梁，不是防火墙</div>
+      <p style="font-size:13px;">执行助理替你跑流程，但<strong>不能替你带团队</strong>。以下事情必须你亲自做：一对一反馈对话、公开表扬、私下教练、周二学习会主持收尾。如果助理来跟你说"XX连续两周笔记没交了"，你要亲自去了解原因——助理只负责提醒，你负责解决问题。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 九、里程碑 ==================== -->
+<div class="section" id="s9">
+  <div class="section-title">
+    <span class="icon" style="background:#ECFDF5;color:#10B981;">🗓️</span>
+    九、171天总进度里程碑
+  </div>
+  <div class="card">
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">7月14日-31日</div><div class="tl-title">🚀 启动期：DISC测评+学习机制跑通</div><div class="tl-desc">7.14启动会→7.18 DISC出结果+个人学习路线图→7.21首次周二学习会（避开7.1-15征期）</div></div>
+      <div class="tl-item"><div class="tl-date">8月</div><div class="tl-title">🐣 破胆期：人人敢开口讲专业</div><div class="tl-desc">每人≥2次角色扮演+1次模拟面谈过关→8.29破胆验收</div></div>
+      <div class="tl-item"><div class="tl-date">9月</div><div class="tl-title">📚 深扎期：三大财税模块通关</div><div class="tl-desc">模块考试100%通过+每人输出3个客户优化方案→9.30大考</div></div>
+      <div class="tl-item"><div class="tl-date">10月</div><div class="tl-title">🛠️ 成型期：销售框架肌肉记忆</div><div class="tl-desc">"三问三说"脱口而出+首次真实客户面谈→10.31结业考核（避开10.1-15国庆+征期）</div></div>
+      <div class="tl-item"><div class="tl-date">11月</div><div class="tl-title">⚔️ 淬炼期：练习到实战</div><div class="tl-desc">人均≥2次客户面谈+≥1个老客户增购→11.30中期复盘+吐槽大会</div></div>
+      <div class="tl-item"><div class="tl-date">12月31日</div><div class="tl-title">🏆 收割期：拿结果+年度盛典</div><div class="tl-desc">每人独立开发1个新客户+段位公布+年度MVP+合影</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 十、预算 ==================== -->
+<div class="section" id="s10">
+  <div class="section-title">
+    <span class="icon" style="background:#F0F9FF;color:#0284C7;">💰</span>
+    十、预算总表（2026年7-12月）
+  </div>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>项目</th><th style="text-align:right;">预算</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>📢 学习分享红包</td><td class="text-right"><strong>2,200 元</strong></td><td>400元/月 × 5.5个月。仅用于周二分享评级奖励（50-100元/次）</td></tr>
+          <tr><td>🧠 DISC 测评</td><td class="text-right"><strong>0 元</strong></td><td>甄有才小程序、123test免费版</td></tr>
+          <tr><td>🎉 年度盛典</td><td class="text-right"><strong>500 元</strong></td><td>定制奖杯+简单聚餐</td></tr>
+          <tr style="background:#EEF2FF;"><td><strong>🔵 总计</strong></td><td class="text-right" style="font-size:18px;"><strong>约 2,700 元</strong></td><td>半年培养5位核心财务顾问的总投入</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hl-box ok mt-4">
+      <div class="hl-title">💡 投入产出参考</div>
+      <p>市场上针对财税服务行业的"顾问式销售+专业提升"培训，单人报价通常在 8,000-15,000 元区间（以2026年行业公开报价为参考）。此方案 5 人半年总投入约 2,700 元，人均约 540 元——相当于外部培训单人费用的 3.6%-6.8%。核心差异在于：外部培训是"听课"，这套方案是"边学边干边出结果"。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 十一、每周执行计划表 ==================== -->
+<div class="section" id="s11">
+  <div class="section-title">
+    <span class="icon" style="background:#EEF2FF;color:#4F46E5;">📋</span>
+    十一、每周执行计划总表：2026年7月14日 — 12月31日
+  </div>
+  <div class="section-desc">老板拿着这张表，一眼就知道这周做什么、做不做、怎么做。已精准避开所有征期高峰。</div>
+
+  <!-- 图例 -->
+  <div class="card" style="padding:16px 24px;">
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:13px;">
+      <strong>图例：</strong>
+      <span class="tax-badge tax-big">大征期</span> = 学习暂停
+      <span class="tax-badge tax-month">月度征期</span> = 学习减半
+      <span class="tax-badge tax-holiday">假期</span> = 不安排
+      <span class="tax-badge tax-free">安全窗口</span> = 全力学习
+    </div>
+  </div>
+
+  <!-- 7月 -->
+  <div class="card" id="plan-july">
+    <div class="card-header">
+      <span class="dot" style="background:#DC2626;"></span>
+      七月 — 启动月 🔴 大征期
+    </div>
+    <div class="table-wrap">
+      <table class="week-plan-table">
+        <thead><tr><th style="width:8%;">周次</th><th style="width:20%;">日期</th><th style="width:12%;">征期状态</th><th style="width:12%;">学习强度</th><th style="width:48%;">本周具体安排</th></tr></thead>
+        <tbody>
+          <tr class="row-big">
+            <td class="w-num">W1</td>
+            <td><strong>7月14日-18日</strong><br><span class="text-xs">（周二→周六）</span></td>
+            <td><span class="tax-badge tax-big">大征期</span><br><span class="text-xs">7.15截止</span></td>
+            <td>🔴 暂停</td>
+            <td>
+              <strong>不发学习任务，只做轻量启动：</strong><br>
+              • 7.14（周二）启动会 30min：老板宣布方案 + 发 DISC 测评链接<br>
+              • 全员在 7.18 前用手机自行完成 DISC 测评（12分钟/人）<br>
+              • 其他时间：全力冲刺 Q2 季度申报！学习不打扰
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W2</td>
+            <td><strong>7月21日-25日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              <strong>机制正式启动：</strong><br>
+              • 7.21（周二）首次完整学习会 120min：老板第一个分享（以身作则）<br>
+              • 7.22 DISC 一对一反馈面谈开始（每天1人，一周内完成）<br>
+              • 7.23 输出个人学习路线卡（5张，贴看板）<br>
+              • 发布第一个「项目挑战题」：税收优惠落地<br>
+              • 销售训练启动：60秒自我介绍录音
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W3</td>
+            <td><strong>7月28日-8月1日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              • 周二学习会：DISC 团队分布诊断讨论（全员参与）<br>
+              • 项目推进：每人认领3个客户做节税测算<br>
+              • 销售训练：角色扮演·低难度（熟人介绍场景）<br>
+              • 周五：首次积分榜公布 + 月度MVP预热
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 8月 -->
+  <div class="card" id="plan-aug">
+    <div class="card-header">
+      <span class="dot" style="background:#F97316;"></span>
+      八月 — 破胆月 🟠 月度征期
+    </div>
+    <div class="table-wrap">
+      <table class="week-plan-table">
+        <thead><tr><th style="width:8%;">周次</th><th style="width:20%;">日期</th><th style="width:12%;">征期状态</th><th style="width:12%;">学习强度</th><th style="width:48%;">本周具体安排</th></tr></thead>
+        <tbody>
+          <tr class="row-normal">
+            <td class="w-num">W4</td>
+            <td><strong>8月4日-8日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              • 周二学习会：税收优惠案例复盘（各组展示）<br>
+              • 销售训练：角色扮演·中难度（冷脸老板）<br>
+              • 8月新模块预告：社保与用工合规<br>
+              • 周四互问互答正常进行
+            </td>
+          </tr>
+          <tr class="row-month">
+            <td class="w-num">W5</td>
+            <td><strong>8月11日-15日</strong></td>
+            <td><span class="tax-badge tax-month">月度征期</span><br><span class="text-xs">8.15周六→17日截止</span></td>
+            <td>🟠 减半</td>
+            <td>
+              <strong>学习降载，专注申报：</strong><br>
+              • 周二学习会压缩至 60min：仅保留案例复盘+一个快拆<br>
+              • 取消周四互问互答、取消周五周考<br>
+              • 销售角色扮演顺延到下周<br>
+              • 周三笔记不强制（自愿）
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W6</td>
+            <td><strong>8月18日-22日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              • 周二学习会恢复 120min：社保与用工合规深度分享<br>
+              • 销售训练：角色扮演·高难度（比价型老板）<br>
+              • 周四互问互答恢复<br>
+              • 项目交付：每人输出1个客户社保优化方案
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W7</td>
+            <td><strong>8月25日-29日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              <strong>破胆阶段收尾：</strong><br>
+              • 周二学习会：社保方案互审会<br>
+              • <strong>8.29（周五）破胆期验收考核</strong>：全员模拟面谈（抽题，综合场景）<br>
+              • 月度积分结算 + 8月 MVP 公布<br>
+              • 公布 9 月项目：金税四期合规自查
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 9月 -->
+  <div class="card" id="plan-sep">
+    <div class="card-header">
+      <span class="dot" style="background:#F59E0B;"></span>
+      九月 — 深扎月 🟠 月度征期
+    </div>
+    <div class="table-wrap">
+      <table class="week-plan-table">
+        <thead><tr><th style="width:8%;">周次</th><th style="width:20%;">日期</th><th style="width:12%;">征期状态</th><th style="width:12%;">学习强度</th><th style="width:48%;">本周具体安排</th></tr></thead>
+        <tbody>
+          <tr class="row-normal">
+            <td class="w-num">W8</td>
+            <td><strong>9月1日-5日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              • 周二学习会：金税四期模块启动 + 新分组公布<br>
+              • 销售训练："三问三说"框架首次教学<br>
+              • 项目分配：每组认领一个行业赛道做税务风险扫描<br>
+              • 周三午休开始"三问三说"两两对练
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W9</td>
+            <td><strong>9月8日-12日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              • 周二学习会：金税四期红线深度案例<br>
+              • 销售训练：周五"三问三说"首次全员考核（老板打分）<br>
+              • 项目推进：行业风险扫描第一轮交付<br>
+              • 周三午休对练继续
+            </td>
+          </tr>
+          <tr class="row-month">
+            <td class="w-num">W10</td>
+            <td><strong>9月15日-19日</strong></td>
+            <td><span class="tax-badge tax-month">月度征期</span><br><span class="text-xs">9.15周二截止</span></td>
+            <td>🟠 减半</td>
+            <td>
+              <strong>学习降载，专注申报：</strong><br>
+              • 周二学习会压缩至 60min："三问三说"对练<br>
+              • 取消周四互问互答、周五周考<br>
+              • 项目交付顺延至征期后<br>
+              • 周三笔记自愿
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W11</td>
+            <td><strong>9月22日-26日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              <strong>深扎收尾冲刺：</strong><br>
+              • 周二学习会：行业风险地图成果展示（跨组交叉审核）<br>
+              • <strong>9.25 专业模块大考</strong>（三大模块抽题，笔试+口试）<br>
+              • 周四互问互答恢复<br>
+              • 月度积分结算 + 9月 MVP 公布
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W12</td>
+            <td><strong>9月28日-30日</strong><br><span class="text-xs">（周一→周三，短周）</span></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              • 周二学习会照常（本阶段最后一次完整120min）<br>
+              • 销售训练：复习"三问三说"，为10月冲刺做准备<br>
+              • 布置国庆自学阅读材料（金税四期政策原文+3个行业案例）
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 10月 -->
+  <div class="card" id="plan-oct">
+    <div class="card-header">
+      <span class="dot" style="background:#DC2626;"></span>
+      十月 — 成型月 🔴 大征期 + 国庆
+    </div>
+    <div class="table-wrap">
+      <table class="week-plan-table">
+        <thead><tr><th style="width:8%;">周次</th><th style="width:20%;">日期</th><th style="width:12%;">征期状态</th><th style="width:12%;">学习强度</th><th style="width:48%;">本周具体安排</th></tr></thead>
+        <tbody>
+          <tr class="row-holiday">
+            <td class="w-num">—</td>
+            <td><strong>10月1日-7日</strong></td>
+            <td><span class="tax-badge tax-holiday">国庆假期</span></td>
+            <td>🔴 不安排</td>
+            <td>
+              <strong>假期，不安排任何学习活动。</strong><br>
+              • 节前已布置自学材料（金税四期+行业案例），自愿阅读<br>
+              • 员工好好休息充电，节后回来全力冲刺
+            </td>
+          </tr>
+          <tr class="row-big">
+            <td class="w-num">W13</td>
+            <td><strong>10月8日-10日</strong><br><span class="text-xs">（周四→周六，短周）</span></td>
+            <td><span class="tax-badge tax-big">大征期</span></td>
+            <td>🔴 暂停</td>
+            <td>
+              <strong>节后回归 + 大征期，学习暂停：</strong><br>
+              • 本周只有一个任务：冲刺 Q3 季度申报！<br>
+              • 周二学习会取消<br>
+              • 不安排任何学习或考核
+            </td>
+          </tr>
+          <tr class="row-big">
+            <td class="w-num">W14</td>
+            <td><strong>10月12日-16日</strong></td>
+            <td><span class="tax-badge tax-big">大征期</span><br><span class="text-xs">10.15周四截止</span></td>
+            <td>🔴 暂停</td>
+            <td>
+              <strong>大征期最后冲刺，学习暂停：</strong><br>
+              • 周二学习会取消<br>
+              • 可以在群里轻分享（自愿），不考核不过问<br>
+              • 全力以赴完成季度申报，10.15 后喘口气
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W15</td>
+            <td><strong>10月19日-23日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              <strong>征期结束，火力全开：</strong><br>
+              • 周二学习会恢复："三问三说"强化训练<br>
+              • 销售冲刺：安排首次真实客户面谈（老客户"财税健康体检"）<br>
+              • 每人本周内约见1个老客户做体检（练对话，不为销售）<br>
+              • 周五全员分享体检感受
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W16</td>
+            <td><strong>10月26日-30日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              <strong>销售结业考核周：</strong><br>
+              • <strong>10.27（周二）销售结业考核</strong>：每人完成一次真实客户面谈（老板在场观察）<br>
+              • 10.30（周五）考核复盘会：全员一起看录像回放、互评<br>
+              • 月度积分结算 + 10月 MVP 公布
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 11月 -->
+  <div class="card" id="plan-nov">
+    <div class="card-header">
+      <span class="dot" style="background:#F97316;"></span>
+      十一月 — 淬炼月 🟠 月度征期
+    </div>
+    <div class="table-wrap">
+      <table class="week-plan-table">
+        <thead><tr><th style="width:8%;">周次</th><th style="width:20%;">日期</th><th style="width:12%;">征期状态</th><th style="width:12%;">学习强度</th><th style="width:48%;">本周具体安排</th></tr></thead>
+        <tbody>
+          <tr class="row-normal">
+            <td class="w-num">W17</td>
+            <td><strong>11月2日-6日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              • 周二学习会：客户增值服务方案大赛启动 + 分组<br>
+              • 实战推进：每人再约见1个老客户做"财税健康体检"<br>
+              • 群内分享体检发现的问题和机会
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W18</td>
+            <td><strong>11月9日-14日</strong></td>
+            <td><span class="tax-badge tax-month">月度征期</span><br><span class="text-xs">11.15周日→16日截止</span></td>
+            <td>🟠 减半</td>
+            <td>
+              <strong>学习降载，专注申报：</strong><br>
+              • 周二学习会压缩至 60min：仅保留方案大赛进展同步<br>
+              • 取消周四互问互答<br>
+              • 实战面谈建议安排在征期后
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W19</td>
+            <td><strong>11月16日-20日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              • 周二学习会：根据体检结果输出客户优化方案<br>
+              • 实战推进：带方案做第二次客户面谈，尝试轻量增购<br>
+              （个税筹划 / 社保优化 / 合同涉税审查等）<br>
+              • 周四互问互答恢复
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W20</td>
+            <td><strong>11月23日-27日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              • 周二学习会：增购案例分享（谁出了什么单、怎么谈的）<br>
+              • 大赛方案书初稿完成，组内互审<br>
+              • <strong>11.27 季度吐槽大会</strong>（第三季度）<br>
+              • 月度积分结算 + 11月MVP公布
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 12月 -->
+  <div class="card" id="plan-dec">
+    <div class="card-header">
+      <span class="dot" style="background:#7C3AED;"></span>
+      十二月 — 收割月 🟠 月度征期 + 年度盛典
+    </div>
+    <div class="table-wrap">
+      <table class="week-plan-table">
+        <thead><tr><th style="width:8%;">周次</th><th style="width:20%;">日期</th><th style="width:12%;">征期状态</th><th style="width:12%;">学习强度</th><th style="width:48%;">本周具体安排</th></tr></thead>
+        <tbody>
+          <tr class="row-normal">
+            <td class="w-num">W21</td>
+            <td><strong>11月30日-12月4日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              • 周二学习会：大赛方案书第二轮打磨<br>
+              • 实战推进：每人启动独立开发新客户（可以是老客户转介绍）<br>
+              • 走完"接触→面谈→方案→成交"全流程<br>
+              • 周五：12月冲刺动员
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W22</td>
+            <td><strong>12月7日-11日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 全力</td>
+            <td>
+              • 周二学习会：客户提案模拟演练（20分钟提案+全员评审）<br>
+              • 实战推进继续：新客户开发持续推进<br>
+              • 年度盛典筹备启动（海报、奖杯、PPT）
+            </td>
+          </tr>
+          <tr class="row-month">
+            <td class="w-num">W23</td>
+            <td><strong>12月14日-18日</strong></td>
+            <td><span class="tax-badge tax-month">月度征期</span><br><span class="text-xs">12.15周二截止</span></td>
+            <td>🟠 减半</td>
+            <td>
+              <strong>学习降载，专注申报 + 年度收尾：</strong><br>
+              • 周二学习会压缩至 60min：年度学习总结分享（轻松回顾）<br>
+              • 不安排新项目<br>
+              • 年度积分最终结算<br>
+              • 秘密准备年度盛典物料
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W24</td>
+            <td><strong>12月21日-25日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🟢 冲刺</td>
+            <td>
+              • 大赛最终方案提交<br>
+              • 客户提案演示（最后两场）<br>
+              • 年度盛典彩排<br>
+              • 新客户开发最后冲刺
+            </td>
+          </tr>
+          <tr class="row-normal">
+            <td class="w-num">W25</td>
+            <td><strong>12月28日-31日</strong></td>
+            <td><span class="tax-badge tax-free">安全窗口</span></td>
+            <td>🎉 盛典</td>
+            <td>
+              <strong>12.31 年度盛典（本方案收官日）：</strong><br>
+              • 🏆 段位公布 + 升段仪式<br>
+              • 👑 年度 MVP / 最佳分享 / 最佳突破 / 互助达人 颁奖<br>
+              • 📸 全员合影 + 四大信条最后一次齐读<br>
+              • 🎂 聚餐庆祝，为 2027 年蓄力！
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 总结 -->
+  <div class="card" style="background:linear-gradient(135deg,#EEF2FF,#FDF2F8);border:none;">
+    <div class="card-header" style="justify-content:center;font-size:20px;">
+      🧡 25 周 · 171 天 · 5 个人 · 1 个目标
+    </div>
+    <div class="grid-3 text-center" style="margin-top:16px;">
+      <div>
+        <div style="font-size:36px;font-weight:900;color:var(--primary);">6 次</div>
+        <div class="text-sm">大征期/假期完整暂停</div>
+      </div>
+      <div>
+        <div style="font-size:36px;font-weight:900;color:var(--accent);">5 次</div>
+        <div class="text-sm">月度征期学习减半</div>
+      </div>
+      <div>
+        <div style="font-size:36px;font-weight:900;color:var(--success);">14 次</div>
+        <div class="text-sm">安全窗口全力学习</div>
+      </div>
+    </div>
+    <div class="quote-box" style="background:white;margin-top:20px;">
+      这张计划表的每一个安排，都尊重了一个事实：<strong>财务人员的本职工作是申报和做账，学习是赋能而不是添乱。</strong>在正确的时间做正确的事——征期拼命申报，窗口期拼命成长。
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--text-secondary);margin-top:12px;">
+      方案制定：2026年7月12日 &nbsp;|&nbsp; 执行启动：2026年7月14日 &nbsp;|&nbsp; 验收节点：2026年12月31日
+    </p>
+  </div>
+</div>
+
+<div class="footer-bar">
+  <p style="font-size:16px;font-weight:700;color:var(--text);">常州苏越会计服务有限公司 · 团队全面跃升方案</p>
+  <p style="margin-top:4px;">五个行为支点：自主权 · 胜任感 · 归属感 · 即时反馈 · 意义感</p>
+</div>
+
+</body>
+</html>
